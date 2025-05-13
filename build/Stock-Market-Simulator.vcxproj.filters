@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Stock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Portfolio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Trade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\StockListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\TradeDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Stock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Portfolio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Trade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\StockListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\TradeDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Stock Market Simulator\Stock-Market-Simulator\mainwindow.ui" />
+    <CustomBuild Include="C:\Stock Market Simulator\Stock-Market-Simulator\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{12830DEF-B7D3-30B0-9EE0-165C2C91EBD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E1DC17AC-B4CE-3500-AE4A-1A9C4ACCDF28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
