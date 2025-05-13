@@ -1,4 +1,3 @@
-#include <iostream>
 #include <QApplication>
 #include "MainWindow.h"
 
@@ -9,5 +8,5 @@ int main(int argc, char *argv[]) {
     MainWindow w;
     w.show();
 
-    return appExec();
+    return a.exec();
 }

@@ -1,75 +1,83 @@
 cmake_minimum_required(VERSION 3.16)
+project(StockMarketSimulator LANGUAGES CXX)
 
-project(Stock-Market-Simulator LANGUAGES CXX)
-
-# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-# Find the required Qt packages
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
-# UI files
-set(UI_FILES
-    mainwindow.ui
-)
-
-# Header files
-set(HEADERS
-    MainWindow.h
-    Models/Stock.h
-    Models/Portfolio.h
-    Models/Trade.h
-    Core/MarketSimulator.h
-    Core/OrderManager.h
-    Core/PortfolioManager.h
-    Data/DataProvider.h
-    UI/StockListView.h
-    UI/TradeDialog.h
-    Utils/Logger.h
-    Utils/Config.h
+# Include directories
+include_directories(
+    ${PROJECT_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/Core
+    ${PROJECT_SOURCE_DIR}/Data
+    ${PROJECT_SOURCE_DIR}/Models
+    ${PROJECT_SOURCE_DIR}/UI
+    ${PROJECT_SOURCE_DIR}/Utils
 )
 
 # Source files
 set(SOURCES
     main.cpp
     MainWindow.cpp
-    Models/Stock.cpp
-    Models/Portfolio.cpp
-    Models/Trade.cpp
+    mainwindow.ui
+
     Core/MarketSimulator.cpp
     Core/OrderManager.cpp
     Core/PortfolioManager.cpp
+
     Data/DataProvider.cpp
+
+    Models/Stock.cpp
+    Models/Portfolio.cpp
+    Models/Trade.cpp
+
     UI/StockListView.cpp
     UI/TradeDialog.cpp
+
     Utils/Logger.cpp
     Utils/Config.cpp
 )
 
-# Qt UI headers auto-generated from .ui
-qt6_wrap_ui(UI_HEADERS ${UI_FILES})
+# Header files (optional but good practice)
+set(HEADERS
+    MainWindow.h
+    Core/MarketSimulator.h
+    Core/OrderManager.h
+    Core/PortfolioManager.h
+
+    Data/DataProvider.h
+
+    Models/Stock.h
+    Models/Portfolio.h
+    Models/Trade.h
+
+    UI/StockListView.h
+    UI/TradeDialog.h
+
+    Utils/Logger.h
+    Utils/Config.h
+)
+
+# UI files
+set(UIS
+    mainwindow.ui
+)
 
 # Create the executable
-add_executable(${PROJECT_NAME}
+qt6_wrap_ui(UI_HEADERS ${UIS})
+
+add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
     ${UI_HEADERS}
 )
 
 # Link Qt libraries
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(StockMarketSimulator
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
-)
-
-# Include directories
-target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/Models
-    ${CMAKE_CURRENT_SOURCE_DIR}/Core
-    ${CMAKE_CURRENT_SOURCE_DIR}/Data
-    ${CMAKE_CURRENT_SOURCE_DIR}/UI
-    ${CMAKE_CURRENT_SOURCE_DIR}/Utils
 )
