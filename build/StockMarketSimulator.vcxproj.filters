@@ -10,6 +10,18 @@
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,15 +55,6 @@
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -73,6 +76,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\Page3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.h">

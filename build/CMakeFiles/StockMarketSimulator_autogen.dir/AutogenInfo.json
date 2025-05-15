@@ -379,6 +379,30 @@
 			"MU",
 			"3AKZUBQRRA/moc_Logger.cpp",
 			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page1.h",
+			"MU",
+			"P2WXERC3RM/moc_Page1.cpp",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page2.h",
+			"MU",
+			"P2WXERC3RM/moc_Page2.cpp",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page3.h",
+			"MU",
+			"P2WXERC3RM/moc_Page3.cpp",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h",
+			"MU",
+			"P2WXERC3RM/moc_loginPage.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -593,21 +617,6 @@
 			null
 		],
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Page1.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Page2.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Page3.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListView.cpp",
 			"MU",
 			null
@@ -629,6 +638,26 @@
 		],
 		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page1.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page2.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/Page3.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.cpp",
 			"MU",
 			null
 		]

@@ -24,6 +24,11 @@ set(SOURCES
     MainWindow.cpp
     mainwindow.ui
 
+    pages/loginPage.cpp
+    pages/Page1.cpp
+    pages/Page2.cpp
+    pages/Page3.cpp
+
     Core/MarketSimulator.cpp
     Core/OrderManager.cpp
     Core/PortfolioManager.cpp
@@ -47,6 +52,11 @@ set(HEADERS
     Core/MarketSimulator.h
     Core/OrderManager.h
     Core/PortfolioManager.h
+
+    pages/loginPage.h
+    pages/Page1.h
+    pages/Page2.h
+    pages/Page3.h
 
     Data/DataProvider.h
 
@@ -73,9 +83,6 @@ add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
     ${UI_HEADERS}
-    Page1.cpp
-    Page2.cpp
-    Page3.cpp
 )
 
 # Link Qt libraries
