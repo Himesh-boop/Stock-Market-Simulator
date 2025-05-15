@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1311</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="font">
@@ -25,10 +25,10 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>20</y>
-      <width>631</width>
-      <height>501</height>
+      <x>330</x>
+      <y>50</y>
+      <width>761</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -52,8 +52,8 @@ QPushButton#pushButton:hover{
       <rect>
        <x>330</x>
        <y>50</y>
-       <width>261</width>
-       <height>351</height>
+       <width>291</width>
+       <height>401</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -87,7 +87,7 @@ border-radius:10px;
       <rect>
        <x>370</x>
        <y>80</y>
-       <width>131</width>
+       <width>161</width>
        <height>41</height>
       </rect>
      </property>
@@ -105,39 +105,12 @@ border-radius:10px;
       <string>Welcome</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>160</y>
-       <width>141</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="accessibleName">
-      <string/>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgba(0, 0, 0, 0);
-border:2px solid rgba(0, 0, 0, 0);
-border-bottom-color:rgba(46, 82, 101, 200);
-color:rgba(0, 0, 0, 0);
-padding-bottom:7px;
-</string>
-     </property>
-     <property name="placeholderText">
-      <string>0</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>220</y>
-       <width>141</width>
+       <x>370</x>
+       <y>230</y>
+       <width>211</width>
        <height>41</height>
       </rect>
      </property>
@@ -153,56 +126,12 @@ padding-bottom:7px;
       <string>Password</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>180</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(53, 53, 53);</string>
-     </property>
-     <property name="text">
-      <string>Username:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>240</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(53, 53, 53);</string>
-     </property>
-     <property name="text">
-      <string>Password:</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
        <x>370</x>
-       <y>300</y>
-       <width>191</width>
+       <y>320</y>
+       <width>201</width>
        <height>51</height>
       </rect>
      </property>
@@ -223,15 +152,16 @@ padding-bottom:7px;
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>-10</x>
        <y>80</y>
-       <width>291</width>
+       <width>311</width>
        <height>281</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>200</pointsize>
+       <underline>false</underline>
       </font>
      </property>
      <property name="styleSheet">
@@ -239,6 +169,27 @@ padding-bottom:7px;
      </property>
      <property name="text">
       <string>⭜</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>170</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:2px solid rgba(0, 0, 0, 0);
+border-bottom-color:rgba(46, 82, 101, 200);
+color:rgba(0, 0, 0);
+padding-bottom:7px;
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
      </property>
     </widget>
    </widget>
