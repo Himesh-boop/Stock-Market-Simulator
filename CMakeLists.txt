@@ -73,6 +73,9 @@ add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
     ${UI_HEADERS}
+    Page1.cpp
+    Page2.cpp
+    Page3.cpp
 )
 
 # Link Qt libraries

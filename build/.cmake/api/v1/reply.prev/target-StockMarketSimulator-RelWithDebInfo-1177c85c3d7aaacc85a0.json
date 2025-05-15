@@ -43,7 +43,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 79,
+				"line" : 81,
 				"parent" : 0
 			},
 			{
@@ -261,7 +261,9 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				28,
+				29
 			]
 		}
 	],
@@ -366,7 +368,9 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				28,
+				29
 			]
 		},
 		{
@@ -553,6 +557,18 @@
 			"isGenerated" : true,
 			"path" : "build/ui_mainwindow.h",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Page1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Page2.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

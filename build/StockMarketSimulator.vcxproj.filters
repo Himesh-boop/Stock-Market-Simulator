@@ -43,6 +43,15 @@
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

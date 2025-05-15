@@ -495,6 +495,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Logger.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\ui_mainwindow.h" />
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page1.cpp" />
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page2.cpp" />
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Page3.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>

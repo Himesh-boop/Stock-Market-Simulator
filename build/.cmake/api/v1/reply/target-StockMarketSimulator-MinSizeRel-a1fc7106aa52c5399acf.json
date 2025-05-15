@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/StockMarketSimulator.exe"
+			"path" : "MinSizeRel/StockMarketSimulator.exe"
 		},
 		{
-			"path" : "Release/StockMarketSimulator.pdb"
+			"path" : "MinSizeRel/StockMarketSimulator.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -43,7 +43,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 79,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
@@ -122,7 +122,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 2,
@@ -184,7 +184,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/include_Release"
+					"path" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/include_MinSizeRel"
 				},
 				{
 					"backtrace" : 15,
@@ -261,7 +261,10 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				28,
+				29,
+				30
 			]
 		}
 	],
@@ -277,7 +280,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
@@ -366,7 +369,10 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				28,
+				29,
+				30
 			]
 		},
 		{
@@ -402,7 +408,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/mocs_compilation_Release.cpp",
+			"path" : "build/StockMarketSimulator_autogen/mocs_compilation_MinSizeRel.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -553,6 +559,24 @@
 			"isGenerated" : true,
 			"path" : "build/ui_mainwindow.h",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Page1.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Page2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Page3.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"
