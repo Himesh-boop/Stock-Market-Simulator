@@ -117,12 +117,37 @@
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\ui_mainwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\UI\ui_ProfilePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\UI\ui_ProfilePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\UI\ui_ProfilePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\UI\ui_ProfilePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Stock Market Simulator\Stock-Market-Simulator\mainwindow.ui" />
+    <CustomBuild Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\CMakeFiles\17ad724a33ce6cc2d700a9939dbbb29d\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
     <CustomBuild Include="C:\Stock Market Simulator\Stock-Market-Simulator\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Debug.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Release.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{25EFEE9F-C04B-367A-8C48-260E80AEAE50}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{12830DEF-B7D3-30B0-9EE0-165C2C91EBD0}</UniqueIdentifier>
     </Filter>

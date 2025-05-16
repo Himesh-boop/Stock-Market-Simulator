@@ -83,6 +83,7 @@ add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
     ${UI_HEADERS}
+    UI/ProfilePage.ui
 )
 
 # Link Qt libraries
