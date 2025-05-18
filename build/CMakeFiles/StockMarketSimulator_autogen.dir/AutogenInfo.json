@@ -300,8 +300,7 @@
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake",
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake",
-		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
-		"C:/Program Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake"
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator",
 	"CROSS_CONFIG" : false,
@@ -309,24 +308,6 @@
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/MarketSimulator.h",
-			"MU",
-			"4VKJKCZPXG/moc_MarketSimulator.cpp",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/OrderManager.h",
-			"MU",
-			"4VKJKCZPXG/moc_OrderManager.cpp",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/PortfolioManager.h",
-			"MU",
-			"4VKJKCZPXG/moc_PortfolioManager.cpp",
-			null
-		],
 		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.h",
 			"MU",
@@ -376,21 +357,15 @@
 			null
 		],
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/loginpage.h",
-			"MU",
-			"EWIEGA46WW/moc_loginpage.cpp",
-			null
-		],
-		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/pages.h",
 			"MU",
 			"EWIEGA46WW/moc_pages.cpp",
 			null
 		],
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h",
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginpage.h",
 			"MU",
-			"P2WXERC3RM/moc_loginPage.cpp",
+			"P2WXERC3RM/moc_loginpage.cpp",
 			null
 		]
 	],
@@ -467,6 +442,13 @@
 	"MOC_INCLUDES" : [],
 	"MOC_INCLUDES_Debug" : 
 	[
+		"C:/Stock Market Simulator/Stock-Market-Simulator",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Core",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Data",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Models",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI/pages",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Utils",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -475,6 +457,13 @@
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
+		"C:/Stock Market Simulator/Stock-Market-Simulator",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Core",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Data",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Models",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI/pages",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Utils",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -483,6 +472,13 @@
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
+		"C:/Stock Market Simulator/Stock-Market-Simulator",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Core",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Data",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Models",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI/pages",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Utils",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -491,6 +487,13 @@
 	],
 	"MOC_INCLUDES_Release" : 
 	[
+		"C:/Stock Market Simulator/Stock-Market-Simulator",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Core",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Data",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Models",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/UI/pages",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/Utils",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -539,21 +542,6 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/MarketSimulator.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/OrderManager.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/Core/PortfolioManager.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.cpp",
 			"MU",
 			null
@@ -594,11 +582,6 @@
 			null
 		],
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/loginpage.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/main.cpp",
 			"MU",
 			null
@@ -609,7 +592,7 @@
 			null
 		],
 		[
-			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.cpp",
+			"C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginpage.cpp",
 			"MU",
 			null
 		]

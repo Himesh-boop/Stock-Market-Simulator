@@ -2,24 +2,15 @@
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Debug.cpp">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.cpp">
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.cpp">
@@ -46,33 +37,21 @@
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.cpp">
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
-      <Filter>Source Files\Generated</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_MinSizeRel.cpp">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_RelWithDebInfo.cpp">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.h">
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.h">
@@ -99,44 +78,29 @@
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.h">
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_pages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_pages.h">
-      <Filter>Source Files\Generated</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\UI\ui_ProfilePage.h">
-      <Filter>Source Files\Generated</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_loginpage.h">
-      <Filter>Source Files\Generated</Filter>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\ui_pages.h">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\UI\ui_ProfilePage.h">
-      <Filter>Source Files\Generated</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\ui_loginpage.h">
-      <Filter>Source Files\Generated</Filter>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\ui_pages.h">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\UI\ui_ProfilePage.h">
-      <Filter>Source Files\Generated</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\ui_loginpage.h">
-      <Filter>Source Files\Generated</Filter>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\ui_pages.h">
-      <Filter>Source Files\Generated</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\UI\ui_ProfilePage.h">
-      <Filter>Source Files\Generated</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\ui_loginpage.h">
-      <Filter>Source Files\Generated</Filter>
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -147,20 +111,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui" />
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui" />
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui" />
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Debug.stamp">
-      <Filter>Source Files\Generated</Filter>
-    </None>
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Release.stamp">
-      <Filter>Source Files\Generated</Filter>
-    </None>
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp">
-      <Filter>Source Files\Generated</Filter>
-    </None>
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp">
-      <Filter>Source Files\Generated</Filter>
-    </None>
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Debug.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Release.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
@@ -171,9 +126,6 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{E1DC17AC-B4CE-3500-AE4A-1A9C4ACCDF28}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Generated">
-      <UniqueIdentifier>{28F7E910-CC27-3344-BA2E-CA59D07FAAD7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

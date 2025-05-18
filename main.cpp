@@ -1,12 +1,20 @@
 #include <QApplication>
-#include "loginpage.h"
+#include "pages/loginpage.h"
 
-using namespace std;
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
 
-int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    loginPage w;
-    w.show();
+    // Set application name and style
+    app.setApplicationName("Stock Market Simulator");
+    app.setApplicationDisplayName("Stock Market Simulator");
+    app.setStyle("Fusion"); // Modern Qt style
 
-    return a.exec();
+    // Create and show main window
+    loginPage mainWindow;
+    mainWindow.setWindowTitle("Stock Market Simulator");
+    mainWindow.resize(1024, 768); // Set initial window size
+    mainWindow.show();
+
+    return app.exec();
 }

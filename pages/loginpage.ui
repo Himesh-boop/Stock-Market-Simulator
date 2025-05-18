@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>loginPage</class>
+ <widget class="QMainWindow" name="loginPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1168</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>40</y>
+      <width>761</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#LoginButton{
+    background-color:rgba(85, 98, 112, 255);
+    color:rgba(255, 255, 255, 200);
+    border-radius:8px;
+    font-size: 16px;
+    padding: 5px;
+}
+QPushButton#LoginButton:pressed{
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgba(255, 107, 107, 255);
+    background-position:calc(100% - 10px)center;
+}
+QPushButton#LoginButton:hover{
+    background-color:rgba(255, 107, 107, 255);
+}
+
+QPushButton#ShowPasswordButton{
+    background-color:rgba(85, 98, 112, 200);
+    color:rgba(255, 255, 255, 200);
+    border-radius:3px;
+}
+QPushButton#ShowPasswordButton:pressed{
+    background-color: rgba(255, 107, 107, 255);
+}
+QPushButton#ShowPasswordButton:hover{
+    background-color:rgba(255, 107, 107, 200);
+}</string>
+    </property>
+    <widget class="QLabel" name="LoginArea">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>50</y>
+       <width>291</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(255, 255, 255, 255);
+border-radius:10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PictureArea">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>311</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 98, 112, 255), stop:1 rgba(255, 107, 107, 255));
+border-radius:10px;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="WelcomeBanner">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>80</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgba(0, 0, 0, 200);</string>
+     </property>
+     <property name="text">
+      <string>Welcome</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Password">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>230</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:2px solid rgba(0, 0, 0, 0);
+border-bottom-color:rgba(46, 82, 101, 200);
+color:black;
+padding-bottom:7px;
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="LoginButton">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>340</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Historic</family>
+       <pointsize>-1</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Click to login</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>LOGIN</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="character">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>311</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>200</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgba(255, 107, 107, 255);</string>
+     </property>
+     <property name="text">
+      <string>〽</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Username">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>170</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:2px solid rgba(0, 0, 0, 0);
+border-bottom-color:rgba(46, 82, 101, 200);
+color:black;
+padding-bottom:7px;
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="statusLabel">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>280</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(255, 0, 0, 200);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="rememberMeCheckbox">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>310</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(0, 0, 0, 150);</string>
+     </property>
+     <property name="text">
+      <string>Remember me</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="forgotPasswordButton">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>400</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(85, 98, 112, 200);
+background-color: transparent;
+border: none;
+text-decoration: underline;</string>
+     </property>
+     <property name="text">
+      <string>Forgot Password?</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>LoginArea</zorder>
+    <zorder>PictureArea</zorder>
+    <zorder>WelcomeBanner</zorder>
+    <zorder>LoginButton</zorder>
+    <zorder>character</zorder>
+    <zorder>Username</zorder>
+    <zorder>statusLabel</zorder>
+    <zorder>rememberMeCheckbox</zorder>
+    <zorder>forgotPasswordButton</zorder>
+    <zorder>Password</zorder>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

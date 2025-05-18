@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.0/msvc2022_64/include" /external:I "C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtWidgets" -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -109,10 +109,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;QT_CORE_LIB;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -154,7 +154,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.0/msvc2022_64/include" /external:I "C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtWidgets" -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -178,10 +178,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -223,7 +223,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.0/msvc2022_64/include" /external:I "C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtWidgets" -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -247,10 +247,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -292,7 +292,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtCore" /external:I "C:/Qt/6.9.0/msvc2022_64/include" /external:I "C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtGui" /external:I "C:/Qt/6.9.0/msvc2022_64/include/QtWidgets" -Zc:__cplusplus -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -315,10 +315,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;QT_CORE_LIB;QT_NO_DEBUG;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_WIN64;UNICODE;_UNICODE;QT_GUI_LIB;QT_WIDGETS_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo;C:\Stock Market Simulator\Stock-Market-Simulator;C:\Stock Market Simulator\Stock-Market-Simulator\Core;C:\Stock Market Simulator\Stock-Market-Simulator\Data;C:\Stock Market Simulator\Stock-Market-Simulator\Models;C:\Stock Market Simulator\Stock-Market-Simulator\UI;C:\Stock Market Simulator\Stock-Market-Simulator\UI\pages;C:\Stock Market Simulator\Stock-Market-Simulator\Utils;C:\Qt\6.9.0\msvc2022_64\include\QtCore;C:\Qt\6.9.0\msvc2022_64\include;C:\Qt\6.9.0\msvc2022_64\mkspecs\win32-msvc;C:\Qt\6.9.0\msvc2022_64\include\QtGui;C:\Qt\6.9.0\msvc2022_64\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -374,7 +374,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui;C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Debug.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
@@ -390,7 +390,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui;C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Release.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
@@ -406,7 +406,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui;C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
@@ -422,7 +422,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui;C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui;C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui;C:\Qt\6.9.0\msvc2022_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -491,13 +491,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\main.cpp" />
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.cpp">
-      <ObjectFileName>$(IntDir)/pages/loginPage.cpp.obj</ObjectFileName>
-    </ClCompile>
+    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.cpp" />
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.cpp" />
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.cpp" />
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Stock.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Portfolio.cpp" />
@@ -506,11 +501,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\TradeDialog.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Logger.cpp" />
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.h" />
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Stock.h" />
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Models\Portfolio.h" />
@@ -521,17 +513,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.h" />
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages.ui">
     </None>
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\UI\ProfilePage.ui">
-    </None>
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.h" />
-    <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.cpp">
-      <ObjectFileName>$(IntDir)/loginpage.cpp.obj</ObjectFileName>
-    </ClCompile>
-    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\loginpage.ui">
+    <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginpage.ui">
     </None>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_pages.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\UI\ui_ProfilePage.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_loginpage.h" />
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\pages\ui_loginpage.h" />
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Debug.stamp">
     </None>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
@@ -540,8 +525,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\ui_pages.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\UI\ui_ProfilePage.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\ui_loginpage.h" />
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Release\pages\ui_loginpage.h" />
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_Release.stamp">
     </None>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_MinSizeRel.cpp">
@@ -550,8 +534,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\ui_pages.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\UI\ui_ProfilePage.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\ui_loginpage.h" />
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_MinSizeRel\pages\ui_loginpage.h" />
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp">
     </None>
     <ClCompile Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_RelWithDebInfo.cpp">
@@ -560,8 +543,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\ui_pages.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\UI\ui_ProfilePage.h" />
-    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\ui_loginpage.h" />
+    <ClInclude Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_RelWithDebInfo\pages\ui_loginpage.h" />
     <None Include="C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp">
     </None>
   </ItemGroup>
