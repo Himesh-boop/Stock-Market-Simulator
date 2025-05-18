@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "loginPage.h"
+#include "loginpage.h"
 
 using namespace std;
 

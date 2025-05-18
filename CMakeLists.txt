@@ -17,7 +17,7 @@ qt_standard_project_setup()
 set(SOURCES
     main.cpp
 
-    pages/loginPage.cpp
+    pages/loginpage.cpp
     pages.cpp
     Core/MarketSimulator.cpp
     Core/OrderManager.cpp
@@ -35,7 +35,7 @@ set(SOURCES
 # Add header files
 set(HEADERS
 
-    pages/loginPage.h
+    pages/loginpage.h
     pages.h
     Core/MarketSimulator.h
     Core/OrderManager.h
@@ -54,6 +54,7 @@ set(HEADERS
 set(UI_FILES
 
     pages.ui
+    pages/loginpage.ui
     UI/ProfilePage.ui
 )
 

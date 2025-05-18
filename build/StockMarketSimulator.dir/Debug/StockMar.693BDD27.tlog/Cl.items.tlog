@@ -1,0 +1,16 @@
+C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\mocs_compilation_Debug.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\mocs_compilation_Debug.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\main.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\main.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\MainWindow.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\MainWindow.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\pages\loginPage.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\loginPage.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\pages.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\pages.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Core\MarketSimulator.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\MarketSimulator.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Core\OrderManager.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\OrderManager.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Core\PortfolioManager.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\PortfolioManager.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Data\DataProvider.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\DataProvider.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Models\Stock.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\Stock.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Models\Portfolio.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\Portfolio.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Models\Trade.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\Trade.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\UI\StockListView.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\StockListView.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\UI\TradeDialog.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\TradeDialog.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Logger.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\Logger.obj
+C:\Stock Market Simulator\Stock-Market-Simulator\Utils\Config.cpp;C:\Stock Market Simulator\Stock-Market-Simulator\build\StockMarketSimulator.dir\Debug\Config.obj
