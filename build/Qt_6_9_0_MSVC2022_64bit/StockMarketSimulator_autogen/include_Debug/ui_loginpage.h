@@ -117,7 +117,7 @@ public:
         LoginButton->setStyleSheet(QString::fromUtf8(""));
         character = new QLabel(widget);
         character->setObjectName("character");
-        character->setGeometry(QRect(-70, 60, 311, 281));
+        character->setGeometry(QRect(10, 60, 311, 281));
         QFont font2;
         font2.setPointSize(200);
         font2.setUnderline(false);

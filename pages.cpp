@@ -49,7 +49,7 @@ void pages::fetchStockData(const QString& symbol) {
 
     // Specify python executable and script path:
     QString pythonExecutable = "python"; // Or full path like "C:/Python39/python.exe"
-    QString scriptPath = "C:/New folder (4)/Stock-Market-Simulator/Models/candlestickChart.py"; // **Update this path**
+    QString scriptPath = "C:/Stock Market Simulator/Stock-Market-Simulator/Models/candlestickChart.py"; // **Update this path**
 
     QStringList arguments = { scriptPath, symbol };
 
