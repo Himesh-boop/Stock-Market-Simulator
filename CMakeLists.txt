@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Charts)
 
 # Include directories
 include_directories(
@@ -15,7 +15,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/Data
     ${PROJECT_SOURCE_DIR}/Models
     ${PROJECT_SOURCE_DIR}/UI
-    ${PROJECT_SOURCE_DIR}/UI/pages     # ✅ Added this
+    ${PROJECT_SOURCE_DIR}/UI/pages
     ${PROJECT_SOURCE_DIR}/Utils
 )
 
@@ -70,6 +70,7 @@ add_executable(StockMarketSimulator
     ${HEADERS}
     ${UI_HEADERS}
     ${UIS}
+    resources.qrc
 )
 
 # Link Qt libraries
@@ -77,4 +78,5 @@ target_link_libraries(StockMarketSimulator
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
+    Qt6::Charts
 )

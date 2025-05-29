@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>509</width>
-    <height>283</height>
+    <width>536</width>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -74,6 +74,7 @@ QScrollBar::handle:vertical {
     min-width: 100px;
     max-width: 100px;
     margin: 0px;
+	min-height: 60px;
 }
 
 QPushButton:hover {
@@ -87,7 +88,7 @@ QPushButton:pressed {
 QPushButton:checked {
     background-color: #707070;
     margin-left: 20px;
-    margin-right: -10px; /* Keeps layout from shifting */
+    margin-right: -20px; /* Keeps layout from shifting */
     font-weight: bold;
     border-left: 4px solid #E0E0E0;
 }
@@ -132,8 +133,8 @@ QPushButton:checked {
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -166,8 +167,8 @@ QPushButton:checked {
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -200,8 +201,8 @@ QPushButton:checked {
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -231,8 +232,8 @@ QPushButton:checked {
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -265,8 +266,8 @@ QPushButton:checked {
           <string/>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
+          <iconset resource="resources.qrc">
+           <normaloff>:/icons/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -293,11 +294,27 @@ QPushButton:checked {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <widget class="QWidget" name="PortfolioPage"/>
+         <widget class="QWidget" name="CashPage"/>
+         <widget class="QWidget" name="CandleSTickPage"/>
+         <widget class="QWidget" name="HistoryPage"/>
+         <widget class="QWidget" name="NewsPage"/>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
