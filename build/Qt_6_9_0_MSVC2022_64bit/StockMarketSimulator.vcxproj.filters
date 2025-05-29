@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\pages\loginpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\pages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Data\DataProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Models\Stock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Models\Portfolio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Models\Trade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\UI\StockListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\UI\TradeDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Utils\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\Utils\Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\EWIEGA46WW_Debug\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\EWIEGA46WW_Release\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\EWIEGA46WW_MinSizeRel\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\EWIEGA46WW_RelWithDebInfo\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\pages\loginpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Data\DataProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Models\Stock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Models\Portfolio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Models\Trade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\UI\StockListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\UI\TradeDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Utils\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\Utils\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_Debug\ui_pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_Debug\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_Release\ui_pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_Release\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_MinSizeRel\ui_pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_MinSizeRel\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_RelWithDebInfo\ui_pages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\include_RelWithDebInfo\pages\ui_loginpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\CMakeFiles\012e31a55008d71af0ba3bf1e861576e\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\CMakeFiles\0379aecd92ab0b2657fe3291528b3c45\qrc_resources.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\New folder (4)\Stock-Market-Simulator\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\pythonBackend\nepse_data_server.py" />
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\Models\candlestickChart.py" />
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\pages.ui">
+      <Filter>Forms</Filter>
+    </None>
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\pages\loginpage.ui">
+      <Filter>Forms</Filter>
+    </None>
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\resources.qrc">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\autouic_Debug.stamp" />
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\autouic_Release.stamp" />
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit\StockMarketSimulator_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C4DDE713-4D8B-3A8E-85EE-4819497B07B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{64169715-A1FB-3CED-B309-09902CD15AE7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{DFE02D7E-B375-3658-B599-625EC3625C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{C9654BCC-3963-3B3C-9949-074DD2A53C41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DB642836-FFCB-3B88-89BC-4A188C8CCFE1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

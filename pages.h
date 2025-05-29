@@ -2,13 +2,14 @@
 #define PAGES_H
 
 #include <QMainWindow>
-#include <QPropertyAnimation>
 #include <QPushButton>
+#include <QPropertyAnimation>
+
+#include <QtCharts/QChartGlobal>
 #include <QtCharts/QChartView>
+#include <QtCharts/QChart>
 #include <QtCharts/QCandlestickSeries>
 #include <QtCharts/QCandlestickSet>
-#include <QtCharts/QChart>
-
 
 namespace Ui {
 class pages;
@@ -32,9 +33,9 @@ private:
     QPushButton *lastCheckedButton;
 
     // Chart related members
-    QtCharts::QChartView *chartView = nullptr;
-    QtCharts::QCandlestickSeries *candlestickSeries = nullptr;
-    QtCharts::QChart *chart = nullptr;
+    QChartView *chartView = nullptr;
+    QCandlestickSeries *candlestickSeries = nullptr;
+    QChart *chart = nullptr;
 
     void setupCandlestickChart();
     void updateCandlestickChart(const QJsonArray &data);

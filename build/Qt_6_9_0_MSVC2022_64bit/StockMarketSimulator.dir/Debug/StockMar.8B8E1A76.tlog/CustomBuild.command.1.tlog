@@ -1,0 +1,36 @@
+^C:\NEW FOLDER (4)\STOCK-MARKET-SIMULATOR\BUILD\QT_6_9_0_MSVC2022_64BIT\CMAKEFILES\012E31A55008D71AF0BA3BF1E861576E\AUTOUIC_(CONFIG).STAMP.RULE
+setlocal
+cd "C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\NEW FOLDER (4)\STOCK-MARKET-SIMULATOR\BUILD\QT_6_9_0_MSVC2022_64BIT\CMAKEFILES\0379AECD92AB0B2657FE3291528B3C45\QRC_RESOURCES.CPP.RULE
+setlocal
+cd "C:\New folder (4)\Stock-Market-Simulator\build\Qt_6_9_0_MSVC2022_64bit"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autorcc "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json" Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\NEW FOLDER (4)\STOCK-MARKET-SIMULATOR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/New folder (4)/Stock-Market-Simulator" "-BC:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit" --check-stamp-file "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

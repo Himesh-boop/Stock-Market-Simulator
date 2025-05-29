@@ -1,0 +1,10 @@
+^C:\NEW FOLDER (4)\STOCK-MARKET-SIMULATOR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/New folder (4)/Stock-Market-Simulator" "-BC:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit" --check-stamp-file "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

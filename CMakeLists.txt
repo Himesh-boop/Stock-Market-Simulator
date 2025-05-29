@@ -23,6 +23,8 @@ include_directories(
 set(SOURCES
     main.cpp
 
+    pythonBackend/nepse_data_server.py
+
     pages/loginpage.cpp
     pages.cpp
 
@@ -31,6 +33,7 @@ set(SOURCES
     Models/Stock.cpp
     Models/Portfolio.cpp
     Models/Trade.cpp
+    Models/candlestickChart.py
 
     UI/StockListView.cpp
     UI/TradeDialog.cpp
