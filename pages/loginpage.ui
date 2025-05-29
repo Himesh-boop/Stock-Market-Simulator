@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1168</width>
-    <height>692</height>
+    <width>998</width>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -167,8 +167,8 @@ padding-bottom:7px;
     <widget class="QLabel" name="character">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
+       <x>-70</x>
+       <y>60</y>
        <width>311</width>
        <height>281</height>
       </rect>

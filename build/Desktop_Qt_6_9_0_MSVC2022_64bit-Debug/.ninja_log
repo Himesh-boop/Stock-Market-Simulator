@@ -1,0 +1,21 @@
+# ninja log v6
+62	499	7702200189047055	StockMarketSimulator_autogen/timestamp	c910f1d02264c8f7
+504	1106	7702187794653649	CMakeFiles/StockMarketSimulator.dir/Models/Trade.cpp.obj	a90590c4a332aff0
+62	499	7702200189047055	StockMarketSimulator_autogen/mocs_compilation.cpp	c910f1d02264c8f7
+484	2142	7702195680474652	CMakeFiles/StockMarketSimulator.dir/pages/loginPage.cpp.obj	9ea8790ae3c900ca
+62	499	7702200189047055	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	c910f1d02264c8f7
+2187	2364	7702195697512656	StockMarketSimulator.exe	6df785708efc5f90
+515	1094	7702187794754316	CMakeFiles/StockMarketSimulator.dir/Utils/Logger.cpp.obj	8decab124825fa8a
+62	499	7702200189047055	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	c910f1d02264c8f7
+522	1148	7702187794840428	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp.obj	92b63cbca1b473ce
+512	1093	7702187794754316	CMakeFiles/StockMarketSimulator.dir/UI/TradeDialog.cpp.obj	220c79c946f7be3
+493	1101	7702187794562701	CMakeFiles/StockMarketSimulator.dir/Data/DataProvider.cpp.obj	f9a9182c63a96d92
+508	1092	7702187794714161	CMakeFiles/StockMarketSimulator.dir/UI/StockListview.cpp.obj	23f36c0971e0c35d
+501	1095	7702187794633559	CMakeFiles/StockMarketSimulator.dir/Models/Portfolio.cpp.obj	56b7af52e4f9a51b
+496	1104	7702187794562701	CMakeFiles/StockMarketSimulator.dir/Models/Stock.cpp.obj	370141a4db4bab1c
+519	1126	7702187794815294	CMakeFiles/StockMarketSimulator.dir/Utils/config.cpp.obj	16a5c7da40f754a1
+482	2372	7702187794406198	CMakeFiles/StockMarketSimulator.dir/main.cpp.obj	27eb4aa76d76b82f
+481	2056	7702195680444660	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/mocs_compilation.cpp.obj	97be5d2d1b7e2e42
+487	2187	7702195680504646	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	8b2be67a21f392f
+275	366	7693714523628154	StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	cc2c7c6a4fddd351
+275	366	7693714523628154	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	cc2c7c6a4fddd351

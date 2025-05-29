@@ -161,6 +161,8 @@ bool loginPage::checkCredentials(const QString &username, const QString &passwor
         return true;
     } else if (username == "user" && password == "user123") {
         return true;
+    } else if (username == "pratik" && password == "pratik123"){
+        return true;
     }
     return false;
 }

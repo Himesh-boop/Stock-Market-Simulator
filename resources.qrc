@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
+        <file>assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
+        <file>candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
+        <file>newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
+        <file>wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
+    </qresource>
+</RCC>
