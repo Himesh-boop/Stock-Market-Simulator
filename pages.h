@@ -8,6 +8,10 @@
 #include <QtCharts/QCandlestickSeries>
 #include <QtCharts/QCandlestickSet>
 #include <QtCharts/QChart>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QDateTimeAxis>
+#include <QtCharts/QValueAxis>
 
 
 namespace Ui {
@@ -32,9 +36,14 @@ private:
     QPushButton *lastCheckedButton;
 
     // Chart related members
-    QtCharts::QChartView *chartView = nullptr;
-    QtCharts::QCandlestickSeries *candlestickSeries = nullptr;
-    QtCharts::QChart *chart = nullptr;
+    QChartView *chartView = nullptr;
+    QCandlestickSeries *candlestickSeries = nullptr;
+    QChart *chart = nullptr;
+
+    QBarSeries *volumeSeries;
+    QBarSet *volumeSet;
+    QValueAxis *volumeAxisY;
+
 
     void setupCandlestickChart();
     void updateCandlestickChart(const QJsonArray &data);

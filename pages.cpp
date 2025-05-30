@@ -5,7 +5,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QDebug>
-#include<QObject>
+#include <QObject>
 #include <QtCharts/QChartView>
 #include <QtCharts/QCandlestickSeries>
 #include <QtCharts/QCandlestickSet>
@@ -13,6 +13,9 @@
 #include <QtCharts/QDateTimeAxis>
 #include <QtCharts/QValueAxis>
 #include <QDateTime>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+
 
 
 void pages::fetchStockData(const QString& symbol) {
@@ -20,15 +23,22 @@ void pages::fetchStockData(const QString& symbol) {
 
     connect(process, &QProcess::finished, this, [this, process]() {
         QByteArray output = process->readAllStandardOutput();
-        QString jsonString(output);
+        QByteArray errorOutput = process->readAllStandardError();
+        QString jsonString = QString(output).trimmed();;
 
         // Debug print the raw output
         qDebug() << "Python script output:" << jsonString;
+        qDebug() << "Python script error output:" << errorOutput;
 
         // Parse JSON data
-        QJsonDocument jsonDoc = QJsonDocument::fromJson(output);
-        if (jsonDoc.isNull() || !jsonDoc.isArray()) {
-            qDebug() << "Failed to parse JSON data";
+        QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonString.toUtf8());
+        if (jsonDoc.isNull()) {
+            qDebug() << "Failed to parse JSON data: invalid JSON";
+            process->deleteLater();
+            return;
+        }
+        if (!jsonDoc.isArray()) {
+            qDebug() << "JSON is not an array but a" << (jsonDoc.isObject() ? "object" : "unknown type");
             process->deleteLater();
             return;
         }
@@ -42,14 +52,15 @@ void pages::fetchStockData(const QString& symbol) {
             qDebug() << "First record:" << firstRecord;
         }
 
-        process->deleteLater();
+        // Process the data and update the chart
+        updateCandlestickChart(jsonArray);
 
-        // TODO: Here, you can process the jsonArray and update your UI
+        process->deleteLater();
     });
 
     // Specify python executable and script path:
     QString pythonExecutable = "python"; // Or full path like "C:/Python39/python.exe"
-    QString scriptPath = "C:/Stock Market Simulator/Stock-Market-Simulator/Models/candlestickChart.py"; // **Update this path**
+    QString scriptPath = "C:/Stock Market Simulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
     QStringList arguments = { scriptPath, symbol };
 
@@ -80,6 +91,8 @@ pages::pages(QWidget *parent)
     ui->Portfolio->setChecked(true);
     // Set initial page to match the initially selected button
     ui->stackedWidget->setCurrentIndex(0); // Portfolio page
+
+    setupCandlestickChart();
 }
 
 pages::~pages()
@@ -151,3 +164,141 @@ void pages::onButtonToggled(bool checked)
 
     lastCheckedButton = button;
 }
+
+void pages::setupCandlestickChart() {
+    // Create the chart and series
+    chart = new QChart();
+    candlestickSeries = new QCandlestickSeries();
+    volumeSeries = new QBarSeries();
+    volumeSet = new QBarSet("Volume");
+
+    // Add series to the chart
+    chart->addSeries(candlestickSeries);
+    chart->addSeries(volumeSeries);
+    volumeSeries->append(volumeSet);
+
+    chart->setTitle("Stock Price Chart with Volume");
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+
+    // X Axis (shared for both series)
+    QDateTimeAxis *axisX = new QDateTimeAxis();
+    axisX->setFormat("dd-MM");
+    axisX->setTitleText("Date");
+    chart->addAxis(axisX, Qt::AlignBottom);
+    candlestickSeries->attachAxis(axisX);
+    volumeSeries->attachAxis(axisX);
+
+    // Y Axis for Candlestick Prices
+    QValueAxis *axisYPrice = new QValueAxis();
+    axisYPrice->setTitleText("Price");
+    chart->addAxis(axisYPrice, Qt::AlignLeft);
+    candlestickSeries->attachAxis(axisYPrice);
+
+    // Y Axis for Volume
+    volumeAxisY = new QValueAxis();
+    volumeAxisY->setTitleText("Volume");
+    chart->addAxis(volumeAxisY, Qt::AlignRight);
+    volumeSeries->attachAxis(volumeAxisY);
+
+    // Setup chart view
+    ui->chartWidget->setChart(chart);
+    ui->chartWidget->setRenderHint(QPainter::Antialiasing);
+    chartView = ui->chartWidget;
+
+    // Enable interaction
+    chartView->setRubberBand(QChartView::RectangleRubberBand);
+    chartView->setDragMode(QGraphicsView::ScrollHandDrag);
+    chartView->setInteractive(true);
+
+    qDebug() << "Chart setup complete with candlestick + volume bars.";
+}
+
+
+void pages::updateCandlestickChart(const QJsonArray &data) {
+    if (!candlestickSeries || !volumeSet || data.isEmpty()) {
+        qDebug() << "No series or empty data";
+        return;
+    }
+
+    // Clear existing data
+    candlestickSeries->clear();
+    volumeSet->remove(0, volumeSet->count());
+
+    qDebug() << "=== Stock Data with Volume ===";
+
+    // Sort by date
+    // Step 1: Copy QJsonArray to QVector<QJsonValue>
+    QVector<QJsonValue> tempList;
+    for (const QJsonValue &val : data) {
+        tempList.append(val);
+    }
+
+    // Step 2: Sort using std::sort (now safe)
+    std::sort(tempList.begin(), tempList.end(), [](const QJsonValue &a, const QJsonValue &b) {
+        return a.toObject()["date"].toString() < b.toObject()["date"].toString();
+    });
+
+    // Step 3: Copy back to QJsonArray
+    QJsonArray sortedData;
+    for (const QJsonValue &val : tempList) {
+        sortedData.append(val);
+    }
+
+
+    // Track max volume for Y-axis scaling
+    double maxVolume = 0;
+
+    for (const QJsonValue &value : sortedData) {
+        QJsonObject obj = value.toObject();
+
+        QString dateStr = obj["date"].toString();
+        double open = obj["open"].toDouble();
+        double high = obj["high"].toDouble();
+        double low = obj["low"].toDouble();
+        double close = obj["close"].toDouble();
+        double volume = obj["volume"].toDouble();
+        maxVolume = std::max(maxVolume, volume);
+
+        qDebug() << QString("Date: %1 | O: %2 | H: %3 | L: %4 | C: %5 | Vol: %6")
+                        .arg(dateStr).arg(open).arg(high).arg(low).arg(close).arg(volume);
+
+        QDateTime dateTime = QDateTime::fromString(dateStr, "yyyy-MM-dd");
+        if (!dateTime.isValid()) {
+            qDebug() << "Invalid date format:" << dateStr;
+            continue;
+        }
+
+        qint64 timestamp = dateTime.toMSecsSinceEpoch();
+
+        // Candlestick
+        auto *candlestickSet = new QCandlestickSet(timestamp);
+        candlestickSet->setOpen(open);
+        candlestickSet->setHigh(high);
+        candlestickSet->setLow(low);
+        candlestickSet->setClose(close);
+        candlestickSet->setBrush(close >= open ? Qt::green : Qt::red);
+        candlestickSeries->append(candlestickSet);
+
+        // Volume
+        volumeSet->append(volume);
+    }
+
+    // Update X-axis range
+    auto *axisX = qobject_cast<QDateTimeAxis *>(chart->axes(Qt::Horizontal).first());
+    if (axisX && candlestickSeries->count() > 1) {
+        const auto sets = candlestickSeries->sets();
+        QDateTime first = QDateTime::fromMSecsSinceEpoch(sets.first()->timestamp());
+        QDateTime last = QDateTime::fromMSecsSinceEpoch(sets.last()->timestamp());
+        axisX->setRange(first, last);
+    }
+
+    // Update volume Y-axis
+    if (volumeAxisY) {
+        volumeAxisY->setRange(0, maxVolume * 1.1);  // leave headroom
+    }
+
+    qDebug() << "=== End Stock Data ===";
+    qDebug() << "Added" << candlestickSeries->count() << "candlestick sets and"
+             << volumeSet->count() << "volume bars.";
+}
+
