@@ -15,8 +15,41 @@
 #include <QDateTime>
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QBarSet>
+#include <QWheelEvent>
+#include <QKeyEvent>
+#include <algorithm>
+#include <limits>
 
+// Custom ChartView class to handle scroll wheel zooming
+class CustomChartView : public QChartView {
+public:
+    CustomChartView(QWidget* parent = nullptr) : QChartView(parent) {
+        setRubberBand(QChartView::RectangleRubberBand);
+        setDragMode(QGraphicsView::ScrollHandDrag);
+    }
 
+protected:
+    void wheelEvent(QWheelEvent* event) override {
+        if (chart()) {
+            const qreal factor = 1.15;
+            if (event->angleDelta().y() > 0) {
+                chart()->zoom(factor);
+            } else {
+                chart()->zoom(1.0 / factor);
+            }
+            event->accept();
+        }
+    }
+
+    void keyPressEvent(QKeyEvent* event) override {
+        if (event->key() == Qt::Key_R) {
+            if (chart()) {
+                chart()->zoomReset();
+            }
+        }
+        QChartView::keyPressEvent(event);
+    }
+};
 
 void pages::fetchStockData(const QString& symbol) {
     QProcess* process = new QProcess(this);
@@ -24,7 +57,7 @@ void pages::fetchStockData(const QString& symbol) {
     connect(process, &QProcess::finished, this, [this, process]() {
         QByteArray output = process->readAllStandardOutput();
         QByteArray errorOutput = process->readAllStandardError();
-        QString jsonString = QString(output).trimmed();;
+        QString jsonString = QString(output).trimmed();
 
         // Debug print the raw output
         qDebug() << "Python script output:" << jsonString;
@@ -77,6 +110,9 @@ pages::pages(QWidget *parent)
     , ui(new Ui::pages)
     , currentAnimation(nullptr)
     , lastCheckedButton(nullptr)
+    , originalMinPrice(0)
+    , originalMaxPrice(0)
+    , originalMaxVolume(0)
 {
     ui->setupUi(this);
 
@@ -181,7 +217,7 @@ void pages::setupCandlestickChart() {
     chart->setAnimationOptions(QChart::SeriesAnimations);
 
     // X Axis (shared for both series)
-    QDateTimeAxis *axisX = new QDateTimeAxis();
+    axisX = new QDateTimeAxis();
     axisX->setFormat("dd-MM");
     axisX->setTitleText("Date");
     chart->addAxis(axisX, Qt::AlignBottom);
@@ -189,7 +225,7 @@ void pages::setupCandlestickChart() {
     volumeSeries->attachAxis(axisX);
 
     // Y Axis for Candlestick Prices
-    QValueAxis *axisYPrice = new QValueAxis();
+    axisYPrice = new QValueAxis();
     axisYPrice->setTitleText("Price");
     chart->addAxis(axisYPrice, Qt::AlignLeft);
     candlestickSeries->attachAxis(axisYPrice);
@@ -200,19 +236,41 @@ void pages::setupCandlestickChart() {
     chart->addAxis(volumeAxisY, Qt::AlignRight);
     volumeSeries->attachAxis(volumeAxisY);
 
-    // Setup chart view
-    ui->chartWidget->setChart(chart);
-    ui->chartWidget->setRenderHint(QPainter::Antialiasing);
-    chartView = ui->chartWidget;
+    // Check if ui->chartWidget is already a QChartView
+    chartView = qobject_cast<QChartView*>(ui->chartWidget);
 
-    // Enable interaction
+    if (!chartView) {
+        // If it's not a QChartView, we need to replace it properly
+        QWidget* parent = ui->chartWidget->parentWidget();
+
+        // Get the geometry and layout info before replacing
+        QRect geometry = ui->chartWidget->geometry();
+        QString objectName = ui->chartWidget->objectName();
+
+        // Create new chart view with same parent
+        chartView = new CustomChartView(parent);
+        chartView->setObjectName(objectName);
+        chartView->setGeometry(geometry);
+
+        // Hide old widget and show new one
+        ui->chartWidget->hide();
+        chartView->show();
+
+        // Update the ui pointer
+        ui->chartWidget = chartView;
+    } else {
+        // If it's already a QChartView, just install event filter for wheel events
+        chartView->installEventFilter(this);
+    }
+
+    chartView->setChart(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
     chartView->setRubberBand(QChartView::RectangleRubberBand);
     chartView->setDragMode(QGraphicsView::ScrollHandDrag);
     chartView->setInteractive(true);
 
-    qDebug() << "Chart setup complete with candlestick + volume bars.";
+    qDebug() << "Chart setup complete with candlestick + volume bars and custom zoom.";
 }
-
 
 void pages::updateCandlestickChart(const QJsonArray &data) {
     if (!candlestickSeries || !volumeSet || data.isEmpty()) {
@@ -227,31 +285,28 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
     qDebug() << "=== Stock Data with Volume ===";
 
     // Sort by date
-    // Step 1: Copy QJsonArray to QVector<QJsonValue>
     QVector<QJsonValue> tempList;
     for (const QJsonValue &val : data) {
         tempList.append(val);
     }
 
-    // Step 2: Sort using std::sort (now safe)
     std::sort(tempList.begin(), tempList.end(), [](const QJsonValue &a, const QJsonValue &b) {
         return a.toObject()["date"].toString() < b.toObject()["date"].toString();
     });
 
-    // Step 3: Copy back to QJsonArray
     QJsonArray sortedData;
     for (const QJsonValue &val : tempList) {
         sortedData.append(val);
     }
 
-
-    // Track max volume for Y-axis scaling
+    // Track ranges for proper axis management
     double maxVolume = 0;
     double minPrice = std::numeric_limits<double>::max();
     double maxPrice = std::numeric_limits<double>::lowest();
+    QDateTime firstDate, lastDate;
 
-    for (const QJsonValue &value : sortedData) {
-        QJsonObject obj = value.toObject();
+    for (int i = 0; i < sortedData.size(); ++i) {
+        QJsonObject obj = sortedData[i].toObject();
 
         QString dateStr = obj["date"].toString();
         double open = obj["open"].toDouble();
@@ -259,8 +314,8 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         double low = obj["low"].toDouble();
         double close = obj["close"].toDouble();
         double volume = obj["volume"].toDouble();
-        maxVolume = std::max(maxVolume, volume);
 
+        maxVolume = std::max(maxVolume, volume);
         minPrice = std::min(minPrice, low);
         maxPrice = std::max(maxPrice, high);
 
@@ -272,6 +327,9 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
             qDebug() << "Invalid date format:" << dateStr;
             continue;
         }
+
+        if (i == 0) firstDate = dateTime;
+        if (i == sortedData.size() - 1) lastDate = dateTime;
 
         qint64 timestamp = dateTime.toMSecsSinceEpoch();
 
@@ -288,28 +346,50 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         volumeSet->append(volume);
     }
 
-    auto *axisYPrice = qobject_cast<QValueAxis *>(chart->axes(Qt::Vertical).first());
-    if (axisYPrice) {
-        axisYPrice->setRange(minPrice * 0.95, maxPrice * 1.05);  // Add some padding
-    }
+    // Store original ranges for zoom reset
+    originalMinPrice = minPrice * 0.95;
+    originalMaxPrice = maxPrice * 1.05;
+    originalMaxVolume = maxVolume * 1.1;
+    originalFirstDate = firstDate;
+    originalLastDate = lastDate;
 
-
-    // Update X-axis range
-    auto *axisX = qobject_cast<QDateTimeAxis *>(chart->axes(Qt::Horizontal).first());
-    if (axisX && candlestickSeries->count() > 1) {
-        const auto sets = candlestickSeries->sets();
-        QDateTime first = QDateTime::fromMSecsSinceEpoch(sets.first()->timestamp());
-        QDateTime last = QDateTime::fromMSecsSinceEpoch(sets.last()->timestamp());
-        axisX->setRange(first, last);
-    }
-
-    // Update volume Y-axis
-    if (volumeAxisY) {
-        volumeAxisY->setRange(0, maxVolume * 1.1);  // leave headroom
-    }
+    // Set axis ranges
+    axisYPrice->setRange(originalMinPrice, originalMaxPrice);
+    volumeAxisY->setRange(0, originalMaxVolume);
+    axisX->setRange(originalFirstDate, originalLastDate);
 
     qDebug() << "=== End Stock Data ===";
     qDebug() << "Added" << candlestickSeries->count() << "candlestick sets and"
              << volumeSet->count() << "volume bars.";
 }
 
+void pages::resetZoom() {
+    if (chart && axisYPrice && volumeAxisY && axisX) {
+        axisYPrice->setRange(originalMinPrice, originalMaxPrice);
+        volumeAxisY->setRange(0, originalMaxVolume);
+        axisX->setRange(originalFirstDate, originalLastDate);
+        chart->zoomReset();
+    }
+}
+
+bool pages::eventFilter(QObject* obj, QEvent* event) {
+    if (obj == chartView && event->type() == QEvent::Wheel) {
+        QWheelEvent* wheelEvent = static_cast<QWheelEvent*>(event);
+        if (chart) {
+            const qreal factor = 1.15;
+            if (wheelEvent->angleDelta().y() > 0) {
+                chart->zoom(factor);
+            } else {
+                chart->zoom(1.0 / factor);
+            }
+            return true;
+        }
+    } else if (obj == chartView && event->type() == QEvent::KeyPress) {
+        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+        if (keyEvent->key() == Qt::Key_R) {
+            resetZoom();
+            return true;
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
+}

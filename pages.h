@@ -4,12 +4,12 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QPropertyAnimation>
-
 #include <QtCharts/QChartGlobal>
 #include <QtCharts/QChartView>
 #include <QtCharts/QChart>
 #include <QtCharts/QCandlestickSeries>
 #include <QtCharts/QCandlestickSet>
+#include <QDateTime>
 #include <QtCharts/QChart>
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QBarSet>
@@ -30,6 +30,9 @@ public:
     ~pages();
     void fetchStockData(const QString& symbol);
 
+protected:
+    bool eventFilter(QObject* obj, QEvent* event) override;
+
 private slots:
     void onButtonToggled(bool checked);
 
@@ -46,6 +49,18 @@ private:
     QBarSeries *volumeSeries;
     QBarSet *volumeSet;
     QValueAxis *volumeAxisY;
+    QDateTimeAxis* axisX;
+    QValueAxis* axisYPrice;
+
+    // Store original ranges for zoom reset
+    double originalMinPrice;
+    double originalMaxPrice;
+    double originalMaxVolume;
+    QDateTime originalFirstDate;
+    QDateTime originalLastDate;
+
+    // Method to reset zoom
+    void resetZoom();
 
 
     void setupCandlestickChart();
