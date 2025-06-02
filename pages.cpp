@@ -47,8 +47,12 @@ void pages::fetchStockData(const QString& symbol) {
         // TODO: Here, you can process the jsonArray and update your UI
     });
 
-    // Specify python executable and script path:
-    QString pythonExecutable = "python"; // Or full path like "C:/Python39/python.exe"
+    connect(process, &QProcess::errorOccurred, this, [process](QProcess::ProcessError error) {
+        qDebug() << "Process error:" << error;
+        process->deleteLater();
+    });
+    
+    QString pythonExecutable = "python";
     QString scriptPath = "C:/Stock Market Simulator/Stock-Market-Simulator/Models/candlestickChart.py"; // **Update this path**
 
     QStringList arguments = { scriptPath, symbol };
