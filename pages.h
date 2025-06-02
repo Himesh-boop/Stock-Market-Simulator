@@ -10,6 +10,12 @@
 #include <QtCharts/QChart>
 #include <QtCharts/QCandlestickSeries>
 #include <QtCharts/QCandlestickSet>
+#include <QtCharts/QChart>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QDateTimeAxis>
+#include <QtCharts/QValueAxis>
+
 
 namespace Ui {
 class pages;
@@ -36,6 +42,11 @@ private:
     QChartView *chartView = nullptr;
     QCandlestickSeries *candlestickSeries = nullptr;
     QChart *chart = nullptr;
+
+    QBarSeries *volumeSeries;
+    QBarSet *volumeSet;
+    QValueAxis *volumeAxisY;
+
 
     void setupCandlestickChart();
     void updateCandlestickChart(const QJsonArray &data);

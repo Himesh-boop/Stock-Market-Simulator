@@ -3,30 +3,39 @@ C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Utils/Logger.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Portfolio.h
-C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.h
-C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.h
 C:/Stock Market Simulator/Stock-Market-Simulator/UI/TradeDialog.h
-C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListView.h
+C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.h
+C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.h
 C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractAxis
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractBarSeries
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractSeries
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QBarSeries
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QBarSet
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QCandlestickSeries
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QCandlestickSet
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChart
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChartGlobal
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChartView
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QDateTimeAxis
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QLegend
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QValueAxis
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractaxis.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractbarseries.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractseries.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qbarseries.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qbarset.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qcandlestickseries.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qcandlestickset.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchart.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchartglobal.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchartview.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qdatetimeaxis.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qlegend.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtcharts-config.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtchartsexports.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qvalueaxis.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QList
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QMargins
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QObject
@@ -34,6 +43,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QRect
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QSize
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QSizeF
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QStringList
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QVariant
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/q17memory.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/q20functional.h
@@ -243,6 +253,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
+C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListView.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Utils/config.h
 C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
  mmc:Q_OBJECT
@@ -424,8 +435,8 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
-C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Utils/Logger.cpp
+C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Portfolio.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListview.cpp
