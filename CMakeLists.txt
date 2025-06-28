@@ -60,7 +60,7 @@ set(HEADERS
     Utils/Config.h
 )
 
-# UI files (with correct paths)
+# UI files 
 set(UIS
     pages.ui
     pages/loginpage.ui

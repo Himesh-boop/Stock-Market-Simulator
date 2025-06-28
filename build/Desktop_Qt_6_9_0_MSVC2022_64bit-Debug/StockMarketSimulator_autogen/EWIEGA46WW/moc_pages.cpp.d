@@ -27,6 +27,7 @@ C:/Stock\ Market\ Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC20
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtcharts-config.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtchartsexports.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qvalueaxis.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QMargins \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QObject \
@@ -60,6 +61,7 @@ C:/Stock\ Market\ Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC20
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcalendar.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qchar.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare_impl.h \
@@ -76,6 +78,7 @@ C:/Stock\ Market\ Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC20
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatetime.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdebug.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qeasingcurve.h \

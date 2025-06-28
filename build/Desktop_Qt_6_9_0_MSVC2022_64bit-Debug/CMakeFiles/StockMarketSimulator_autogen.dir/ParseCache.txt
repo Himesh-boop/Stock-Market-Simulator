@@ -3,9 +3,10 @@ C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Utils/Logger.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Portfolio.h
-C:/Stock Market Simulator/Stock-Market-Simulator/UI/TradeDialog.h
-C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.h
+C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.h
+C:/Stock Market Simulator/Stock-Market-Simulator/UI/TradeDialog.h
+C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListView.h
 C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractAxis
@@ -36,6 +37,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtcharts-config.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtchartsexports.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qvalueaxis.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QDateTime
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QList
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QMargins
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QObject
@@ -69,6 +71,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcalendar.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare_impl.h
@@ -85,6 +88,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcoreevent.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdeadlinetimer.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/qeasingcurve.h
@@ -253,7 +257,6 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Stock Market Simulator/Stock-Market-Simulator/pages.h
-C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListView.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Utils/config.h
 C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
  mmc:Q_OBJECT
@@ -435,8 +438,8 @@ C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtWidgets/qwidget.h
  mdp:C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
-C:/Stock Market Simulator/Stock-Market-Simulator/Utils/Logger.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Data/DataProvider.cpp
+C:/Stock Market Simulator/Stock-Market-Simulator/Utils/Logger.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Portfolio.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/UI/StockListview.cpp

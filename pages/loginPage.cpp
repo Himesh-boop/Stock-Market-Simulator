@@ -93,7 +93,7 @@ void loginPage::validateInput()
     QString username = ui->Username->text();
     QString password = ui->Password->text();
     
-    // Simple validation example
+    // Simple validation
     bool isValid = !username.isEmpty() && password.length() >= 6;
     
     // Set the login button enabled/disabled based on validation
@@ -156,12 +156,14 @@ void loginPage::onLoginButtonClicked()
 
 bool loginPage::checkCredentials(const QString &username, const QString &password)
 {
-    // Demo credentials - in a real app, you would check against a database or API
+    // Demo credentials -  check from a database in the final app.
     if (username == "himesh" && password == "password123") {
         return true;
     } else if (username == "user" && password == "user123") {
         return true;
     } else if (username == "pratik" && password == "pratik123"){
+        return true;
+    } else if (username == "prajaya" && password == "prajaya123"){
         return true;
     }
     return false;

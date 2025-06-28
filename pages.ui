@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>536</width>
-    <height>430</height>
+    <width>608</width>
+    <height>408</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -298,10 +298,421 @@ QPushButton:checked {
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
-         <widget class="QWidget" name="PortfolioPage"/>
-         <widget class="QWidget" name="CashPage"/>
+         <widget class="QWidget" name="PortfolioPage">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0">
+            <widget class="QFrame" name="Cards">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>2</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Plain</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>11</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="widget_4" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+    border-radius: 12px;                        /* Curved corners */
+    padding: 12px;                              /* Space inside the card */</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string>Total Value:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string>Rs. XXXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+    border-radius: 12px;                        /* Curved corners */
+    padding: 12px;                              /* Space inside the card */</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string>Total Gain/Loss:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string>Rs. XXXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_3" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+    border-radius: 12px;                        /* Curved corners */
+    padding: 12px;                              /* Space inside the card */</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string>Total Change:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                   </property>
+                   <property name="text">
+                    <string> XX.XXX %</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QWidget" name="Title" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>2</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <pointsize>24</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 50;
+font-weight: bold;</string>
+                </property>
+                <property name="text">
+                 <string>My Portfolio</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 17;</string>
+                </property>
+                <property name="text">
+                 <string>Track your investments and gains</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 14;
+</string>
+                </property>
+                <property name="text">
+                 <string>Portfolio Overview</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QTableWidget" name="Table">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>6</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>300</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget {
+    background-color: #2E2E2E;
+    color: white;
+    gridline-color: #505050;
+    font-size: 10 px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #444;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    padding: 6px;
+    border-bottom: 1px solid #505050;
+}
+
+QTableWidget::item:selected {
+    background-color: #66ccff;
+    color: black;
+}
+</string>
+             </property>
+             <property name="tabKeyNavigation">
+              <bool>true</bool>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <property name="rowCount">
+              <number>8</number>
+             </property>
+             <property name="columnCount">
+              <number>5</number>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <item row="0" column="0">
+              <property name="text">
+               <string>Symbol</string>
+              </property>
+             </item>
+             <item row="0" column="1">
+              <property name="text">
+               <string>Name</string>
+              </property>
+             </item>
+             <item row="0" column="2">
+              <property name="text">
+               <string>Quantity</string>
+              </property>
+             </item>
+             <item row="0" column="3">
+              <property name="text">
+               <string>Current Price</string>
+              </property>
+             </item>
+             <item row="0" column="4">
+              <property name="text">
+               <string>Total Value</string>
+              </property>
+             </item>
+             <item row="1" column="0">
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+               </font>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="CashPage">
+          <widget class="QWidget" name="Title_2" native="true">
+           <property name="geometry">
+            <rect>
+             <x>-10</x>
+             <y>0</y>
+             <width>451</width>
+             <height>109</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>2</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="font">
+               <font>
+                <pointsize>24</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 50;
+font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>My Portfolio</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 17;</string>
+              </property>
+              <property name="text">
+               <string>Track your investments and gains</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 14;
+</string>
+              </property>
+              <property name="text">
+               <string>Portfolio Overview</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
          <widget class="QWidget" name="CandleStickPage">
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
