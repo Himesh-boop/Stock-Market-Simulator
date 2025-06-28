@@ -1,4 +1,4 @@
-C:/New\ folder\ (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug/P2WXERC3RM/moc_loginpage.cpp: C:/New\ folder\ (4)/Stock-Market-Simulator/pages/loginpage.h \
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug/P2WXERC3RM/moc_loginpage.cpp: C:/StockMarketSimulator/Stock-Market-Simulator/pages/loginpage.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QPropertyAnimation \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QSettings \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QTimer \

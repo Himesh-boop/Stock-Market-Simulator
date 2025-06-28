@@ -1,5 +1,0 @@
-C:/Stock Market Simulator/Stock-Market-Simulator/build/Unnamed-Debug/CMakeFiles/StockMarketSimulator.dir
-C:/Stock Market Simulator/Stock-Market-Simulator/build/Unnamed-Debug/CMakeFiles/edit_cache.dir
-C:/Stock Market Simulator/Stock-Market-Simulator/build/Unnamed-Debug/CMakeFiles/rebuild_cache.dir
-C:/Stock Market Simulator/Stock-Market-Simulator/build/Unnamed-Debug/CMakeFiles/StockMarketSimulator_autogen_timestamp_deps.dir
-C:/Stock Market Simulator/Stock-Market-Simulator/build/Unnamed-Debug/CMakeFiles/StockMarketSimulator_autogen.dir

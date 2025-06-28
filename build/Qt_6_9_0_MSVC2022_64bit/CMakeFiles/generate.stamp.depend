@@ -1,10 +1,4 @@
 # CMake generation dependency list for this directory.
-C:/New folder (4)/Stock-Market-Simulator/CMakeLists.txt
-C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/.qtc/package-manager/auto-setup.cmake
-C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake
-C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeRCCompiler.cmake
-C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeSystem.cmake
-C:/New folder (4)/Stock-Market-Simulator/resources.qrc
 C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
 C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake
@@ -240,6 +234,53 @@ C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivate/Qt6OpenGLWidgetsPrivat
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivate/Qt6OpenGLWidgetsPrivateDependencies.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivate/Qt6OpenGLWidgetsPrivateTargets.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6OpenGLWidgetsPrivate/Qt6OpenGLWidgetsPrivateVersionlessAliasTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-debug.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateAdditionalTargetInfo.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfig.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersion.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersionImpl.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateDependencies.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateTargets.cmake
+C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateVersionlessAliasTargets.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake
@@ -278,3 +319,9 @@ C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersion.cma
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake
 C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake
+C:/StockMarketSimulator/Stock-Market-Simulator/CMakeLists.txt
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/.qtc/package-manager/auto-setup.cmake
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeRCCompiler.cmake
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeSystem.cmake
+C:/StockMarketSimulator/Stock-Market-Simulator/resources.qrc

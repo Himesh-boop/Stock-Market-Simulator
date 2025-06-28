@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>998</width>
-    <height>511</height>
+    <width>1228</width>
+    <height>737</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>40</y>
+      <x>270</x>
+      <y>80</y>
       <width>761</width>
       <height>551</height>
      </rect>
@@ -51,6 +51,23 @@ QPushButton#ShowPasswordButton:pressed{
 }
 QPushButton#ShowPasswordButton:hover{
     background-color:rgba(255, 107, 107, 200);
+}
+
+QPushButton#signUpButton{
+    background-color:rgba(255, 107, 107, 255);
+    color:rgba(255, 255, 255, 200);
+    border-radius:8px;
+    font-size: 16px;
+    padding: 5px;
+}
+QPushButton#signUpButton:pressed{
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgba(85, 98, 112, 255);
+    background-position:calc(100% - 10px)center;
+}
+QPushButton#signUpButton:hover{
+    background-color:rgba(85, 98, 112, 255);
 }</string>
     </property>
     <widget class="QLabel" name="LoginArea">
@@ -245,29 +262,17 @@ padding-bottom:7px;
       <string>Remember me</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="forgotPasswordButton">
+    <widget class="QPushButton" name="signUpButton">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>430</x>
        <y>400</y>
-       <width>131</width>
+       <width>83</width>
        <height>31</height>
       </rect>
      </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgba(85, 98, 112, 200);
-background-color: transparent;
-border: none;
-text-decoration: underline;</string>
-     </property>
      <property name="text">
-      <string>Forgot Password?</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
+      <string>Sign Up?</string>
      </property>
     </widget>
     <zorder>LoginArea</zorder>
@@ -278,8 +283,8 @@ text-decoration: underline;</string>
     <zorder>Username</zorder>
     <zorder>statusLabel</zorder>
     <zorder>rememberMeCheckbox</zorder>
-    <zorder>forgotPasswordButton</zorder>
     <zorder>Password</zorder>
+    <zorder>signUpButton</zorder>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

@@ -1,4 +1,4 @@
-# Install script for directory: C:/New folder (4)/Stock-Market-Simulator
+# Install script for directory: C:/StockMarketSimulator/Stock-Market-Simulator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,7 +35,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/install_local_manifest.txt"
+  file(WRITE "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -51,6 +51,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

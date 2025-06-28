@@ -9,6 +9,7 @@
 #ifndef UI_PAGES_H
 #define UI_PAGES_H
 
+#include <QtCharts/QChartView>
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
@@ -38,7 +39,10 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *PortfolioPage;
     QWidget *CashPage;
-    QWidget *CandleSTickPage;
+    QWidget *CandleStickPage;
+    QVBoxLayout *verticalLayout_3;
+    QChartView *chartWidget;
+    QWidget *widget;
     QWidget *HistoryPage;
     QWidget *NewsPage;
 
@@ -46,7 +50,7 @@ public:
     {
         if (pages->objectName().isEmpty())
             pages->setObjectName("pages");
-        pages->resize(536, 408);
+        pages->resize(1217, 693);
         pages->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "    background-color: #2E2E2E;\n"
 "    color: #E0E0E0;\n"
@@ -246,9 +250,31 @@ public:
         CashPage = new QWidget();
         CashPage->setObjectName("CashPage");
         stackedWidget->addWidget(CashPage);
-        CandleSTickPage = new QWidget();
-        CandleSTickPage->setObjectName("CandleSTickPage");
-        stackedWidget->addWidget(CandleSTickPage);
+        CandleStickPage = new QWidget();
+        CandleStickPage->setObjectName("CandleStickPage");
+        verticalLayout_3 = new QVBoxLayout(CandleStickPage);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        chartWidget = new QChartView(CandleStickPage);
+        chartWidget->setObjectName("chartWidget");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(2);
+        sizePolicy2.setHeightForWidth(chartWidget->sizePolicy().hasHeightForWidth());
+        chartWidget->setSizePolicy(sizePolicy2);
+
+        verticalLayout_3->addWidget(chartWidget);
+
+        widget = new QWidget(CandleStickPage);
+        widget->setObjectName("widget");
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(1);
+        sizePolicy3.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy3);
+
+        verticalLayout_3->addWidget(widget);
+
+        stackedWidget->addWidget(CandleStickPage);
         HistoryPage = new QWidget();
         HistoryPage->setObjectName("HistoryPage");
         stackedWidget->addWidget(HistoryPage);
@@ -265,7 +291,7 @@ public:
 
         retranslateUi(pages);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(pages);

@@ -25,6 +25,7 @@ public:
 private slots:
     // Add slots for handling user interactions
     void onLoginButtonClicked();
+    void openSignUpPage();
     void validateInput();
     void showLoginResult(bool success);
 

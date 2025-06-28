@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Charts)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Charts Sql)
 
 # Include directories
 include_directories(
@@ -17,13 +17,16 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/UI
     ${PROJECT_SOURCE_DIR}/UI/pages
     ${PROJECT_SOURCE_DIR}/Utils
+    ${PROJECT_SOURCE_DIR}/pages
 )
 
 # Source files
 set(SOURCES
     main.cpp
 
+    pages/signuppage.cpp
     pythonBackend/nepse_data_server.py
+    db/dbUpdater.py
 
     pages/loginpage.cpp
     pages.cpp
@@ -40,12 +43,14 @@ set(SOURCES
 
     Utils/Logger.cpp
     Utils/Config.cpp
+
+    logindb.cpp
 )
 
 # Header files
 set(HEADERS
     pages.h
-
+    pages/signuppage.h
     pages/loginpage.h
     Data/DataProvider.h
 
@@ -58,21 +63,22 @@ set(HEADERS
 
     Utils/Logger.h
     Utils/Config.h
+
+    logindb.h
 )
 
-# UI files (with correct paths)
-set(UIS
+# All UI files should be here directly (for AUTOUIC to work)
+set(FORMS
     pages.ui
     pages/loginpage.ui
+    pages/signuppage.ui
 )
 
-
-# Create the executable
+# Create executable with .ui files included directly
 add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
-    ${UI_HEADERS}
-    ${UIS}
+    ${FORMS}
     resources.qrc
 )
 
@@ -82,4 +88,5 @@ target_link_libraries(StockMarketSimulator
     Qt6::Gui
     Qt6::Widgets
     Qt6::Charts
+    Qt6::Sql
 )

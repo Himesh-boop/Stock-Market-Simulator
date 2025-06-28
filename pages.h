@@ -61,8 +61,6 @@ private:
 
     // Method to reset zoom
     void resetZoom();
-
-
     void setupCandlestickChart();
     void updateCandlestickChart(const QJsonArray &data);
 };

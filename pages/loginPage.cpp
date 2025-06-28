@@ -1,6 +1,7 @@
 #include "loginpage.h"
 #include "ui_loginpage.h"
 #include "pages.h"
+#include "signuppage.h"
 
 
 loginPage::loginPage(QWidget *parent) :
@@ -35,18 +36,12 @@ void loginPage::setupConnections()
 {
     // Connect login button click
     connect(ui->LoginButton, &QPushButton::clicked, this, &loginPage::onLoginButtonClicked);
+    connect(ui->signUpButton, &QPushButton::clicked, this, &loginPage::openSignUpPage);
     
     // Connect text changed signals for validation
     connect(ui->Username, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     connect(ui->Password, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     connect(validationTimer, &QTimer::timeout, this, &loginPage::validateInput);
-    
-    // Connect forgot password button
-    connect(ui->forgotPasswordButton, &QPushButton::clicked, [this]() {
-        QMessageBox::information(this, "Password Recovery", 
-                                "Password recovery functionality will be implemented soon.");
-    });
-    
 }
 
 void loginPage::setupAnimations()
@@ -102,31 +97,18 @@ void loginPage::validateInput()
     // Visual feedback
     if (!username.isEmpty() && username.length() < 3) {
         ui->statusLabel->setText("Username too short");
-        // ui->Username->setStyleSheet("background-color:rgba(0, 0, 0, 0); "
-        //                          "border:2px solid rgba(0, 0, 0, 0); "
-        //                          "border-bottom-color:rgba(255, 107, 107, 200); "
-        //                          "color:rgba(0, 0, 0); "
-        //                          "padding-bottom:7px;");
     } else if (!password.isEmpty() && password.length() < 6) {
         ui->statusLabel->setText("Password too short");
-        // ui->Password->setStyleSheet("background-color:rgba(0, 0, 0, 0); "
-        //                          "border:2px solid rgba(0, 0, 0, 0); "
-        //                          "border-bottom-color:rgba(255, 107, 107, 200); "
-        //                          "color:rgba(0, 0, 0); "
-        //                          "padding-bottom:7px;");
     } else {
         ui->statusLabel->clear();
-        // ui->Username->setStyleSheet("background-color:rgba(0, 0, 0, 0); "
-        //                          "border:2px solid rgba(0, 0, 0, 0); "
-        //                          "border-bottom-color:rgba(46, 82, 101, 200); "
-        //                          "color:rgba(0, 0, 0); "
-        //                          "padding-bottom:7px;");
-        // ui->Password->setStyleSheet("background-color:rgba(0, 0, 0, 0); "
-        //                          "border:2px solid rgba(0, 0, 0, 0); "
-        //                          "border-bottom-color:rgba(46, 82, 101, 200); "
-        //                          "color:rgba(0, 0, 0); "
-        //                          "padding-bottom:7px;");
     }
+}
+
+void loginPage::openSignUpPage() {
+    SignUpPage *signup = new SignUpPage(this);
+    signup->setWindowModality(Qt::ApplicationModal);
+    signup->setAttribute(Qt::WA_DeleteOnClose);
+    signup->show();
 }
 
 void loginPage::onLoginButtonClicked()
@@ -170,16 +152,6 @@ bool loginPage::checkCredentials(const QString &username, const QString &passwor
 void loginPage::showLoginResult(bool success)
 {
     if (success) {
-        // // Success animation and message
-        // ui->statusLabel->setStyleSheet("color: rgba(0, 128, 0, 200);");
-        // ui->statusLabel->setText("Login successful!");
-        
-        // // After a short delay, you might redirect to the main application
-        // QTimer::singleShot(1500, [this]() {
-        //     QMessageBox::information(this, "Login Successful", "Welcome to the application!");
-        //     // Here you would typically navigate to the main window or dashboard
-        // });
-
         pages *landingPage = new pages(this);
         landingPage->show();
         this->hide();

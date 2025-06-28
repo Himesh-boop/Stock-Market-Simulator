@@ -1,22 +1,33 @@
-C:/New\ folder\ (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug/EWIEGA46WW/moc_pages.cpp: C:/New\ folder\ (4)/Stock-Market-Simulator/pages.h \
+C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug/EWIEGA46WW/moc_pages.cpp: C:/StockMarketSimulator/Stock-Market-Simulator/pages.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractAxis \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractBarSeries \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QAbstractSeries \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QBarSeries \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QBarSet \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QCandlestickSeries \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QCandlestickSet \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChart \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChartGlobal \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QChartView \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QDateTimeAxis \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QLegend \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/QValueAxis \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractaxis.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractbarseries.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qabstractseries.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qbarseries.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qbarset.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qcandlestickseries.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qcandlestickset.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchart.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchartglobal.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qchartview.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qdatetimeaxis.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qlegend.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtcharts-config.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qtchartsexports.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCharts/qvalueaxis.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/QDateTime \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QList \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QMargins \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QObject \
@@ -24,6 +35,7 @@ C:/New\ folder\ (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMa
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QRect \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QSize \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QSizeF \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/QStringList \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/QVariant \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/q20functional.h \
@@ -49,6 +61,7 @@ C:/New\ folder\ (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMa
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcalendar.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qchar.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare_impl.h \
@@ -65,6 +78,7 @@ C:/New\ folder\ (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMa
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdatetime.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qdebug.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qeasingcurve.h \

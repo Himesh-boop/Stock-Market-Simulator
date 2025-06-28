@@ -24,9 +24,9 @@ events:
       The output was:
       0
       MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-      Build started 5/29/2025 5:31:02 PM.
+      Build started 6/28/2025 5:07:16 PM.
       
-      Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -39,7 +39,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -47,13 +47,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\4.0.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.58
+      Time Elapsed 00:00:00.51
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -61,7 +61,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CompilerIdCXX/CompilerIdCXX.exe
+        C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-uqw5ym"
-      binary: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-uqw5ym"
+      source: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-cqzywi"
+      binary: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-cqzywi"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -83,40 +83,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-uqw5ym'
+        Change Dir: 'C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-cqzywi'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_03157.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_af2a7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-        Build started 5/29/2025 5:31:03 PM.
+        Build started 6/28/2025 5:07:17 PM.
         
-        Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-uqw5ym\\cmTC_03157.vcxproj" on node 1 (default targets).
+        Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-cqzywi\\cmTC_af2a7.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_03157.dir\\Debug\\".
+          Creating directory "cmTC_af2a7.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-uqw5ym\\Debug\\".
-          Creating directory "cmTC_03157.dir\\Debug\\cmTC_03157.tlog\\".
+          Creating directory "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-cqzywi\\Debug\\".
+          Creating directory "cmTC_af2a7.dir\\Debug\\cmTC_af2a7.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_03157.dir\\Debug\\cmTC_03157.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_03157.dir\\Debug\\cmTC_03157.tlog\\unsuccessfulbuild".
+          Creating "cmTC_af2a7.dir\\Debug\\cmTC_af2a7.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_af2a7.dir\\Debug\\cmTC_af2a7.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_03157.dir\\Debug\\\\" /Fd"cmTC_03157.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_af2a7.dir\\Debug\\\\" /Fd"cmTC_af2a7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_03157.dir\\Debug\\\\" /Fd"cmTC_03157.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_af2a7.dir\\Debug\\\\" /Fd"cmTC_af2a7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-uqw5ym\\Debug\\cmTC_03157.exe" /INCREMENTAL /ILK:"cmTC_03157.dir\\Debug\\cmTC_03157.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-uqw5ym/Debug/cmTC_03157.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-uqw5ym/Debug/cmTC_03157.lib" /MACHINE:X64  /machine:x64 cmTC_03157.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_03157.vcxproj -> C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-uqw5ym\\Debug\\cmTC_03157.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-cqzywi\\Debug\\cmTC_af2a7.exe" /INCREMENTAL /ILK:"cmTC_af2a7.dir\\Debug\\cmTC_af2a7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-cqzywi/Debug/cmTC_af2a7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-cqzywi/Debug/cmTC_af2a7.lib" /MACHINE:X64  /machine:x64 cmTC_af2a7.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_af2a7.vcxproj -> C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-cqzywi\\Debug\\cmTC_af2a7.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_03157.dir\\Debug\\cmTC_03157.tlog\\unsuccessfulbuild".
-          Touching "cmTC_03157.dir\\Debug\\cmTC_03157.tlog\\cmTC_03157.lastbuildstate".
-        Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-uqw5ym\\cmTC_03157.vcxproj" (default targets).
+          Deleting file "cmTC_af2a7.dir\\Debug\\cmTC_af2a7.tlog\\unsuccessfulbuild".
+          Touching "cmTC_af2a7.dir\\Debug\\cmTC_af2a7.tlog\\cmTC_af2a7.lastbuildstate".
+        Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-cqzywi\\cmTC_af2a7.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.47
+        Time Elapsed 00:00:00.52
         
       exitCode: 0
   -
@@ -162,8 +162,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-tg9lll"
-      binary: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-tg9lll"
+      source: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-zki8og"
+      binary: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-zki8og"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -173,40 +173,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-tg9lll'
+        Change Dir: 'C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-zki8og'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_818f7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8ca4c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-        Build started 5/29/2025 5:31:05 PM.
+        Build started 6/28/2025 5:07:18 PM.
         
-        Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\cmTC_818f7.vcxproj" on node 1 (default targets).
+        Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\cmTC_8ca4c.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_818f7.dir\\Debug\\".
+          Creating directory "cmTC_8ca4c.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\Debug\\".
-          Creating directory "cmTC_818f7.dir\\Debug\\cmTC_818f7.tlog\\".
+          Creating directory "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\Debug\\".
+          Creating directory "cmTC_8ca4c.dir\\Debug\\cmTC_8ca4c.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_818f7.dir\\Debug\\cmTC_818f7.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_818f7.dir\\Debug\\cmTC_818f7.tlog\\unsuccessfulbuild".
+          Creating "cmTC_8ca4c.dir\\Debug\\cmTC_8ca4c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8ca4c.dir\\Debug\\cmTC_8ca4c.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_818f7.dir\\Debug\\\\" /Fd"cmTC_818f7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_8ca4c.dir\\Debug\\\\" /Fd"cmTC_8ca4c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\src.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_818f7.dir\\Debug\\\\" /Fd"cmTC_818f7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\src.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_8ca4c.dir\\Debug\\\\" /Fd"cmTC_8ca4c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\src.cxx"
           src.cxx
-        C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\cmTC_818f7.vcxproj]
-        Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\cmTC_818f7.vcxproj" (default targets) -- FAILED.
+        C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\cmTC_8ca4c.vcxproj]
+        Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\cmTC_8ca4c.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\cmTC_818f7.vcxproj" (default target) (1) ->
+        "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\cmTC_8ca4c.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-tg9lll\\cmTC_818f7.vcxproj]
+          C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\src.cxx(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-zki8og\\cmTC_8ca4c.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.34
+        Time Elapsed 00:00:00.31
         
       exitCode: 1
   -
@@ -223,8 +223,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-avptj1"
-      binary: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-avptj1"
+      source: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-dn4het"
+      binary: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-dn4het"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -234,42 +234,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-avptj1'
+        Change Dir: 'C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-dn4het'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4824c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d8410.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-        Build started 5/29/2025 5:31:05 PM.
+        Build started 6/28/2025 5:07:19 PM.
         
-        Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\cmTC_4824c.vcxproj" on node 1 (default targets).
+        Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\cmTC_d8410.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_4824c.dir\\Debug\\".
+          Creating directory "cmTC_d8410.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\Debug\\".
-          Creating directory "cmTC_4824c.dir\\Debug\\cmTC_4824c.tlog\\".
+          Creating directory "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\Debug\\".
+          Creating directory "cmTC_d8410.dir\\Debug\\cmTC_d8410.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_4824c.dir\\Debug\\cmTC_4824c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_4824c.dir\\Debug\\cmTC_4824c.tlog\\unsuccessfulbuild".
+          Creating "cmTC_d8410.dir\\Debug\\cmTC_d8410.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_d8410.dir\\Debug\\cmTC_d8410.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_4824c.dir\\Debug\\\\" /Fd"cmTC_4824c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d8410.dir\\Debug\\\\" /Fd"cmTC_d8410.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\CheckFunctionExists.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_4824c.dir\\Debug\\\\" /Fd"cmTC_4824c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d8410.dir\\Debug\\\\" /Fd"cmTC_d8410.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\Debug\\cmTC_4824c.exe" /INCREMENTAL /ILK:"cmTC_4824c.dir\\Debug\\cmTC_4824c.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-avptj1/Debug/cmTC_4824c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-avptj1/Debug/cmTC_4824c.lib" /MACHINE:X64  /machine:x64 cmTC_4824c.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\cmTC_4824c.vcxproj]
-        Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\cmTC_4824c.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\Debug\\cmTC_d8410.exe" /INCREMENTAL /ILK:"cmTC_d8410.dir\\Debug\\cmTC_d8410.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-dn4het/Debug/cmTC_d8410.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-dn4het/Debug/cmTC_d8410.lib" /MACHINE:X64  /machine:x64 cmTC_d8410.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\cmTC_d8410.vcxproj]
+        Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\cmTC_d8410.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\cmTC_4824c.vcxproj" (default target) (1) ->
+        "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\cmTC_d8410.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-avptj1\\cmTC_4824c.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-dn4het\\cmTC_d8410.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.38
+        Time Elapsed 00:00:00.41
         
       exitCode: 1
   -
@@ -286,8 +286,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-wnrnn6"
-      binary: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-wnrnn6"
+      source: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-co17hh"
+      binary: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-co17hh"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -297,42 +297,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-wnrnn6'
+        Change Dir: 'C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-co17hh'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f40e7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_09dd5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-        Build started 5/29/2025 5:31:06 PM.
+        Build started 6/28/2025 5:07:19 PM.
         
-        Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\cmTC_f40e7.vcxproj" on node 1 (default targets).
+        Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\cmTC_09dd5.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_f40e7.dir\\Debug\\".
+          Creating directory "cmTC_09dd5.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\Debug\\".
-          Creating directory "cmTC_f40e7.dir\\Debug\\cmTC_f40e7.tlog\\".
+          Creating directory "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\Debug\\".
+          Creating directory "cmTC_09dd5.dir\\Debug\\cmTC_09dd5.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_f40e7.dir\\Debug\\cmTC_f40e7.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_f40e7.dir\\Debug\\cmTC_f40e7.tlog\\unsuccessfulbuild".
+          Creating "cmTC_09dd5.dir\\Debug\\cmTC_09dd5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_09dd5.dir\\Debug\\cmTC_09dd5.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f40e7.dir\\Debug\\\\" /Fd"cmTC_f40e7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_09dd5.dir\\Debug\\\\" /Fd"cmTC_09dd5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\CheckFunctionExists.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f40e7.dir\\Debug\\\\" /Fd"cmTC_f40e7.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_09dd5.dir\\Debug\\\\" /Fd"cmTC_09dd5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\Debug\\cmTC_f40e7.exe" /INCREMENTAL /ILK:"cmTC_f40e7.dir\\Debug\\cmTC_f40e7.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-wnrnn6/Debug/cmTC_f40e7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-wnrnn6/Debug/cmTC_f40e7.lib" /MACHINE:X64  /machine:x64 cmTC_f40e7.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\cmTC_f40e7.vcxproj]
-        Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\cmTC_f40e7.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\Debug\\cmTC_09dd5.exe" /INCREMENTAL /ILK:"cmTC_09dd5.dir\\Debug\\cmTC_09dd5.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-co17hh/Debug/cmTC_09dd5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-co17hh/Debug/cmTC_09dd5.lib" /MACHINE:X64  /machine:x64 cmTC_09dd5.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\cmTC_09dd5.vcxproj]
+        Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\cmTC_09dd5.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\cmTC_f40e7.vcxproj" (default target) (1) ->
+        "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\cmTC_09dd5.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-wnrnn6\\cmTC_f40e7.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-co17hh\\cmTC_09dd5.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.39
+        Time Elapsed 00:00:00.41
         
       exitCode: 1
   -
@@ -350,8 +350,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-h32sr7"
-      binary: "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-h32sr7"
+      source: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-5ywsyg"
+      binary: "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-5ywsyg"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -361,40 +361,40 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-h32sr7'
+        Change Dir: 'C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-5ywsyg'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_857c5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f9c14.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.13.19+0d9f5a35a for .NET Framework
-        Build started 5/29/2025 5:31:07 PM.
+        Build started 6/28/2025 5:07:20 PM.
         
-        Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\cmTC_857c5.vcxproj" on node 1 (default targets).
+        Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\cmTC_f9c14.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_857c5.dir\\Debug\\".
+          Creating directory "cmTC_f9c14.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\Debug\\".
-          Creating directory "cmTC_857c5.dir\\Debug\\cmTC_857c5.tlog\\".
+          Creating directory "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\Debug\\".
+          Creating directory "cmTC_f9c14.dir\\Debug\\cmTC_f9c14.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_857c5.dir\\Debug\\cmTC_857c5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_857c5.dir\\Debug\\cmTC_857c5.tlog\\unsuccessfulbuild".
+          Creating "cmTC_f9c14.dir\\Debug\\cmTC_f9c14.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f9c14.dir\\Debug\\cmTC_f9c14.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_857c5.dir\\Debug\\\\" /Fd"cmTC_857c5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f9c14.dir\\Debug\\\\" /Fd"cmTC_f9c14.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\src.cxx"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_857c5.dir\\Debug\\\\" /Fd"cmTC_857c5.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\src.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_f9c14.dir\\Debug\\\\" /Fd"cmTC_f9c14.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\src.cxx"
           src.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\Debug\\cmTC_857c5.exe" /INCREMENTAL /ILK:"cmTC_857c5.dir\\Debug\\cmTC_857c5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-h32sr7/Debug/cmTC_857c5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-h32sr7/Debug/cmTC_857c5.lib" /MACHINE:X64  /machine:x64 cmTC_857c5.dir\\Debug\\src.obj
-          cmTC_857c5.vcxproj -> C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\Debug\\cmTC_857c5.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\Debug\\cmTC_f9c14.exe" /INCREMENTAL /ILK:"cmTC_f9c14.dir\\Debug\\cmTC_f9c14.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-5ywsyg/Debug/cmTC_f9c14.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/CMakeScratch/TryCompile-5ywsyg/Debug/cmTC_f9c14.lib" /MACHINE:X64  /machine:x64 cmTC_f9c14.dir\\Debug\\src.obj
+          cmTC_f9c14.vcxproj -> C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\Debug\\cmTC_f9c14.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_857c5.dir\\Debug\\cmTC_857c5.tlog\\unsuccessfulbuild".
-          Touching "cmTC_857c5.dir\\Debug\\cmTC_857c5.tlog\\cmTC_857c5.lastbuildstate".
-        Done Building Project "C:\\New folder (4)\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-h32sr7\\cmTC_857c5.vcxproj" (default targets).
+          Deleting file "cmTC_f9c14.dir\\Debug\\cmTC_f9c14.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f9c14.dir\\Debug\\cmTC_f9c14.tlog\\cmTC_f9c14.lastbuildstate".
+        Done Building Project "C:\\StockMarketSimulator\\Stock-Market-Simulator\\build\\Qt_6_9_0_MSVC2022_64bit\\CMakeFiles\\CMakeScratch\\TryCompile-5ywsyg\\cmTC_f9c14.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.55
+        Time Elapsed 00:00:00.60
         
       exitCode: 0
 ...

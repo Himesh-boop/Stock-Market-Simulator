@@ -1,18 +1,18 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen",
-	"CMAKE_BINARY_DIR" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/New folder (4)/Stock-Market-Simulator",
+	"BUILD_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen",
+	"CMAKE_BINARY_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator",
 	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator/CMakeLists.txt",
-		"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/.qtc/package-manager/auto-setup.cmake",
-		"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeSystem.cmake",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/CMakeLists.txt",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/.qtc/package-manager/auto-setup.cmake",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeSystem.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake",
-		"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeGenericSystem.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake",
@@ -25,7 +25,7 @@
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/Windows-MSVC-CXX.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/Platform/Windows-MSVC.cmake",
-		"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeRCCompiler.cmake",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/4.0.2/CMakeRCCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeRCInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake",
 		"C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake",
@@ -362,86 +362,153 @@
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateAdditionalTargetInfo.cmake",
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateVersionlessAliasTargets.cmake",
 		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Charts/Qt6ChartsVersionlessAliasTargets.cmake",
-		"C:/New folder (4)/Stock-Market-Simulator/resources.qrc"
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersion.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfigVersionImpl.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateDependencies.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6SqlPrivate/Qt6SqlPrivateVersionlessAliasTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QIBaseDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QOCIDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake",
+		"C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-debug.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/msvc2022_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessAliasTargets.cmake",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/New folder (4)/Stock-Market-Simulator",
+	"CMAKE_SOURCE_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator",
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Data/DataProvider.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Data/DataProvider.h",
 			"MU",
 			"M5WLY3B75D/moc_DataProvider.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Portfolio.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Portfolio.h",
 			"MU",
 			"25IR5XJDBU/moc_Portfolio.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Stock.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Stock.h",
 			"MU",
 			"25IR5XJDBU/moc_Stock.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Trade.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Trade.h",
 			"MU",
 			"25IR5XJDBU/moc_Trade.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/UI/StockListView.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/StockListView.h",
 			"MU",
 			"KRKR4BN5RM/moc_StockListView.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/UI/TradeDialog.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/TradeDialog.h",
 			"MU",
 			"KRKR4BN5RM/moc_TradeDialog.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Utils/Config.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Config.h",
 			"MU",
 			"3AKZUBQRRA/moc_Config.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Utils/Logger.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Logger.h",
 			"MU",
 			"3AKZUBQRRA/moc_Logger.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/pages.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/logindb.h",
+			"MU",
+			"EWIEGA46WW/moc_logindb.cpp",
+			null
+		],
+		[
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages.h",
 			"MU",
 			"EWIEGA46WW/moc_pages.cpp",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/pages/loginpage.h",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages/loginpage.h",
 			"MU",
 			"P2WXERC3RM/moc_loginpage.cpp",
+			null
+		],
+		[
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages/signuppage.h",
+			"MU",
+			"P2WXERC3RM/moc_signuppage.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include",
-	"INCLUDE_DIR_Debug" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug",
-	"INCLUDE_DIR_MinSizeRel" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_MinSizeRel",
-	"INCLUDE_DIR_RelWithDebInfo" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_RelWithDebInfo",
-	"INCLUDE_DIR_Release" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Release",
-	"MOC_COMPILATION_FILE" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation.cpp",
-	"MOC_COMPILATION_FILE_Debug" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_Debug.cpp",
-	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_MinSizeRel.cpp",
-	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_RelWithDebInfo.cpp",
-	"MOC_COMPILATION_FILE_Release" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_Release.cpp",
+	"INCLUDE_DIR" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include",
+	"INCLUDE_DIR_Debug" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_MinSizeRel" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_MinSizeRel.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/StockMarketSimulator_autogen/mocs_compilation_Release.cpp",
 	"MOC_DEFINITIONS" : [],
 	"MOC_DEFINITIONS_Debug" : 
 	[
@@ -450,6 +517,7 @@
 		"QT_GUI_LIB",
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
+		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -466,6 +534,7 @@
 		"QT_NO_DEBUG",
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
+		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -482,6 +551,7 @@
 		"QT_NO_DEBUG",
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
+		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -498,6 +568,7 @@
 		"QT_NO_DEBUG",
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
+		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -516,13 +587,14 @@
 	"MOC_INCLUDES" : [],
 	"MOC_INCLUDES_Debug" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator",
-		"C:/New folder (4)/Stock-Market-Simulator/Core",
-		"C:/New folder (4)/Stock-Market-Simulator/Data",
-		"C:/New folder (4)/Stock-Market-Simulator/Models",
-		"C:/New folder (4)/Stock-Market-Simulator/UI",
-		"C:/New folder (4)/Stock-Market-Simulator/UI/pages",
-		"C:/New folder (4)/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Core",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Data",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Models",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI/pages",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/pages",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -530,17 +602,19 @@
 		"C:/Qt/6.9.0/msvc2022_64/include/QtWidgets",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCharts",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGL",
-		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets"
+		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.0/msvc2022_64/include/QtSql"
 	],
 	"MOC_INCLUDES_MinSizeRel" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator",
-		"C:/New folder (4)/Stock-Market-Simulator/Core",
-		"C:/New folder (4)/Stock-Market-Simulator/Data",
-		"C:/New folder (4)/Stock-Market-Simulator/Models",
-		"C:/New folder (4)/Stock-Market-Simulator/UI",
-		"C:/New folder (4)/Stock-Market-Simulator/UI/pages",
-		"C:/New folder (4)/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Core",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Data",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Models",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI/pages",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/pages",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -548,17 +622,19 @@
 		"C:/Qt/6.9.0/msvc2022_64/include/QtWidgets",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCharts",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGL",
-		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets"
+		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.0/msvc2022_64/include/QtSql"
 	],
 	"MOC_INCLUDES_RelWithDebInfo" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator",
-		"C:/New folder (4)/Stock-Market-Simulator/Core",
-		"C:/New folder (4)/Stock-Market-Simulator/Data",
-		"C:/New folder (4)/Stock-Market-Simulator/Models",
-		"C:/New folder (4)/Stock-Market-Simulator/UI",
-		"C:/New folder (4)/Stock-Market-Simulator/UI/pages",
-		"C:/New folder (4)/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Core",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Data",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Models",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI/pages",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/pages",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -566,17 +642,19 @@
 		"C:/Qt/6.9.0/msvc2022_64/include/QtWidgets",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCharts",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGL",
-		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets"
+		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.0/msvc2022_64/include/QtSql"
 	],
 	"MOC_INCLUDES_Release" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator",
-		"C:/New folder (4)/Stock-Market-Simulator/Core",
-		"C:/New folder (4)/Stock-Market-Simulator/Data",
-		"C:/New folder (4)/Stock-Market-Simulator/Models",
-		"C:/New folder (4)/Stock-Market-Simulator/UI",
-		"C:/New folder (4)/Stock-Market-Simulator/UI/pages",
-		"C:/New folder (4)/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Core",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Data",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Models",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/UI/pages",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/Utils",
+		"C:/StockMarketSimulator/Stock-Market-Simulator/pages",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCore",
 		"C:/Qt/6.9.0/msvc2022_64/include",
 		"C:/Qt/6.9.0/msvc2022_64/mkspecs/win32-msvc",
@@ -584,7 +662,8 @@
 		"C:/Qt/6.9.0/msvc2022_64/include/QtWidgets",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtCharts",
 		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGL",
-		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets"
+		"C:/Qt/6.9.0/msvc2022_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.9.0/msvc2022_64/include/QtSql"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -603,11 +682,11 @@
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : true,
 	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache.txt",
-	"PARSE_CACHE_FILE_Debug" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_Debug.txt",
-	"PARSE_CACHE_FILE_MinSizeRel" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_MinSizeRel.txt",
-	"PARSE_CACHE_FILE_RelWithDebInfo" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_RelWithDebInfo.txt",
-	"PARSE_CACHE_FILE_Release" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_Release.txt",
+	"PARSE_CACHE_FILE" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/ParseCache_Release.txt",
 	"QT_MOC_EXECUTABLE" : "",
 	"QT_MOC_EXECUTABLE_Debug" : "C:/Qt/6.9.0/msvc2022_64/bin/moc.exe",
 	"QT_MOC_EXECUTABLE_MinSizeRel" : "C:/Qt/6.9.0/msvc2022_64/bin/moc.exe",
@@ -620,57 +699,71 @@
 	"QT_UIC_EXECUTABLE_Release" : "C:/Qt/6.9.0/msvc2022_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed.txt",
-	"SETTINGS_FILE_Debug" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_Debug.txt",
-	"SETTINGS_FILE_MinSizeRel" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_MinSizeRel.txt",
-	"SETTINGS_FILE_RelWithDebInfo" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
-	"SETTINGS_FILE_Release" : "C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_Release.txt",
+	"SETTINGS_FILE" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Data/DataProvider.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Data/DataProvider.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Portfolio.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Portfolio.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Stock.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Stock.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Models/Trade.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Trade.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/UI/StockListView.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/StockListView.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/UI/TradeDialog.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/TradeDialog.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Utils/Config.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Config.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/Utils/Logger.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Logger.cpp",
 			"MU",
 			null
 		],
-		[ "C:/New folder (4)/Stock-Market-Simulator/main.cpp", "MU", null ],
-		[ "C:/New folder (4)/Stock-Market-Simulator/pages.cpp", "MU", null ],
 		[
-			"C:/New folder (4)/Stock-Market-Simulator/pages/loginpage.cpp",
+			"C:/StockMarketSimulator/Stock-Market-Simulator/logindb.cpp",
+			"MU",
+			null
+		],
+		[ "C:/StockMarketSimulator/Stock-Market-Simulator/main.cpp", "MU", null ],
+		[
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages/loginpage.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/StockMarketSimulator/Stock-Market-Simulator/pages/signuppage.cpp",
 			"MU",
 			null
 		]

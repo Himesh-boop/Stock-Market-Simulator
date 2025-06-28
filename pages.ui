@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>536</width>
-    <height>430</height>
+    <width>1217</width>
+    <height>693</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -298,7 +298,7 @@ QPushButton:checked {
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="PortfolioPage"/>
          <widget class="QWidget" name="CashPage"/>

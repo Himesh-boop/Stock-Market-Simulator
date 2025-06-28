@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/New folder (4)/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/cmake_install.cmake"
+		"C:/StockMarketSimulator/Stock-Market-Simulator/build/Qt_6_9_0_MSVC2022_64bit/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

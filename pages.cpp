@@ -59,7 +59,6 @@ void pages::fetchStockData(const QString& symbol) {
         QByteArray errorOutput = process->readAllStandardError();
         QString jsonString = QString(output).trimmed();
 
-        // Debug print the raw output
         qDebug() << "Python script output:" << jsonString;
         qDebug() << "Python script error output:" << errorOutput;
 
@@ -79,21 +78,18 @@ void pages::fetchStockData(const QString& symbol) {
         QJsonArray jsonArray = jsonDoc.array();
         qDebug() << "Received data points:" << jsonArray.size();
 
-        // Example: print first data point (if any)
         if (!jsonArray.isEmpty()) {
             QJsonObject firstRecord = jsonArray.first().toObject();
             qDebug() << "First record:" << firstRecord;
         }
 
-        // Process the data and update the chart
         updateCandlestickChart(jsonArray);
 
         process->deleteLater();
     });
 
-    // Specify python executable and script path:
-    QString pythonExecutable = "python"; // Or full path like "C:/Python39/python.exe"
-    QString scriptPath = "C:/Stock Market Simulator/Stock-Market-Simulator/Models/candlestickChart.py";
+    QString pythonExecutable = "python";
+    QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
     QStringList arguments = { scriptPath, symbol };
 
@@ -157,7 +153,6 @@ void pages::onButtonToggled(bool checked)
         ui->stackedWidget->setCurrentIndex(4);
     }
 
-    // Delete any existing animation
     if (currentAnimation) {
         currentAnimation->stop();
         delete currentAnimation;
@@ -166,12 +161,10 @@ void pages::onButtonToggled(bool checked)
     // Original position
     QRect origGeometry = button->geometry();
 
-    // Create new animation
     currentAnimation = new QPropertyAnimation(button, "geometry");
     currentAnimation->setDuration(150); // 150ms animation
     currentAnimation->setStartValue(origGeometry);
 
-    // Create target geometry (shifted 20px to the right)
     QRect targetGeometry = origGeometry;
     targetGeometry.setLeft(origGeometry.left() + 20);
     targetGeometry.setRight(origGeometry.right() + 20);
@@ -180,7 +173,6 @@ void pages::onButtonToggled(bool checked)
     currentAnimation->setEasingCurve(QEasingCurve::OutCubic);
     currentAnimation->start();
 
-    // If there was a previously checked button, animate it back
     if (lastCheckedButton && lastCheckedButton != button) {
         QPropertyAnimation *reverseAnim = new QPropertyAnimation(lastCheckedButton, "geometry");
         reverseAnim->setDuration(150);
@@ -194,7 +186,6 @@ void pages::onButtonToggled(bool checked)
         reverseAnim->setEndValue(origLastButtonGeom);
         reverseAnim->setEasingCurve(QEasingCurve::OutCubic);
 
-        // Auto-delete when done
         reverseAnim->start(QAbstractAnimation::DeleteWhenStopped);
     }
 
