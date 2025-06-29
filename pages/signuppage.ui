@@ -220,6 +220,9 @@ color:black;
 padding-bottom:7px;
 </string>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>Password</string>
     </property>

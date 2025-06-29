@@ -1,26 +1,51 @@
 #include "logindb.h"
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlError>
+#include <QSqlQuery>
+#include <QSqlError>
 #include <QDebug>
-#include "pages/ui_signuppage.h"   // make ts sign up page
+#include <QCryptographicHash>
 
 loginDB::loginDB() {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("login.db");
 
-    if(!db.open()){
-        qDebug() << "Coudn't open the database";
+    if (!db.open()) {
+        qDebug() << "Couldn't open the database";
         qDebug() << db.lastError().text();
     }
-    QSqlQuery query;
-    query.prepare("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)");
 
-    if(!query.exec()){
-        qDebug() << "Error creating user table";
-        qDebug() << db.lastError().text();
+    QSqlQuery query;
+    // Add email to schema
+    query.prepare("CREATE TABLE IF NOT EXISTS users ("
+                  "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                  "username TEXT UNIQUE, "
+                  "email TEXT, "
+                  "password TEXT)");
+
+    if (!query.exec()) {
+        qDebug() << "Error creating user table:" << query.lastError().text();
     }
-    query.prepare("INSERT INTO users (usename, password) VALUES (:username, :password)");
-    query.bindValue(":username", "Himesh");
-    query.bindValue(":password", "password123");
+}
+
+QString loginDB::hashPassword(const QString &password){
+    QByteArray hashed = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256);
+    return hashed.toHex();
+}
+
+bool loginDB::insertUser(const QString &username, const QString &email, const QString &password) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO users (username, email, password) "
+                  "VALUES (:username, :email, :password)");
+    query.bindValue(":username", username);
+    query.bindValue(":email", email);
+
+    QString hashedPassword = hashPassword(password);
+    query.bindValue(":password", hashedPassword);
+
+    qDebug() << "loginDB was called";
+
+    if (!query.exec()) {
+        qDebug() << "Insert failed:" << query.lastError().text();
+        return false;
+    }
+    return true;
 }

@@ -142,6 +142,7 @@ public:
 "color:black;\n"
 "padding-bottom:7px;\n"
 ""));
+        password->setEchoMode(QLineEdit::EchoMode::Password);
         SignUpArea->raise();
         PictureArea->raise();
         WelcomeBanner->raise();
