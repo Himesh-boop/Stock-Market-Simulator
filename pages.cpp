@@ -19,6 +19,7 @@
 #include <QKeyEvent>
 #include <algorithm>
 #include <limits>
+#include <QHeaderView>
 
 // Custom ChartView class to handle scroll wheel zooming
 class CustomChartView : public QChartView {
@@ -123,6 +124,21 @@ pages::pages(QWidget *parent)
     ui->Portfolio->setChecked(true);
     // Set initial page to match the initially selected button
     ui->stackedWidget->setCurrentIndex(0); // Portfolio page
+
+
+
+    ui->Table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);            // Symbol
+    ui->Table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);          // Name
+    ui->Table->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Quantity
+    ui->Table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Curr Price
+    ui->Table->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Total Price
+
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Fixed);          // Type
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Amount
+
+    //fix width for symbol column
+    ui->Table->setColumnWidth(0, 100);
 
     setupCandlestickChart();
 }

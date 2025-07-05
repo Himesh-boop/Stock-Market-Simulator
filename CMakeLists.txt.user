@@ -4,7 +4,7 @@
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{b1e38b37-da58-4e13-bd84-ba7bbe76d884}</value>
+  <value type="QByteArray">{2d1bd24a-29bd-42a7-8b2c-b5c8ea0841a9}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -118,7 +118,7 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-       <value type="QString">ALL_BUILD</value>
+       <value type="QString">all</value>
       </valuelist>
       <value type="bool" key="CMakeProjectManager.MakeStep.ClearSystemEnvironment">false</value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.UserEnvironmentChanges"/>
@@ -789,7 +789,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.TargetCount</variable>
-  <value type="qlonglong">1</value>
+  <value type="qlonglong">2</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>
