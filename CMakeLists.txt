@@ -27,6 +27,7 @@ set(SOURCES
     pages/signuppage.cpp
     pythonBackend/nepse_data_server.py
     db/dbUpdater.py
+    db/logindb.cpp
 
     pages/loginpage.cpp
     pages.cpp
@@ -36,7 +37,7 @@ set(SOURCES
     Models/Stock.cpp
     Models/Portfolio.cpp
     Models/Trade.cpp
-    Models/candlestickChart.py
+
 
     UI/StockListView.cpp
     UI/TradeDialog.cpp
@@ -44,7 +45,7 @@ set(SOURCES
     Utils/Logger.cpp
     Utils/Config.cpp
 
-    logindb.cpp
+
 )
 
 # Header files
@@ -64,22 +65,26 @@ set(HEADERS
     Utils/Logger.h
     Utils/Config.h
 
-    logindb.h
+    db/logindb.h
 )
 
-# All UI files should be here directly (for AUTOUIC to work)
 set(FORMS
     pages.ui
     pages/loginpage.ui
     pages/signuppage.ui
 )
 
-# Create executable with .ui files included directly
 add_executable(StockMarketSimulator
     ${SOURCES}
     ${HEADERS}
     ${FORMS}
     resources.qrc
+
+    Models/candlestickChart.py
+    db/authenticator.h db/authenticator.cpp
+    db/portfoliodb.h db/portfoliodb.cpp
+    db/cashdb.h db/cashdb.cpp
+    db/databasemanager.h db/databasemanager.cpp
 )
 
 # Link Qt libraries

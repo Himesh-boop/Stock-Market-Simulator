@@ -2,6 +2,7 @@
 #include "ui_loginpage.h"
 #include "pages.h"
 #include "signuppage.h"
+#include "db/authenticator.h"
 
 
 loginPage::loginPage(QWidget *parent) :
@@ -9,18 +10,18 @@ loginPage::loginPage(QWidget *parent) :
     ui(new Ui::loginPage)
 {
     ui->setupUi(this);
-    
+
     // Set window properties
     this->setWindowTitle("Interactive Login System");
     this->setFixedSize(this->size());
-    
+
     // Initialize components
     validationTimer = new QTimer(this);
     validationTimer->setSingleShot(true);
     validationTimer->setInterval(500);  // Delay validation by 500ms after typing
-    
+
     settings = new QSettings("YourCompany", "LoginApp", this);
-    
+
     // Setup connections and animations
     setupConnections();
     setupAnimations();
@@ -37,7 +38,7 @@ void loginPage::setupConnections()
     // Connect login button click
     connect(ui->LoginButton, &QPushButton::clicked, this, &loginPage::onLoginButtonClicked);
     connect(ui->signUpButton, &QPushButton::clicked, this, &loginPage::openSignUpPage);
-    
+
     // Connect text changed signals for validation
     connect(ui->Username, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     connect(ui->Password, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
@@ -49,7 +50,7 @@ void loginPage::setupAnimations()
     // Create button hover animation
     buttonAnimation = new QPropertyAnimation(ui->LoginButton, "geometry", this);
     buttonAnimation->setDuration(100);
-    
+
     // Connect hover events
     ui->LoginButton->installEventFilter(this);
 }
@@ -58,28 +59,28 @@ bool loginPage::eventFilter(QObject *watched, QEvent *event)
 {
     if (watched == ui->LoginButton) {
         if (event->type() == QEvent::Enter) {
-            // Mouse entered button - grow slightly
+
             QRect geo = ui->LoginButton->geometry();
             QRect newGeo = geo.adjusted(-5, -2, 5, 2);
-            
+
             buttonAnimation->setStartValue(geo);
             buttonAnimation->setEndValue(newGeo);
             buttonAnimation->start();
-            
+
             return true;
         } else if (event->type() == QEvent::Leave) {
             // Mouse left button - shrink back
             QRect geo = ui->LoginButton->geometry();
             QRect originalGeo = QRect(370, 340, 201, 51);
-            
+
             buttonAnimation->setStartValue(geo);
             buttonAnimation->setEndValue(originalGeo);
             buttonAnimation->start();
-            
+
             return true;
         }
     }
-    
+
     return QMainWindow::eventFilter(watched, event);
 }
 
@@ -87,13 +88,13 @@ void loginPage::validateInput()
 {
     QString username = ui->Username->text();
     QString password = ui->Password->text();
-    
+
     // Simple validation
     bool isValid = !username.isEmpty() && password.length() >= 6;
-    
+
     // Set the login button enabled/disabled based on validation
     ui->LoginButton->setEnabled(isValid);
-    
+
     // Visual feedback
     if (!username.isEmpty() && username.length() < 3) {
         ui->statusLabel->setText("Username too short");
@@ -115,21 +116,22 @@ void loginPage::onLoginButtonClicked()
 {
     QString username = ui->Username->text();
     QString password = ui->Password->text();
-    
+
     // Animate button press
     ui->LoginButton->setStyleSheet("padding-left: 5px; padding-top: 5px; "
-                                "background-color: rgba(255, 107, 107, 255);");
-    
+                                   "background-color: rgba(255, 107, 107, 255);");
+
     QTimer::singleShot(200, [this]() {
         ui->LoginButton->setStyleSheet("");  // Reset after animation
     });
-    
+
     // Check credentials
-    bool loginSuccess = checkCredentials(username, password);
-    
+    Authenticator auth;
+    bool loginSuccess = auth.authenticate(username, password);
+
     // Show success/failure
     showLoginResult(loginSuccess);
-    
+
     // Save settings if remember me is checked
     if (ui->rememberMeCheckbox->isChecked()) {
         saveSettings();
@@ -162,13 +164,13 @@ void loginPage::showLoginResult(bool success)
         // Failure animation and message
         ui->statusLabel->setStyleSheet("color: rgba(255, 0, 0, 200);");
         ui->statusLabel->setText("Invalid credentials!");
-        
+
         // Shake animation for the login button
         QPropertyAnimation* shakeAnimation = new QPropertyAnimation(ui->LoginButton, "pos");
         shakeAnimation->setDuration(100);
-        
+
         QPoint originalPos = ui->LoginButton->pos();
-        
+
         QList<QPoint> positions = {
             originalPos + QPoint(5, 0),
             originalPos + QPoint(-5, 0),
@@ -176,14 +178,14 @@ void loginPage::showLoginResult(bool success)
             originalPos + QPoint(-5, 0),
             originalPos
         };
-        
+
         shakeAnimation->setKeyValueAt(0.0, originalPos);
         shakeAnimation->setKeyValueAt(0.25, positions[0]);
         shakeAnimation->setKeyValueAt(0.5, positions[1]);
         shakeAnimation->setKeyValueAt(0.75, positions[2]);
         shakeAnimation->setKeyValueAt(0.9, positions[3]);
         shakeAnimation->setKeyValueAt(1.0, positions[4]);
-        
+
         shakeAnimation->start(QAbstractAnimation::DeleteWhenStopped);
     }
 }

@@ -1,5 +1,7 @@
 #include <QApplication>
 #include "pages/loginpage.h"
+#include "db/databasemanager.h"
+#include <qmessagebox.h>
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +11,15 @@ int main(int argc, char *argv[])
     app.setApplicationName("Stock Market Simulator");
     app.setApplicationDisplayName("Stock Market Simulator");
     app.setStyle("Fusion"); // Modern Qt style
+
+    DatabaseManager* dbManager = DatabaseManager::getInstance();
+    if (!dbManager->isConnected()) {
+        QMessageBox::critical(nullptr, "Database Error",
+                              "Failed to initialize database. Application will close.");
+        return -1;
+    }
+
+    qDebug() << "Database initialized successfully";
 
     // Create and show main window
     loginPage mainWindow;

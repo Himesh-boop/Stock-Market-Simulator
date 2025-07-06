@@ -3,25 +3,25 @@
 
 #include <QDialog>
 
-namespace Ui {
-class SignUpPage;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class SignUpPage; }
+QT_END_NAMESPACE
 
 class SignUpPage : public QDialog
 {
     Q_OBJECT
 
+public:
+    SignUpPage(QWidget *parent = nullptr);
+    ~SignUpPage();
+
 private slots:
     void onCreateAccButtonClicked();
-
-public:
-    explicit SignUpPage(QWidget *parent = nullptr);
-    ~SignUpPage();
 
 private:
     Ui::SignUpPage *ui;
 
+    // Database methods
     void storeInDatabase(const QString &username, const QString &email, const QString &password);
 };
-
-#endif // SIGNUPPAGE_H
+#endif //SINGUPPAGE_H

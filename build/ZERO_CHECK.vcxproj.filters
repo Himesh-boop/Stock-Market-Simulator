@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\CMakeFiles\4d20c6e162bc6ab4e4253e134f9aead9\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CBF1D667-6929-30B4-965E-63D2E0404E15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

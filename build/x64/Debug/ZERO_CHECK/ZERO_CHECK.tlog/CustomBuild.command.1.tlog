@@ -1,0 +1,10 @@
+^C:\STOCKMARKETSIMULATOR\STOCK-MARKET-SIMULATOR\BUILD\CMAKEFILES\4D20C6E162BC6AB4E4253E134F9AEAD9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/StockMarketSimulator/Stock-Market-Simulator -BC:/StockMarketSimulator/Stock-Market-Simulator/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
