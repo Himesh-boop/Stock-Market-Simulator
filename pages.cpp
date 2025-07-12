@@ -52,6 +52,13 @@ protected:
     }
 };
 
+void pages::setUsername(const QString &username)
+{
+    m_username = username;
+    m_username[0] = m_username[0].toUpper();
+    ui->label->setText(QString("%1's Portfolio").arg(m_username));
+}
+
 void pages::fetchStockData(const QString& symbol) {
     QProcess* process = new QProcess(this);
 

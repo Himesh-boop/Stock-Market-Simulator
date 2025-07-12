@@ -35,11 +35,9 @@ loginPage::~loginPage()
 
 void loginPage::setupConnections()
 {
-    // Connect login button click
     connect(ui->LoginButton, &QPushButton::clicked, this, &loginPage::onLoginButtonClicked);
     connect(ui->signUpButton, &QPushButton::clicked, this, &loginPage::openSignUpPage);
 
-    // Connect text changed signals for validation
     connect(ui->Username, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     connect(ui->Password, &QLineEdit::textChanged, validationTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     connect(validationTimer, &QTimer::timeout, this, &loginPage::validateInput);
@@ -47,11 +45,9 @@ void loginPage::setupConnections()
 
 void loginPage::setupAnimations()
 {
-    // Create button hover animation
     buttonAnimation = new QPropertyAnimation(ui->LoginButton, "geometry", this);
     buttonAnimation->setDuration(100);
 
-    // Connect hover events
     ui->LoginButton->installEventFilter(this);
 }
 
@@ -89,13 +85,10 @@ void loginPage::validateInput()
     QString username = ui->Username->text();
     QString password = ui->Password->text();
 
-    // Simple validation
     bool isValid = !username.isEmpty() && password.length() >= 6;
 
-    // Set the login button enabled/disabled based on validation
     ui->LoginButton->setEnabled(isValid);
 
-    // Visual feedback
     if (!username.isEmpty() && username.length() < 3) {
         ui->statusLabel->setText("Username too short");
     } else if (!password.isEmpty() && password.length() < 6) {
@@ -117,40 +110,31 @@ void loginPage::onLoginButtonClicked()
     QString username = ui->Username->text();
     QString password = ui->Password->text();
 
-    // Animate button press
     ui->LoginButton->setStyleSheet("padding-left: 5px; padding-top: 5px; "
                                    "background-color: rgba(255, 107, 107, 255);");
 
     QTimer::singleShot(200, [this]() {
-        ui->LoginButton->setStyleSheet("");  // Reset after animation
+        ui->LoginButton->setStyleSheet("");
     });
 
-    // Check credentials
     Authenticator auth;
     bool loginSuccess = auth.authenticate(username, password);
 
-    // Show success/failure
-    showLoginResult(loginSuccess);
+    if (loginSuccess) {
+        pages *landingPage = new pages(this);
+        landingPage->setUsername(username);
+        landingPage->show();
+        this->hide();
+    } else {
+        showLoginResult(false);
+    }
 
-    // Save settings if remember me is checked
+    pages *page = new pages(this);
+    page->setUsername(username);
+
     if (ui->rememberMeCheckbox->isChecked()) {
         saveSettings();
     }
-}
-
-bool loginPage::checkCredentials(const QString &username, const QString &password)
-{
-    // Demo credentials -  check from a database in the final app.
-    if (username == "himesh" && password == "password123") {
-        return true;
-    } else if (username == "user" && password == "user123") {
-        return true;
-    } else if (username == "pratik" && password == "pratik123"){
-        return true;
-    } else if (username == "prajaya" && password == "prajaya123"){
-        return true;
-    }
-    return false;
 }
 
 void loginPage::showLoginResult(bool success)

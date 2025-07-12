@@ -29,6 +29,7 @@ public:
     explicit pages(QWidget *parent = nullptr);
     ~pages();
     void fetchStockData(const QString& symbol);
+    void setUsername(const QString& username);
 
 protected:
     bool eventFilter(QObject* obj, QEvent* event) override;
@@ -40,6 +41,7 @@ private:
     Ui::pages *ui;
     QPropertyAnimation *currentAnimation;
     QPushButton *lastCheckedButton;
+    QString m_username;
 
     // Chart related members
     QChartView *chartView = nullptr;

@@ -612,8 +612,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\portfoliodb.cpp" />
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\cashdb.h" />
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\cashdb.cpp" />
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\databasemanager.h" />
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\databasemanager.cpp" />
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_pages.h" />
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\pages\ui_loginpage.h" />
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\pages\ui_signuppage.h" />

@@ -7,26 +7,35 @@
 #include <QDir>
 
 loginDB::loginDB() {
-    QString dbPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir().mkpath(dbPath);
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(dbPath + "/login.db");
+    const QString connectionName = "main_connection";
 
-    if (!db.open()) {
-        qDebug() << "Couldn't open the database";
-        qDebug() << db.lastError().text();
-        return;
-    }
+    if (QSqlDatabase::contains(connectionName)) {
+        db = QSqlDatabase::database(connectionName);
+    } else {
+        db = QSqlDatabase::addDatabase("QSQLITE", connectionName);
 
-    QSqlQuery query;
-    query.prepare("CREATE TABLE IF NOT EXISTS users ("
-                  "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                  "username TEXT UNIQUE, "
-                  "email TEXT, "
-                  "password TEXT)");
+        QString dbPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+        QDir().mkpath(dbPath);
+        db.setDatabaseName(dbPath + "/login.db");
 
-    if (!query.exec()) {
-        qDebug() << "Error creating user table:" << query.lastError().text();
+        if (!db.open()) {
+            qDebug() << "Couldn't open the database";
+            qDebug() << db.lastError().text();
+            return;
+        }
+
+        qDebug() << "Database opened at:" << db.databaseName();
+
+        QSqlQuery query(db);
+        query.prepare("CREATE TABLE IF NOT EXISTS users ("
+                      "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                      "username TEXT UNIQUE, "
+                      "email TEXT, "
+                      "password TEXT)");
+
+        if (!query.exec()) {
+            qDebug() << "Error creating user table:" << query.lastError().text();
+        }
     }
 }
 
@@ -36,7 +45,13 @@ QString loginDB::hashPassword(const QString &password){
 }
 
 bool loginDB::insertUser(const QString &username, const QString &email, const QString &password) {
-    QSqlQuery query;
+    if (!db.isValid() || !db.isOpen()) {
+        qDebug() << "Database connection is invalid or not open in insertUser";
+        return false;
+    }
+
+    QSqlQuery query(db);
+
     query.prepare("INSERT INTO users (username, email, password) "
                   "VALUES (:username, :email, :password)");
     query.bindValue(":username", username);

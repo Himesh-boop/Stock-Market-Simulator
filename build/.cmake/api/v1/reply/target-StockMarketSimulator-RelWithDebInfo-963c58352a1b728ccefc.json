@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/StockMarketSimulator.exe"
+			"path" : "RelWithDebInfo/StockMarketSimulator.exe"
 		},
 		{
-			"path" : "Release/StockMarketSimulator.pdb"
+			"path" : "RelWithDebInfo/StockMarketSimulator.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +45,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 90,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
@@ -150,7 +150,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 2,
@@ -228,7 +228,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/include_Release"
+					"path" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/include_RelWithDebInfo"
 				},
 				{
 					"backtrace" : 20,
@@ -353,11 +353,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
@@ -539,7 +539,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/mocs_compilation_Release.cpp",
+			"path" : "build/StockMarketSimulator_autogen/mocs_compilation_RelWithDebInfo.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -751,32 +751,32 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/include_Release/ui_pages.h",
+			"path" : "build/StockMarketSimulator_autogen/include_RelWithDebInfo/ui_pages.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/include_Release/pages/ui_loginpage.h",
+			"path" : "build/StockMarketSimulator_autogen/include_RelWithDebInfo/pages/ui_loginpage.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/include_Release/pages/ui_signuppage.h",
+			"path" : "build/StockMarketSimulator_autogen/include_RelWithDebInfo/pages/ui_signuppage.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/autouic_Release.stamp",
+			"path" : "build/StockMarketSimulator_autogen/autouic_RelWithDebInfo.stamp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/StockMarketSimulator_autogen/EWIEGA46WW_Release/qrc_resources.cpp",
+			"path" : "build/StockMarketSimulator_autogen/EWIEGA46WW_RelWithDebInfo/qrc_resources.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

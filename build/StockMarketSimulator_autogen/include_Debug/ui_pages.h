@@ -43,6 +43,11 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *PortfolioPage;
     QGridLayout *gridLayout;
+    QWidget *Title;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
     QFrame *Cards;
     QHBoxLayout *horizontalLayout_2;
     QWidget *widget_4;
@@ -57,11 +62,6 @@ public:
     QVBoxLayout *verticalLayout_7;
     QLabel *label_8;
     QLabel *label_9;
-    QWidget *Title;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
     QTableWidget *Table;
     QWidget *CashPage;
     QWidget *TitleCash;
@@ -288,16 +288,64 @@ public:
         contentPanel->setSizePolicy(sizePolicy2);
         stackedWidget = new QStackedWidget(contentPanel);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(0, -10, 1051, 711));
+        stackedWidget->setGeometry(QRect(0, -10, 1061, 663));
         PortfolioPage = new QWidget();
         PortfolioPage->setObjectName("PortfolioPage");
         gridLayout = new QGridLayout(PortfolioPage);
         gridLayout->setObjectName("gridLayout");
-        Cards = new QFrame(PortfolioPage);
-        Cards->setObjectName("Cards");
+        Title = new QWidget(PortfolioPage);
+        Title->setObjectName("Title");
         QSizePolicy sizePolicy3(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(2);
+        sizePolicy3.setHeightForWidth(Title->sizePolicy().hasHeightForWidth());
+        Title->setSizePolicy(sizePolicy3);
+        verticalLayout_4 = new QVBoxLayout(Title);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        label = new QLabel(Title);
+        label->setObjectName("label");
+        QFont font;
+        font.setPointSize(24);
+        font.setBold(true);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
+"color : white;\n"
+"border: none;\n"
+"font-size: 50;\n"
+"font-weight: bold;"));
+
+        verticalLayout_4->addWidget(label);
+
+        label_2 = new QLabel(Title);
+        label_2->setObjectName("label_2");
+        QFont font1;
+        font1.setPointSize(10);
+        label_2->setFont(font1);
+        label_2->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
+"color : white;\n"
+"border: none;\n"
+"font-size: 17;"));
+
+        verticalLayout_4->addWidget(label_2);
+
+        label_3 = new QLabel(Title);
+        label_3->setObjectName("label_3");
+        QFont font2;
+        font2.setPointSize(14);
+        label_3->setFont(font2);
+        label_3->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
+"color : white;\n"
+"border: none;\n"
+"font-size: 14;\n"
+""));
+
+        verticalLayout_4->addWidget(label_3);
+
+
+        gridLayout->addWidget(Title, 0, 0, 1, 1);
+
+        Cards = new QFrame(PortfolioPage);
+        Cards->setObjectName("Cards");
         sizePolicy3.setHeightForWidth(Cards->sizePolicy().hasHeightForWidth());
         Cards->setSizePolicy(sizePolicy3);
         Cards->setFrameShape(QFrame::Shape::NoFrame);
@@ -314,9 +362,7 @@ public:
         verticalLayout_6->setObjectName("verticalLayout_6");
         label_7 = new QLabel(widget_4);
         label_7->setObjectName("label_7");
-        QFont font;
-        font.setPointSize(14);
-        label_7->setFont(font);
+        label_7->setFont(font2);
         label_7->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -325,7 +371,7 @@ public:
 
         label_6 = new QLabel(widget_4);
         label_6->setObjectName("label_6");
-        label_6->setFont(font);
+        label_6->setFont(font2);
         label_6->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -344,7 +390,7 @@ public:
         verticalLayout_5->setObjectName("verticalLayout_5");
         label_4 = new QLabel(widget_2);
         label_4->setObjectName("label_4");
-        label_4->setFont(font);
+        label_4->setFont(font2);
         label_4->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -353,7 +399,7 @@ public:
 
         label_5 = new QLabel(widget_2);
         label_5->setObjectName("label_5");
-        label_5->setFont(font);
+        label_5->setFont(font2);
         label_5->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -372,7 +418,7 @@ public:
         verticalLayout_7->setObjectName("verticalLayout_7");
         label_8 = new QLabel(widget_3);
         label_8->setObjectName("label_8");
-        label_8->setFont(font);
+        label_8->setFont(font2);
         label_8->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -381,7 +427,7 @@ public:
 
         label_9 = new QLabel(widget_3);
         label_9->setObjectName("label_9");
-        label_9->setFont(font);
+        label_9->setFont(font2);
         label_9->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -393,52 +439,6 @@ public:
 
 
         gridLayout->addWidget(Cards, 1, 0, 1, 1);
-
-        Title = new QWidget(PortfolioPage);
-        Title->setObjectName("Title");
-        sizePolicy3.setHeightForWidth(Title->sizePolicy().hasHeightForWidth());
-        Title->setSizePolicy(sizePolicy3);
-        verticalLayout_4 = new QVBoxLayout(Title);
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        label = new QLabel(Title);
-        label->setObjectName("label");
-        QFont font1;
-        font1.setPointSize(24);
-        font1.setBold(true);
-        label->setFont(font1);
-        label->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
-"color : white;\n"
-"border: none;\n"
-"font-size: 50;\n"
-"font-weight: bold;"));
-
-        verticalLayout_4->addWidget(label);
-
-        label_2 = new QLabel(Title);
-        label_2->setObjectName("label_2");
-        QFont font2;
-        font2.setPointSize(10);
-        label_2->setFont(font2);
-        label_2->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
-"color : white;\n"
-"border: none;\n"
-"font-size: 17;"));
-
-        verticalLayout_4->addWidget(label_2);
-
-        label_3 = new QLabel(Title);
-        label_3->setObjectName("label_3");
-        label_3->setFont(font);
-        label_3->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
-"color : white;\n"
-"border: none;\n"
-"font-size: 14;\n"
-""));
-
-        verticalLayout_4->addWidget(label_3);
-
-
-        gridLayout->addWidget(Title, 0, 0, 1, 1);
 
         Table = new QTableWidget(PortfolioPage);
         if (Table->columnCount() < 5)
@@ -461,12 +461,12 @@ public:
         __qtablewidgetitem5->setFont(font3);
         Table->setItem(1, 0, __qtablewidgetitem5);
         Table->setObjectName("Table");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(6);
         sizePolicy4.setHeightForWidth(Table->sizePolicy().hasHeightForWidth());
         Table->setSizePolicy(sizePolicy4);
-        Table->setMinimumSize(QSize(400, 300));
+        Table->setMinimumSize(QSize(0, 0));
         Table->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
 "    background-color: #2E2E2E;\n"
 "    color: white;\n"
@@ -517,7 +517,7 @@ public:
         verticalLayout_8->setObjectName("verticalLayout_8");
         label_10 = new QLabel(TitleCash);
         label_10->setObjectName("label_10");
-        label_10->setFont(font1);
+        label_10->setFont(font);
         label_10->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
@@ -528,7 +528,7 @@ public:
 
         label_11 = new QLabel(TitleCash);
         label_11->setObjectName("label_11");
-        label_11->setFont(font2);
+        label_11->setFont(font1);
         label_11->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
@@ -646,7 +646,7 @@ public:
         gridLayout_2->setObjectName("gridLayout_2");
         label_12 = new QLabel(CashCard);
         label_12->setObjectName("label_12");
-        label_12->setFont(font);
+        label_12->setFont(font2);
         label_12->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: white;\n"
 "border: none;"));
@@ -705,7 +705,7 @@ public:
 
         retranslateUi(pages);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(pages);
@@ -732,15 +732,15 @@ public:
 "	font-weight: bold;\n"
 "}\n"
 "", nullptr));
+        label->setText(QCoreApplication::translate("pages", "My Portfolio", nullptr));
+        label_2->setText(QCoreApplication::translate("pages", "Track your investments and gains", nullptr));
+        label_3->setText(QCoreApplication::translate("pages", "Portfolio Overview", nullptr));
         label_7->setText(QCoreApplication::translate("pages", "Total Value:", nullptr));
         label_6->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
         label_4->setText(QCoreApplication::translate("pages", "Total Gain/Loss:", nullptr));
         label_5->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
         label_8->setText(QCoreApplication::translate("pages", "Total Change:", nullptr));
         label_9->setText(QCoreApplication::translate("pages", " XX.XXX %", nullptr));
-        label->setText(QCoreApplication::translate("pages", "My Portfolio", nullptr));
-        label_2->setText(QCoreApplication::translate("pages", "Track your investments and gains", nullptr));
-        label_3->setText(QCoreApplication::translate("pages", "Portfolio Overview", nullptr));
 
         const bool __sortingEnabled = Table->isSortingEnabled();
         Table->setSortingEnabled(false);

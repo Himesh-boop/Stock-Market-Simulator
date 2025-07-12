@@ -84,7 +84,7 @@ add_executable(StockMarketSimulator
     db/authenticator.h db/authenticator.cpp
     db/portfoliodb.h db/portfoliodb.cpp
     db/cashdb.h db/cashdb.cpp
-    db/databasemanager.h db/databasemanager.cpp
+
 )
 
 # Link Qt libraries

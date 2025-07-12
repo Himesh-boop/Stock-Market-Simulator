@@ -486,12 +486,6 @@
 			null
 		],
 		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/db/databasemanager.h",
-			"MU",
-			"SQIZ3OIOWK/moc_databasemanager.cpp",
-			null
-		],
-		[
 			"C:/StockMarketSimulator/Stock-Market-Simulator/db/logindb.h",
 			"MU",
 			"SQIZ3OIOWK/moc_logindb.cpp",
@@ -777,11 +771,6 @@
 		],
 		[
 			"C:/StockMarketSimulator/Stock-Market-Simulator/db/cashdb.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/db/databasemanager.cpp",
 			"MU",
 			null
 		],

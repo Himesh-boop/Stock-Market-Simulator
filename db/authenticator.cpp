@@ -9,7 +9,14 @@ Authenticator::Authenticator() {
 }
 
 bool Authenticator::authenticate(const QString &username, const QString &password) {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open in Authenticator.";
+        return false;
+    }
+
+    QSqlQuery query(db);
+
     query.prepare("SELECT password FROM users WHERE username = :username");
     query.bindValue(":username", username);
 
