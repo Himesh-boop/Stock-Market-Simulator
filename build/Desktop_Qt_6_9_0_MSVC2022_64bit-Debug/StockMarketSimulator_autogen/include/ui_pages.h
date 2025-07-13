@@ -38,9 +38,8 @@ public:
     QPushButton *Cash;
     QPushButton *Investment;
     QPushButton *Ledger;
-    QPushButton *News;
     QWidget *contentPanel;
-    QVBoxLayout *verticalLayout_2;
+    QGridLayout *gridLayout_2;
     QStackedWidget *stackedWidget;
     QWidget *PortfolioPage;
     QGridLayout *gridLayout;
@@ -65,23 +64,46 @@ public:
     QLabel *label_3;
     QTableWidget *Table;
     QWidget *CashPage;
+    QVBoxLayout *verticalLayout_2;
+    QWidget *cashTitle;
+    QGridLayout *gridLayout_4;
     QWidget *Title_2;
     QVBoxLayout *verticalLayout_8;
     QLabel *label_10;
-    QLabel *label_11;
     QLabel *label_12;
+    QWidget *cashCard;
+    QGridLayout *gridLayout_5;
+    QFrame *Cards_2;
+    QHBoxLayout *horizontalLayout_3;
+    QWidget *widget_11;
+    QVBoxLayout *verticalLayout_9;
+    QLabel *label_11;
+    QLabel *label_13;
+    QWidget *cashButtons;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QWidget *cashTable_2;
+    QGridLayout *gridLayout_6;
+    QTableWidget *cashTable;
     QWidget *CandleStickPage;
     QVBoxLayout *verticalLayout_3;
     QChartView *chartWidget;
     QWidget *widget;
     QWidget *HistoryPage;
-    QWidget *NewsPage;
+    QGridLayout *gridLayout_8;
+    QWidget *historyTitle;
+    QGridLayout *gridLayout_3;
+    QLabel *title;
+    QWidget *historyTable;
+    QGridLayout *gridLayout_7;
+    QTableWidget *tableHistory;
 
     void setupUi(QMainWindow *pages)
     {
         if (pages->objectName().isEmpty())
             pages->setObjectName("pages");
-        pages->resize(608, 408);
+        pages->resize(594, 555);
         pages->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "    background-color: #2E2E2E;\n"
 "    color: #E0E0E0;\n"
@@ -244,23 +266,6 @@ public:
 
         verticalLayout->addWidget(Ledger);
 
-        News = new QPushButton(navPanel);
-        News->setObjectName("News");
-        News->setStyleSheet(QString::fromUtf8("QPushButton:checked {\n"
-"    background-color: #707070;\n"
-"    border: 1px solid #AAAAAA;\n"
-"    font-weight: bold;\n"
-"}\n"
-""));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/icons/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        News->setIcon(icon4);
-        News->setIconSize(QSize(35, 35));
-        News->setCheckable(true);
-        News->setAutoExclusive(true);
-
-        verticalLayout->addWidget(News);
-
 
         horizontalLayout->addWidget(navPanel);
 
@@ -271,10 +276,24 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(contentPanel->sizePolicy().hasHeightForWidth());
         contentPanel->setSizePolicy(sizePolicy1);
-        verticalLayout_2 = new QVBoxLayout(contentPanel);
-        verticalLayout_2->setObjectName("verticalLayout_2");
+        gridLayout_2 = new QGridLayout(contentPanel);
+        gridLayout_2->setObjectName("gridLayout_2");
         stackedWidget = new QStackedWidget(contentPanel);
         stackedWidget->setObjectName("stackedWidget");
+        stackedWidget->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    min-width: 100px;\n"
+"    min-height: 40px;\n"
+"    padding: 6px 12px;\n"
+"    border-radius: 20px; /* Full rounded look */\n"
+"    font-weight: bold;\n"
+"    color: black;\n"
+"    background-color: #333; /* Default dark for Withdraw */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 0.85;\n"
+"}\n"
+""));
         PortfolioPage = new QWidget();
         PortfolioPage->setObjectName("PortfolioPage");
         gridLayout = new QGridLayout(PortfolioPage);
@@ -491,44 +510,200 @@ public:
         stackedWidget->addWidget(PortfolioPage);
         CashPage = new QWidget();
         CashPage->setObjectName("CashPage");
-        Title_2 = new QWidget(CashPage);
+        verticalLayout_2 = new QVBoxLayout(CashPage);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        cashTitle = new QWidget(CashPage);
+        cashTitle->setObjectName("cashTitle");
+        gridLayout_4 = new QGridLayout(cashTitle);
+        gridLayout_4->setObjectName("gridLayout_4");
+        Title_2 = new QWidget(cashTitle);
         Title_2->setObjectName("Title_2");
-        Title_2->setGeometry(QRect(-10, 0, 451, 109));
         sizePolicy2.setHeightForWidth(Title_2->sizePolicy().hasHeightForWidth());
         Title_2->setSizePolicy(sizePolicy2);
         verticalLayout_8 = new QVBoxLayout(Title_2);
         verticalLayout_8->setObjectName("verticalLayout_8");
         label_10 = new QLabel(Title_2);
         label_10->setObjectName("label_10");
-        label_10->setFont(font1);
+        QFont font4;
+        font4.setBold(true);
+        label_10->setFont(font4);
         label_10->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
-"font-size: 50;\n"
+"font-size: 50px;\n"
 "font-weight: bold;"));
 
         verticalLayout_8->addWidget(label_10);
 
-        label_11 = new QLabel(Title_2);
-        label_11->setObjectName("label_11");
-        label_11->setFont(font2);
-        label_11->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
-"color : white;\n"
-"border: none;\n"
-"font-size: 17;"));
-
-        verticalLayout_8->addWidget(label_11);
-
         label_12 = new QLabel(Title_2);
         label_12->setObjectName("label_12");
-        label_12->setFont(font);
+        QFont font5;
+        label_12->setFont(font5);
         label_12->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
-"font-size: 14;\n"
+"font-size: 20px;\n"
 ""));
 
         verticalLayout_8->addWidget(label_12);
+
+
+        gridLayout_4->addWidget(Title_2, 0, 0, 1, 1);
+
+
+        verticalLayout_2->addWidget(cashTitle);
+
+        cashCard = new QWidget(CashPage);
+        cashCard->setObjectName("cashCard");
+        gridLayout_5 = new QGridLayout(cashCard);
+        gridLayout_5->setObjectName("gridLayout_5");
+        Cards_2 = new QFrame(cashCard);
+        Cards_2->setObjectName("Cards_2");
+        sizePolicy2.setHeightForWidth(Cards_2->sizePolicy().hasHeightForWidth());
+        Cards_2->setSizePolicy(sizePolicy2);
+        Cards_2->setFrameShape(QFrame::Shape::NoFrame);
+        Cards_2->setFrameShadow(QFrame::Shadow::Plain);
+        horizontalLayout_3 = new QHBoxLayout(Cards_2);
+        horizontalLayout_3->setSpacing(11);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        widget_11 = new QWidget(Cards_2);
+        widget_11->setObjectName("widget_11");
+        widget_11->setStyleSheet(QString::fromUtf8(" background-color: rgba(200, 255, 200, 30);  /* Light translucent green */\n"
+"    border-radius: 12px;                        /* Curved corners */\n"
+"    padding: 12px;                              /* Space inside the card */"));
+        verticalLayout_9 = new QVBoxLayout(widget_11);
+        verticalLayout_9->setObjectName("verticalLayout_9");
+        label_11 = new QLabel(widget_11);
+        label_11->setObjectName("label_11");
+        label_11->setFont(font);
+        label_11->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"color: white;\n"
+"border: none;"));
+
+        verticalLayout_9->addWidget(label_11);
+
+        label_13 = new QLabel(widget_11);
+        label_13->setObjectName("label_13");
+        label_13->setFont(font);
+        label_13->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"color: white;\n"
+"border: none;"));
+
+        verticalLayout_9->addWidget(label_13);
+
+
+        horizontalLayout_3->addWidget(widget_11);
+
+
+        gridLayout_5->addWidget(Cards_2, 0, 0, 1, 1);
+
+
+        verticalLayout_2->addWidget(cashCard);
+
+        cashButtons = new QWidget(CashPage);
+        cashButtons->setObjectName("cashButtons");
+        horizontalLayout_4 = new QHBoxLayout(cashButtons);
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
+        pushButton = new QPushButton(cashButtons);
+        pushButton->setObjectName("pushButton");
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    min-width: 30px;\n"
+"    min-height: 20px;\n"
+"    padding: 6px 12px;\n"
+"    border-radius: 15px; /* Full rounded look */\n"
+"    font-weight: bold;\n"
+"    color: black;\n"
+"    background-color: #8dd279; \n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 0.85;\n"
+"}\n"
+""));
+
+        horizontalLayout_4->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(cashButtons);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    min-width: 30px;\n"
+"    min-height: 20px;\n"
+"    padding: 6px 12px;\n"
+"    border-radius: 15px; /* Full rounded look */\n"
+"    font-weight: bold;\n"
+"    color: white;\n"
+"    background-color: #333; /* Default dark for Withdraw */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 0.85;\n"
+"}\n"
+""));
+
+        horizontalLayout_4->addWidget(pushButton_2);
+
+
+        verticalLayout_2->addWidget(cashButtons);
+
+        cashTable_2 = new QWidget(CashPage);
+        cashTable_2->setObjectName("cashTable_2");
+        gridLayout_6 = new QGridLayout(cashTable_2);
+        gridLayout_6->setObjectName("gridLayout_6");
+        cashTable = new QTableWidget(cashTable_2);
+        if (cashTable->columnCount() < 3)
+            cashTable->setColumnCount(3);
+        if (cashTable->rowCount() < 8)
+            cashTable->setRowCount(8);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        cashTable->setItem(0, 0, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        cashTable->setItem(0, 1, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        cashTable->setItem(0, 2, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        __qtablewidgetitem9->setFont(font3);
+        cashTable->setItem(1, 0, __qtablewidgetitem9);
+        cashTable->setObjectName("cashTable");
+        sizePolicy3.setHeightForWidth(cashTable->sizePolicy().hasHeightForWidth());
+        cashTable->setSizePolicy(sizePolicy3);
+        cashTable->setMinimumSize(QSize(400, 300));
+        cashTable->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
+"    background-color: #2E2E2E;\n"
+"    color: white;\n"
+"    gridline-color: #505050;\n"
+"    font-size: 10 px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #444;\n"
+"    color: white;\n"
+"    padding: 6px;\n"
+"    border: none;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QTableWidget::item {\n"
+"    padding: 6px;\n"
+"    border-bottom: 1px solid #505050;\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: #66ccff;\n"
+"    color: black;\n"
+"}\n"
+""));
+        cashTable->setTabKeyNavigation(true);
+        cashTable->setShowGrid(false);
+        cashTable->setRowCount(8);
+        cashTable->setColumnCount(3);
+        cashTable->horizontalHeader()->setVisible(false);
+        cashTable->verticalHeader()->setVisible(false);
+
+        gridLayout_6->addWidget(cashTable, 0, 0, 1, 1);
+
+
+        verticalLayout_2->addWidget(cashTable_2);
 
         stackedWidget->addWidget(CashPage);
         CandleStickPage = new QWidget();
@@ -558,12 +733,95 @@ public:
         stackedWidget->addWidget(CandleStickPage);
         HistoryPage = new QWidget();
         HistoryPage->setObjectName("HistoryPage");
-        stackedWidget->addWidget(HistoryPage);
-        NewsPage = new QWidget();
-        NewsPage->setObjectName("NewsPage");
-        stackedWidget->addWidget(NewsPage);
+        gridLayout_8 = new QGridLayout(HistoryPage);
+        gridLayout_8->setObjectName("gridLayout_8");
+        historyTitle = new QWidget(HistoryPage);
+        historyTitle->setObjectName("historyTitle");
+        gridLayout_3 = new QGridLayout(historyTitle);
+        gridLayout_3->setObjectName("gridLayout_3");
+        title = new QLabel(historyTitle);
+        title->setObjectName("title");
+        title->setFont(font1);
+        title->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
+"color : white;\n"
+"border: none;\n"
+"font-size: 50;\n"
+"font-weight: bold;"));
 
-        verticalLayout_2->addWidget(stackedWidget);
+        gridLayout_3->addWidget(title, 0, 0, 1, 1);
+
+
+        gridLayout_8->addWidget(historyTitle, 0, 0, 1, 1);
+
+        historyTable = new QWidget(HistoryPage);
+        historyTable->setObjectName("historyTable");
+        gridLayout_7 = new QGridLayout(historyTable);
+        gridLayout_7->setObjectName("gridLayout_7");
+        tableHistory = new QTableWidget(historyTable);
+        if (tableHistory->columnCount() < 6)
+            tableHistory->setColumnCount(6);
+        if (tableHistory->rowCount() < 15)
+            tableHistory->setRowCount(15);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableHistory->setItem(0, 0, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableHistory->setItem(0, 1, __qtablewidgetitem11);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        tableHistory->setItem(0, 2, __qtablewidgetitem12);
+        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
+        tableHistory->setItem(0, 3, __qtablewidgetitem13);
+        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
+        tableHistory->setItem(0, 4, __qtablewidgetitem14);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        tableHistory->setItem(0, 5, __qtablewidgetitem15);
+        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
+        __qtablewidgetitem16->setFont(font3);
+        tableHistory->setItem(1, 0, __qtablewidgetitem16);
+        tableHistory->setObjectName("tableHistory");
+        sizePolicy3.setHeightForWidth(tableHistory->sizePolicy().hasHeightForWidth());
+        tableHistory->setSizePolicy(sizePolicy3);
+        tableHistory->setMinimumSize(QSize(400, 300));
+        tableHistory->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
+"    background-color: #2E2E2E;\n"
+"    color: white;\n"
+"    gridline-color: #505050;\n"
+"    font-size: 10 px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #444;\n"
+"    color: white;\n"
+"    padding: 6px;\n"
+"    border: none;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QTableWidget::item {\n"
+"    padding: 6px;\n"
+"    border-bottom: 1px solid #505050;\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: #66ccff;\n"
+"    color: black;\n"
+"}\n"
+""));
+        tableHistory->setTabKeyNavigation(true);
+        tableHistory->setShowGrid(false);
+        tableHistory->setRowCount(15);
+        tableHistory->setColumnCount(6);
+        tableHistory->horizontalHeader()->setVisible(false);
+        tableHistory->verticalHeader()->setVisible(false);
+
+        gridLayout_7->addWidget(tableHistory, 0, 0, 1, 1);
+
+
+        gridLayout_8->addWidget(historyTable, 1, 0, 1, 1);
+
+        stackedWidget->addWidget(HistoryPage);
+
+        gridLayout_2->addWidget(stackedWidget, 0, 0, 1, 1);
 
 
         horizontalLayout->addWidget(contentPanel);
@@ -572,7 +830,7 @@ public:
 
         retranslateUi(pages);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(pages);
@@ -585,7 +843,6 @@ public:
         Cash->setText(QString());
         Investment->setText(QString());
         Ledger->setText(QString());
-        News->setText(QString());
         label_7->setText(QCoreApplication::translate("pages", "Total Value:", nullptr));
         label_6->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
         label_4->setText(QCoreApplication::translate("pages", "Total Gain/Loss:", nullptr));
@@ -610,9 +867,41 @@ public:
         ___qtablewidgetitem4->setText(QCoreApplication::translate("pages", "Total Value", nullptr));
         Table->setSortingEnabled(__sortingEnabled);
 
-        label_10->setText(QCoreApplication::translate("pages", "My Portfolio", nullptr));
-        label_11->setText(QCoreApplication::translate("pages", "Track your investments and gains", nullptr));
-        label_12->setText(QCoreApplication::translate("pages", "Portfolio Overview", nullptr));
+        label_10->setText(QCoreApplication::translate("pages", "Cash", nullptr));
+        label_12->setText(QCoreApplication::translate("pages", "Manage your cash balance", nullptr));
+        label_11->setText(QCoreApplication::translate("pages", "Cash Balance:", nullptr));
+        label_13->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
+        pushButton->setText(QCoreApplication::translate("pages", "Deposit", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("pages", "Withdraw", nullptr));
+
+        const bool __sortingEnabled1 = cashTable->isSortingEnabled();
+        cashTable->setSortingEnabled(false);
+        QTableWidgetItem *___qtablewidgetitem5 = cashTable->item(0, 0);
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("pages", "Date", nullptr));
+        QTableWidgetItem *___qtablewidgetitem6 = cashTable->item(0, 1);
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("pages", "Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem7 = cashTable->item(0, 2);
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("pages", "Amount", nullptr));
+        cashTable->setSortingEnabled(__sortingEnabled1);
+
+        title->setText(QCoreApplication::translate("pages", "Transaction History", nullptr));
+
+        const bool __sortingEnabled2 = tableHistory->isSortingEnabled();
+        tableHistory->setSortingEnabled(false);
+        QTableWidgetItem *___qtablewidgetitem8 = tableHistory->item(0, 0);
+        ___qtablewidgetitem8->setText(QCoreApplication::translate("pages", "Date", nullptr));
+        QTableWidgetItem *___qtablewidgetitem9 = tableHistory->item(0, 1);
+        ___qtablewidgetitem9->setText(QCoreApplication::translate("pages", "Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem10 = tableHistory->item(0, 2);
+        ___qtablewidgetitem10->setText(QCoreApplication::translate("pages", "Symbol", nullptr));
+        QTableWidgetItem *___qtablewidgetitem11 = tableHistory->item(0, 3);
+        ___qtablewidgetitem11->setText(QCoreApplication::translate("pages", "Quantity", nullptr));
+        QTableWidgetItem *___qtablewidgetitem12 = tableHistory->item(0, 4);
+        ___qtablewidgetitem12->setText(QCoreApplication::translate("pages", "Price", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = tableHistory->item(0, 5);
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("pages", "Total", nullptr));
+        tableHistory->setSortingEnabled(__sortingEnabled2);
+
     } // retranslateUi
 
 };

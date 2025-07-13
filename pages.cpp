@@ -122,7 +122,6 @@ pages::pages(QWidget *parent)
     connect(ui->Cash, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Investment, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Ledger, &QPushButton::toggled, this, &pages::onButtonToggled);
-    connect(ui->News, &QPushButton::toggled, this, &pages::onButtonToggled);
 
     // Set Portfolio as initially selected
     ui->Portfolio->setChecked(true);
@@ -138,6 +137,17 @@ pages::pages(QWidget *parent)
     //fix width for symbol column
     ui->Table->setColumnWidth(0, 100);
 
+
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);  // Type
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);  // Amount
+
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents); // Date
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents); // Type
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch); // Symbol
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Quantity
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Price
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(5, QHeaderView::Stretch); // Total
     setupCandlestickChart();
 }
 
@@ -163,8 +173,6 @@ void pages::onButtonToggled(bool checked)
         fetchStockData("NABIL");
     } else if (button == ui->Ledger) {
         ui->stackedWidget->setCurrentIndex(3);
-    } else if (button == ui->News) {
-        ui->stackedWidget->setCurrentIndex(4);
     }
 
     // Delete any existing animation
