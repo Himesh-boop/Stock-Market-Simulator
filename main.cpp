@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     loginPage mainWindow;
     mainWindow.setWindowTitle("Stock Market Simulator");
-    mainWindow.resize(1024, 768); // Set initial window size
+    mainWindow.resize(1024, 768);
     mainWindow.show();
 
     return app.exec();

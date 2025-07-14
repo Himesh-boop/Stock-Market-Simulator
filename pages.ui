@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1220</width>
-    <height>713</height>
+    <width>1322</width>
+    <height>807</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -249,37 +249,6 @@ QPushButton:checked {
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="News">
-         <property name="styleSheet">
-          <string notr="true">QPushButton:checked {
-    background-color: #707070;
-    border: 1px solid #AAAAAA;
-    font-weight: bold;
-}
-</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/icons/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</normaloff>:/icons/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>35</width>
-           <height>35</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
@@ -291,276 +260,202 @@ QPushButton:checked {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <widget class="QStackedWidget" name="stackedWidget">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>-10</y>
-         <width>1061</width>
-         <height>663</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string>QPushButton {
-    min-width: 70px;
-    min-height: 15px;
-    max-width: 70px;
-	 max-height: 15px;
-    padding: 5px;
-    border-radius: 12px;
-    background-color: #8dd279;
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    min-width: 100px;
+    min-height: 40px;
+    padding: 6px 12px;
+    border-radius: 20px; /* Full rounded look */
+    font-weight: bold;
     color: black;
-	font-size: 12px;
-	font-weight: bold;
+    background-color: #333; /* Default dark for Withdraw */
+}
+
+QPushButton:hover {
+    opacity: 0.85;
 }
 </string>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <widget class="QWidget" name="PortfolioPage">
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QWidget" name="Title" native="true">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>2</verstretch>
-            </sizepolicy>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="font">
-               <font>
-                <pointsize>24</pointsize>
-                <bold>true</bold>
-               </font>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <widget class="QWidget" name="PortfolioPage">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0">
+            <widget class="QFrame" name="Cards">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>2</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Shape::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Shadow::Plain</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>11</number>
               </property>
-              <property name="styleSheet">
-               <string notr="true">background-color : transparent;
-color : white;
-border: none;
-font-size: 50;
-font-weight: bold;</string>
-              </property>
-              <property name="text">
-               <string>My Portfolio</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_2">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color : transparent;
-color : white;
-border: none;
-font-size: 17;</string>
-              </property>
-              <property name="text">
-               <string>Track your investments and gains</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="font">
-               <font>
-                <pointsize>14</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color : transparent;
-color : white;
-border: none;
-font-size: 14;
-</string>
-              </property>
-              <property name="text">
-               <string>Portfolio Overview</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QFrame" name="Cards">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>2</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Shape::NoFrame</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Shadow::Plain</enum>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <property name="spacing">
-             <number>11</number>
-            </property>
-            <item>
-             <widget class="QWidget" name="widget_4" native="true">
-              <property name="styleSheet">
-               <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+              <item>
+               <widget class="QWidget" name="widget_4" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
     border-radius: 12px;                        /* Curved corners */
     padding: 12px;                              /* Space inside the card */</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_6">
-               <item>
-                <widget class="QLabel" name="label_7">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Total Value:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_6">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                   </property>
+                   <property name="text">
+                    <string>Total Value:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Rs. XXXX</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" name="widget_2" native="true">
-              <property name="styleSheet">
-               <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+                   </property>
+                   <property name="text">
+                    <string>Rs. XXXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
     border-radius: 12px;                        /* Curved corners */
     padding: 12px;                              /* Space inside the card */</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_5">
-               <item>
-                <widget class="QLabel" name="label_4">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Total Gain/Loss:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_5">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                   </property>
+                   <property name="text">
+                    <string>Total Gain/Loss:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Rs. XXXX</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" name="widget_3" native="true">
-              <property name="styleSheet">
-               <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+                   </property>
+                   <property name="text">
+                    <string>Rs. XXXX</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_3" native="true">
+                <property name="styleSheet">
+                 <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
     border-radius: 12px;                        /* Curved corners */
     padding: 12px;                              /* Space inside the card */</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <item>
-                <widget class="QLabel" name="label_8">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string>Total Change:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_9">
-                 <property name="font">
-                  <font>
-                   <pointsize>14</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: transparent;
+                   </property>
+                   <property name="text">
+                    <string>Total Change:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
 color: white;
 border: none;</string>
-                 </property>
-                 <property name="text">
-                  <string> XX.XXX %</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QTableWidget" name="Table">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>6</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QTableWidget {
+                   </property>
+                   <property name="text">
+                    <string> XX.XXX %</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QTableWidget" name="Table">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>6</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget {
     background-color: #2E2E2E;
     color: white;
     gridline-color: #505050;
@@ -586,421 +481,986 @@ QTableWidget::item:selected {
     color: black;
 }
 </string>
-           </property>
-           <property name="tabKeyNavigation">
-            <bool>true</bool>
-           </property>
-           <property name="showGrid">
-            <bool>false</bool>
-           </property>
-           <property name="rowCount">
-            <number>8</number>
-           </property>
-           <property name="columnCount">
-            <number>5</number>
-           </property>
-           <attribute name="horizontalHeaderVisible">
-            <bool>false</bool>
-           </attribute>
-           <attribute name="verticalHeaderVisible">
-            <bool>false</bool>
-           </attribute>
-           <row/>
-           <row/>
-           <row/>
-           <row/>
-           <row/>
-           <row/>
-           <row/>
-           <row/>
-           <column/>
-           <column/>
-           <column/>
-           <column/>
-           <column/>
+             </property>
+             <property name="tabKeyNavigation">
+              <bool>true</bool>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <property name="rowCount">
+              <number>8</number>
+             </property>
+             <property name="columnCount">
+              <number>5</number>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <item row="0" column="0">
+              <property name="text">
+               <string>Symbol</string>
+              </property>
+             </item>
+             <item row="0" column="1">
+              <property name="text">
+               <string>Name</string>
+              </property>
+             </item>
+             <item row="0" column="2">
+              <property name="text">
+               <string>Quantity</string>
+              </property>
+             </item>
+             <item row="0" column="3">
+              <property name="text">
+               <string>Current Price</string>
+              </property>
+             </item>
+             <item row="0" column="4">
+              <property name="text">
+               <string>Total Value</string>
+              </property>
+             </item>
+             <item row="1" column="0">
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+               </font>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="CashPage">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QWidget" name="cashTitle" native="true">
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QWidget" name="Title_2" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>2</verstretch>
+                 </sizepolicy>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="font">
+                    <font>
+                     <pointsize>-1</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 50px;
+font-weight: bold;</string>
+                   </property>
+                   <property name="text">
+                    <string>Cash</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="font">
+                    <font>
+                     <pointsize>-1</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 20px;
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Manage your cash balance</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cashCard" native="true">
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QFrame" name="Cards_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>2</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Plain</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <property name="spacing">
+                  <number>11</number>
+                 </property>
+                 <item>
+                  <widget class="QWidget" name="widget_11" native="true">
+                   <property name="styleSheet">
+                    <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
+    border-radius: 12px;                        /* Curved corners */
+    padding: 12px;                              /* Space inside the card */</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <item>
+                     <widget class="QLabel" name="label_11">
+                      <property name="font">
+                       <font>
+                        <pointsize>14</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                      </property>
+                      <property name="text">
+                       <string>Cash Balance:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="font">
+                       <font>
+                        <pointsize>14</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent;
+color: white;
+border: none;</string>
+                      </property>
+                      <property name="text">
+                       <string>Rs. XXXX</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cashButtons" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    min-width: 30px;
+    min-height: 20px;
+    padding: 6px 12px;
+    border-radius: 15px; /* Full rounded look */
+    font-weight: bold;
+    color: black;
+    background-color: #8dd279; 
+}
+
+QPushButton:hover {
+    opacity: 0.85;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Deposit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    min-width: 30px;
+    min-height: 20px;
+    padding: 6px 12px;
+    border-radius: 15px; /* Full rounded look */
+    font-weight: bold;
+    color: white;
+    background-color: #333; /* Default dark for Withdraw */
+}
+
+QPushButton:hover {
+    opacity: 0.85;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Withdraw</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="cashTable_2" native="true">
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="cashTable">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>6</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTableWidget {
+    background-color: #2E2E2E;
+    color: white;
+    gridline-color: #505050;
+    font-size: 10 px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #444;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    padding: 6px;
+    border-bottom: 1px solid #505050;
+}
+
+QTableWidget::item:selected {
+    background-color: #66ccff;
+    color: black;
+}
+</string>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>true</bool>
+                </property>
+                <property name="showGrid">
+                 <bool>false</bool>
+                </property>
+                <property name="rowCount">
+                 <number>8</number>
+                </property>
+                <property name="columnCount">
+                 <number>3</number>
+                </property>
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <column/>
+                <column/>
+                <column/>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>Date</string>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string>Type</string>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string>Amount</string>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="CandleStickPage">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QWidget" name="chartControls" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="controlsLayout">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="tradingButtons" native="true">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <layout class="QHBoxLayout" name="tradingLayout" stretch="0,0,0">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="buyButton">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    min-width: 80px;
+    min-height: 35px;
+    padding: 8px 16px;
+    border-radius: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50; /* Green for buy */
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3d8b40;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>BUY</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QSpinBox" name="spinBox">
+                      <property name="styleSheet">
+                       <string notr="true">QSpinBox {
+    background-color: #3A3A3A;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font: bold 12px &quot;Segoe UI&quot;;
+    min-height: 30px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    subcontrol-origin: border;
+    background-color: #3A3A3A;
+    border-left: 1px solid #555;
+    width: 20px;
+}
+
+QSpinBox::up-button {
+    subcontrol-position: top right;
+    border-top-right-radius: 6px;
+}
+
+QSpinBox::down-button {
+    subcontrol-position: bottom right;
+    border-bottom-right-radius: 6px;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #505050;
+}
+
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    width: 10px;
+    height: 10px;
+}
+QSpinBox::up-arrow {
+    width: 10px;
+    height: 10px;
+    image: none;
+}
+
+QSpinBox::down-arrow {
+    width: 10px;
+    height: 10px;
+    image: none;
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="sellButton">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    min-width: 80px;
+    min-height: 35px;
+    padding: 8px 16px;
+    border-radius: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #f44336; /* Red for sell */
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #da190b;
+}
+
+QPushButton:pressed {
+    background-color: #c62828;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>SELL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QWidget" name="companySymbols" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0">
+                 <item>
+                  <widget class="QComboBox" name="companySymbolsCombo">
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox {
+    min-width: 120px;
+    min-height: 30px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #3A3A3A;
+    color: #E0E0E0;
+    border: 1px solid #555;
+}
+
+QComboBox:hover {
+    background-color: #505050;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #E0E0E0;
+    margin-right: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #3A3A3A;
+    color: #E0E0E0;
+    selection-background-color: #555;
+    border: 1px solid #555;
+    border-radius: 8px;
+}</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>BBC</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>NRIC</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>CIT</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>GBIME</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>SANIMA</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>SBI</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="chartTypeWidget" native="true">
+                <layout class="QHBoxLayout" name="chartTypeLayout" stretch="0,0">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="chartTypeLabel">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;
+font-size: 12px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Chart Type:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="chartTypeToggle">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    min-width: 100px;
+    min-height: 30px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #2196F3;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #1976D2;
+}
+
+QPushButton:pressed {
+    background-color: #1565C0;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Candlestick</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="rsiWidget" native="true">
+                <layout class="QHBoxLayout" name="rsiLayout" stretch="0,0">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="rsiLabel">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;
+font-size: 12px;</string>
+                   </property>
+                   <property name="text">
+                    <string>RSI:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="rsiToggle">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    min-width: 60px;
+    min-height: 30px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #666;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #777;
+}
+
+QPushButton:checked {
+    background-color: #FF9800;
+}
+
+QPushButton:checked:hover {
+    background-color: #F57C00;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>OFF</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="algorithmsWidget" native="true">
+                <layout class="QHBoxLayout" name="algorithmsLayout" stretch="0,0">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="algorithmsLabel">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: transparent;
+color: white;
+border: none;
+font-size: 12px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Indicators:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="algorithmsCombo">
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox {
+    min-width: 120px;
+    min-height: 30px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #3A3A3A;
+    color: #E0E0E0;
+    border: 1px solid #555;
+}
+
+QComboBox:hover {
+    background-color: #505050;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #E0E0E0;
+    margin-right: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #3A3A3A;
+    color: #E0E0E0;
+    selection-background-color: #555;
+    border: 1px solid #555;
+    border-radius: 8px;
+}</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>None</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>MACD</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Bollinger Bands</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Moving Average</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Stochastic</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Williams %R</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>CCI</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QChartView" name="chartWidget" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>2</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="HistoryPage">
+          <layout class="QGridLayout" name="gridLayout_8">
            <item row="0" column="0">
-            <property name="text">
-             <string>Symbol</string>
-            </property>
-           </item>
-           <item row="0" column="1">
-            <property name="text">
-             <string>Name</string>
-            </property>
-           </item>
-           <item row="0" column="2">
-            <property name="text">
-             <string>Quantity</string>
-            </property>
-           </item>
-           <item row="0" column="3">
-            <property name="text">
-             <string>Current Price</string>
-            </property>
-           </item>
-           <item row="0" column="4">
-            <property name="text">
-             <string>Total Value</string>
-            </property>
-           </item>
-           <item row="1" column="0">
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="CashPage">
-        <widget class="QWidget" name="TitleCash" native="true">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>771</width>
-           <height>111</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>2</verstretch>
-          </sizepolicy>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_8">
-          <item>
-           <widget class="QLabel" name="label_10">
-            <property name="font">
-             <font>
-              <pointsize>24</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color : transparent;
+            <widget class="QWidget" name="historyTitle" native="true">
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QLabel" name="title">
+                <property name="font">
+                 <font>
+                  <pointsize>24</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color : transparent;
 color : white;
 border: none;
 font-size: 50;
 font-weight: bold;</string>
-            </property>
-            <property name="text">
-             <string>Cash</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_11">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color : transparent;
-color : white;
-border: none;
-font-size: 17;</string>
-            </property>
-            <property name="text">
-             <string>Manage your cash balance</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="ButtonsCash" native="true">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>290</y>
-           <width>371</width>
-           <height>61</height>
-          </rect>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    min-width: 70px;
-    min-height: 15px;
-    max-width: 70px;
-	 max-height: 15px;
-    padding: 5px;
-    border-radius: 12px;
-    background-color: #8dd279;
-    color: black;
-	font-size: 12px;
-	font-weight: bold;
+                </property>
+                <property name="text">
+                 <string>Transaction History</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QWidget" name="historyTable" native="true">
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableHistory">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>6</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>300</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QTableWidget {
+    background-color: #2E2E2E;
+    color: white;
+    gridline-color: #505050;
+    font-size: 10 px;
+    border: none;
 }
-</string>
-            </property>
-            <property name="text">
-             <string>Deposit</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_2">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    min-width: 70px;
-    min-height: 15px;
-    max-width: 70px;
-	 max-height: 15px;
-    padding: 5px;
-    border-radius: 12px;
+
+QHeaderView::section {
     background-color: #444;
     color: white;
-	font-size: 12px;
-	font-weight: bold;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableWidget::item {
+    padding: 6px;
+    border-bottom: 1px solid #505050;
+}
+
+QTableWidget::item:selected {
+    background-color: #66ccff;
+    color: black;
 }
 </string>
-            </property>
-            <property name="text">
-             <string>Withdraw</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>true</bool>
+                </property>
+                <property name="showGrid">
+                 <bool>false</bool>
+                </property>
+                <property name="rowCount">
+                 <number>15</number>
+                </property>
+                <property name="columnCount">
+                 <number>6</number>
+                </property>
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <row/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <column/>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>Date</string>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string>Type</string>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string>Symbol</string>
+                 </property>
+                </item>
+                <item row="0" column="3">
+                 <property name="text">
+                  <string>Quantity</string>
+                 </property>
+                </item>
+                <item row="0" column="4">
+                 <property name="text">
+                  <string>Price</string>
+                 </property>
+                </item>
+                <item row="0" column="5">
+                 <property name="text">
+                  <string>Total</string>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
-        <widget class="QLabel" name="label_14">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>350</y>
-           <width>411</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-color: white;
-font-size: 15px;
-font-weight:bold;
-border: none;</string>
-         </property>
-         <property name="text">
-          <string>Cash Transactions</string>
-         </property>
-        </widget>
-        <widget class="QTableWidget" name="cashTable">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>400</y>
-           <width>800</width>
-           <height>300</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>800</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Shape::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Shadow::Plain</enum>
-         </property>
-         <property name="showGrid">
-          <bool>false</bool>
-         </property>
-         <property name="rowCount">
-          <number>9</number>
-         </property>
-         <property name="columnCount">
-          <number>3</number>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <column/>
-         <column/>
-         <column/>
-         <item row="0" column="0">
-          <property name="text">
-           <string>Date</string>
-          </property>
-         </item>
-         <item row="0" column="1">
-          <property name="text">
-           <string>Type</string>
-          </property>
-         </item>
-         <item row="0" column="2">
-          <property name="text">
-           <string>Amount</string>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
-         </item>
-        </widget>
-        <widget class="QWidget" name="widget_5" native="true">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>110</y>
-           <width>781</width>
-           <height>171</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"> background-color: rgba(200, 255, 200, 30);  /* Light translucent green */
-    border-radius: 12px;                        /* Curved corners */
-    padding: 12px;                              /* Space inside the card */</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_9">
-          <item>
-           <widget class="QFrame" name="CashCard">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>2</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::Shape::NoFrame</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Shadow::Plain</enum>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_2">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_12">
-               <property name="font">
-                <font>
-                 <pointsize>14</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: transparent;
-color: white;
-border: none;</string>
-               </property>
-               <property name="text">
-                <string>Cash Balance:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_13">
-               <property name="font">
-                <font>
-                 <pointsize>14</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: transparent;
-color: white;
-border: none;
-font-weight: bold;</string>
-               </property>
-               <property name="text">
-                <string>Rs. XXXX</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="CandleStickPage">
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <widget class="QChartView" name="chartWidget" native="true">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>2</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget" native="true">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>1</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="HistoryPage"/>
-       <widget class="QWidget" name="NewsPage"/>
-      </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>

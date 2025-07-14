@@ -20,8 +20,8 @@
 #include <algorithm>
 #include <limits>
 #include <QHeaderView>
+#include "db/transactiondb.h"
 
-// Custom ChartView class to handle scroll wheel zooming
 class CustomChartView : public QChartView {
 public:
     CustomChartView(QWidget* parent = nullptr) : QChartView(parent) {
@@ -56,10 +56,10 @@ void pages::setUsername(const QString &username)
 {
     m_username = username;
     m_username[0] = m_username[0].toUpper();
-    ui->label->setText(QString("%1's Portfolio").arg(m_username));
+    // ui->label->setText(QString("%1's Portfolio").arg(m_username));
 }
 
-void pages::fetchStockData(const QString& symbol) {
+void pages::fetchStockData() {
     QProcess* process = new QProcess(this);
 
     connect(process, &QProcess::finished, this, [this, process]() {
@@ -70,7 +70,6 @@ void pages::fetchStockData(const QString& symbol) {
         qDebug() << "Python script output:" << jsonString;
         qDebug() << "Python script error output:" << errorOutput;
 
-        // Parse JSON data
         QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonString.toUtf8());
         if (jsonDoc.isNull()) {
             qDebug() << "Failed to parse JSON data: invalid JSON";
@@ -99,6 +98,8 @@ void pages::fetchStockData(const QString& symbol) {
     QString pythonExecutable = "python";
     QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
+    QString symbol = ui->companySymbolsCombo->currentText();
+
     QStringList arguments = { scriptPath, symbol };
 
     process->start(pythonExecutable, arguments);
@@ -117,20 +118,22 @@ pages::pages(QWidget *parent)
     , originalMinPrice(0)
     , originalMaxPrice(0)
     , originalMaxVolume(0)
+    , pricePerShare(0.0)
 {
     ui->setupUi(this);
 
-    // Connect all buttons to the toggle slot
+    connect(ui->buyButton, &QPushButton::clicked, this, &pages::buyButtonPushed);
+    connect(ui->sellButton, &QPushButton::clicked, this, &pages::sellButtonPushed);
+    connect(ui->companySymbolsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
+            this, &pages::fetchStockData);
+
     connect(ui->Portfolio, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Cash, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Investment, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Ledger, &QPushButton::toggled, this, &pages::onButtonToggled);
-    connect(ui->News, &QPushButton::toggled, this, &pages::onButtonToggled);
 
-    // Set Portfolio as initially selected
     ui->Portfolio->setChecked(true);
-    // Set initial page to match the initially selected button
-    ui->stackedWidget->setCurrentIndex(0); // Portfolio page
+    ui->stackedWidget->setCurrentIndex(0);
 
 
 
@@ -147,6 +150,17 @@ pages::pages(QWidget *parent)
     //fix width for symbol column
     ui->Table->setColumnWidth(0, 100);
 
+
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);  // Type
+    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);  // Amount
+
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents); // Date
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents); // Type
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch); // Symbol
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Quantity
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Price
+    ui->tableHistory->horizontalHeader()->setSectionResizeMode(5, QHeaderView::Stretch); // Total
     setupCandlestickChart();
 }
 
@@ -169,11 +183,9 @@ void pages::onButtonToggled(bool checked)
         ui->stackedWidget->setCurrentIndex(1);
     } else if (button == ui->Investment) {
         ui->stackedWidget->setCurrentIndex(2);
-        fetchStockData("NABIL");
+        fetchStockData();
     } else if (button == ui->Ledger) {
         ui->stackedWidget->setCurrentIndex(3);
-    } else if (button == ui->News) {
-        ui->stackedWidget->setCurrentIndex(4);
     }
 
     if (currentAnimation) {
@@ -216,13 +228,11 @@ void pages::onButtonToggled(bool checked)
 }
 
 void pages::setupCandlestickChart() {
-    // Create the chart and series
     chart = new QChart();
     candlestickSeries = new QCandlestickSeries();
     volumeSeries = new QBarSeries();
     volumeSet = new QBarSet("Volume");
 
-    // Add series to the chart
     chart->addSeries(candlestickSeries);
     chart->addSeries(volumeSeries);
     volumeSeries->append(volumeSet);
@@ -230,7 +240,6 @@ void pages::setupCandlestickChart() {
     chart->setTitle("Stock Price Chart with Volume");
     chart->setAnimationOptions(QChart::SeriesAnimations);
 
-    // X Axis (shared for both series)
     axisX = new QDateTimeAxis();
     axisX->setFormat("dd-MM");
     axisX->setTitleText("Date");
@@ -238,42 +247,33 @@ void pages::setupCandlestickChart() {
     candlestickSeries->attachAxis(axisX);
     volumeSeries->attachAxis(axisX);
 
-    // Y Axis for Candlestick Prices
     axisYPrice = new QValueAxis();
     axisYPrice->setTitleText("Price");
     chart->addAxis(axisYPrice, Qt::AlignLeft);
     candlestickSeries->attachAxis(axisYPrice);
 
-    // Y Axis for Volume
     volumeAxisY = new QValueAxis();
     volumeAxisY->setTitleText("Volume");
     chart->addAxis(volumeAxisY, Qt::AlignRight);
     volumeSeries->attachAxis(volumeAxisY);
 
-    // Check if ui->chartWidget is already a QChartView
     chartView = qobject_cast<QChartView*>(ui->chartWidget);
 
     if (!chartView) {
-        // If it's not a QChartView, we need to replace it properly
         QWidget* parent = ui->chartWidget->parentWidget();
 
-        // Get the geometry and layout info before replacing
         QRect geometry = ui->chartWidget->geometry();
         QString objectName = ui->chartWidget->objectName();
 
-        // Create new chart view with same parent
         chartView = new CustomChartView(parent);
         chartView->setObjectName(objectName);
         chartView->setGeometry(geometry);
 
-        // Hide old widget and show new one
         ui->chartWidget->hide();
         chartView->show();
 
-        // Update the ui pointer
         ui->chartWidget = chartView;
     } else {
-        // If it's already a QChartView, just install event filter for wheel events
         chartView->installEventFilter(this);
     }
 
@@ -360,14 +360,12 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         volumeSet->append(volume);
     }
 
-    // Store original ranges for zoom reset
     originalMinPrice = minPrice * 0.95;
     originalMaxPrice = maxPrice * 1.05;
     originalMaxVolume = maxVolume * 1.1;
     originalFirstDate = firstDate;
     originalLastDate = lastDate;
 
-    // Set axis ranges
     axisYPrice->setRange(originalMinPrice, originalMaxPrice);
     volumeAxisY->setRange(0, originalMaxVolume);
     axisX->setRange(originalFirstDate, originalLastDate);
@@ -406,4 +404,37 @@ bool pages::eventFilter(QObject* obj, QEvent* event) {
         }
     }
     return QMainWindow::eventFilter(obj, event);
+}
+
+// Alternative simpler approach - get the last item from the already sorted data
+void pages::extractLatestClosingPrice(const QJsonArray &data) {
+    if (data.isEmpty()) {
+        qDebug() << "No data available to extract closing price";
+        pricePerShare = 0.0;
+        return;
+    }
+
+    QJsonObject latestEntry = data.last().toObject();
+    pricePerShare = latestEntry["close"].toDouble();
+
+    qDebug() << "Latest closing price:" << pricePerShare;
+    qDebug() << "Date:" << latestEntry["date"].toString();
+}
+
+void pages::buyButtonPushed() {
+    QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+    QString symbol = ui->companySymbolsCombo->currentText();
+    int quantity = ui->spinBox->value();
+
+    TransactionDB tdb;
+    tdb.insertEntry(currentTime, "BUY", symbol, quantity, pricePerShare);
+}
+
+void pages::sellButtonPushed(){
+    QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+    QString symbol = ui->companySymbolsCombo->currentText();
+    int quantity = ui->spinBox->value();
+
+    TransactionDB tdb;
+    tdb.insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
 }

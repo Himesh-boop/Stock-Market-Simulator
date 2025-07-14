@@ -4,8 +4,7 @@
 #include <QDebug>
 
 PortfolioDB::PortfolioDB() {
-    db = QSqlDatabase::addDatabase("QSQLITE", "portfolio_connection");
-    db.setDatabaseName("portfolio.db");
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
 
     if (!db.open()) {
         qDebug() << "Failed to open portfolio database:" << db.lastError().text();

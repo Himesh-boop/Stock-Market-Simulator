@@ -84,6 +84,7 @@ add_executable(StockMarketSimulator
     db/authenticator.h db/authenticator.cpp
     db/portfoliodb.h db/portfoliodb.cpp
     db/cashdb.h db/cashdb.cpp
+    db/transactiondb.h db/transactiondb.cpp
 
 )
 
