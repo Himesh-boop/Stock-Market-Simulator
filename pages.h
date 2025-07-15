@@ -28,7 +28,7 @@ class pages : public QMainWindow
 public:
     explicit pages(QWidget *parent = nullptr);
     ~pages();
-    void fetchStockData(const QString& symbol);
+    void fetchStockData();
     void setUsername(const QString& username);
 
 protected:
@@ -43,7 +43,6 @@ private:
     QPushButton *lastCheckedButton;
     QString m_username;
 
-    // Chart related members
     QChartView *chartView = nullptr;
     QCandlestickSeries *candlestickSeries = nullptr;
     QChart *chart = nullptr;
@@ -54,17 +53,19 @@ private:
     QDateTimeAxis* axisX;
     QValueAxis* axisYPrice;
 
-    // Store original ranges for zoom reset
     double originalMinPrice;
     double originalMaxPrice;
     double originalMaxVolume;
     QDateTime originalFirstDate;
     QDateTime originalLastDate;
 
-    // Method to reset zoom
     void resetZoom();
     void setupCandlestickChart();
     void updateCandlestickChart(const QJsonArray &data);
+    void buyButtonPushed();
+    void sellButtonPushed();
+    double pricePerShare;
+    void extractLatestClosingPrice(const QJsonArray &data);
 };
 
 #endif // PAGES_H

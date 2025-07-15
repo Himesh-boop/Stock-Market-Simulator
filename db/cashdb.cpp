@@ -4,8 +4,7 @@
 #include <QDebug>
 
 CashDB::CashDB() {
-    db = QSqlDatabase::addDatabase("QSQLITE", "cash_connection");
-    db.setDatabaseName("cash.db");
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
 
     if (!db.open()) {
         qDebug() << "Failed to open cash database:" << db.lastError().text();

@@ -49,14 +49,13 @@ def generate_chart(symbol):
     if df is None or df.empty:
         print("No data to plot")
         return None
-    # Convert DataFrame to JSON string for easy parsing in C++
+
     return df
 
 if __name__ == '__main__':
-    symbol = sys.argv[1] if len(sys.argv) > 1 else 'NABIL'  # default symbol if none passed
+    symbol = sys.argv[1] if len(sys.argv) > 1 else 'xyz'
     df = generate_chart(symbol)
     if df is not None:
-        # Send debug info to stderr (not stdout)
         print(f"Got DataFrame: {df.shape}", file=sys.stderr)
 
         df = df.rename(columns={

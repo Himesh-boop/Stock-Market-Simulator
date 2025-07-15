@@ -52,6 +52,9 @@
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\cashdb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\transactiondb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\EWIEGA46WW_Debug\qrc_resources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -118,6 +121,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\cashdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\transactiondb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\build\StockMarketSimulator_autogen\include_Debug\ui_pages.h">
