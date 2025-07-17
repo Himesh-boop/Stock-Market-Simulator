@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1322</width>
+    <width>1413</width>
     <height>807</height>
    </rect>
   </property>
@@ -260,8 +260,8 @@ QPushButton:checked {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="styleSheet">
           <string notr="true">QPushButton {
@@ -280,7 +280,7 @@ QPushButton:hover {
 </string>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="PortfolioPage">
           <layout class="QGridLayout" name="gridLayout">
@@ -441,7 +441,7 @@ border: none;</string>
             </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QTableWidget" name="Table">
+            <widget class="QTableView" name="Table">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -455,7 +455,7 @@ border: none;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QTableWidget {
+              <string notr="true">QTableView {
     background-color: #2E2E2E;
     color: white;
     gridline-color: #505050;
@@ -471,12 +471,12 @@ QHeaderView::section {
     font-weight: bold;
 }
 
-QTableWidget::item {
+QTableView::item {
     padding: 6px;
     border-bottom: 1px solid #505050;
 }
 
-QTableWidget::item:selected {
+QTableView::item:selected {
     background-color: #66ccff;
     color: black;
 }
@@ -488,69 +488,18 @@ QTableWidget::item:selected {
              <property name="showGrid">
               <bool>false</bool>
              </property>
-             <property name="rowCount">
-              <number>8</number>
-             </property>
-             <property name="columnCount">
-              <number>5</number>
-             </property>
              <attribute name="horizontalHeaderVisible">
-              <bool>false</bool>
+              <bool>true</bool>
              </attribute>
              <attribute name="verticalHeaderVisible">
               <bool>false</bool>
              </attribute>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <column/>
-             <column/>
-             <column/>
-             <column/>
-             <column/>
-             <item row="0" column="0">
-              <property name="text">
-               <string>Symbol</string>
-              </property>
-             </item>
-             <item row="0" column="1">
-              <property name="text">
-               <string>Name</string>
-              </property>
-             </item>
-             <item row="0" column="2">
-              <property name="text">
-               <string>Quantity</string>
-              </property>
-             </item>
-             <item row="0" column="3">
-              <property name="text">
-               <string>Current Price</string>
-              </property>
-             </item>
-             <item row="0" column="4">
-              <property name="text">
-               <string>Total Value</string>
-              </property>
-             </item>
-             <item row="1" column="0">
-              <property name="font">
-               <font>
-                <pointsize>9</pointsize>
-               </font>
-              </property>
-             </item>
             </widget>
            </item>
           </layout>
          </widget>
          <widget class="QWidget" name="CashPage">
-          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,5">
            <item>
             <widget class="QWidget" name="cashTitle" native="true">
              <layout class="QGridLayout" name="gridLayout_4">
@@ -733,108 +682,7 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="cashTable_2" native="true">
-             <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="0">
-               <widget class="QTableWidget" name="cashTable">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>6</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>300</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QTableWidget {
-    background-color: #2E2E2E;
-    color: white;
-    gridline-color: #505050;
-    font-size: 10 px;
-    border: none;
-}
-
-QHeaderView::section {
-    background-color: #444;
-    color: white;
-    padding: 6px;
-    border: none;
-    font-weight: bold;
-}
-
-QTableWidget::item {
-    padding: 6px;
-    border-bottom: 1px solid #505050;
-}
-
-QTableWidget::item:selected {
-    background-color: #66ccff;
-    color: black;
-}
-</string>
-                </property>
-                <property name="tabKeyNavigation">
-                 <bool>true</bool>
-                </property>
-                <property name="showGrid">
-                 <bool>false</bool>
-                </property>
-                <property name="rowCount">
-                 <number>8</number>
-                </property>
-                <property name="columnCount">
-                 <number>3</number>
-                </property>
-                <attribute name="horizontalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <column/>
-                <column/>
-                <column/>
-                <item row="0" column="0">
-                 <property name="text">
-                  <string>Date</string>
-                 </property>
-                </item>
-                <item row="0" column="1">
-                 <property name="text">
-                  <string>Type</string>
-                 </property>
-                </item>
-                <item row="0" column="2">
-                 <property name="text">
-                  <string>Amount</string>
-                 </property>
-                </item>
-                <item row="1" column="0">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </widget>
+            <widget class="QTableView" name="tableView_2"/>
            </item>
           </layout>
          </widget>
@@ -1324,134 +1172,8 @@ font-weight: bold;</string>
                 </property>
                </widget>
               </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QWidget" name="historyTable" native="true">
-             <layout class="QGridLayout" name="gridLayout_7">
-              <item row="0" column="0">
-               <widget class="QTableWidget" name="tableHistory">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>6</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>300</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QTableWidget {
-    background-color: #2E2E2E;
-    color: white;
-    gridline-color: #505050;
-    font-size: 10 px;
-    border: none;
-}
-
-QHeaderView::section {
-    background-color: #444;
-    color: white;
-    padding: 6px;
-    border: none;
-    font-weight: bold;
-}
-
-QTableWidget::item {
-    padding: 6px;
-    border-bottom: 1px solid #505050;
-}
-
-QTableWidget::item:selected {
-    background-color: #66ccff;
-    color: black;
-}
-</string>
-                </property>
-                <property name="tabKeyNavigation">
-                 <bool>true</bool>
-                </property>
-                <property name="showGrid">
-                 <bool>false</bool>
-                </property>
-                <property name="rowCount">
-                 <number>15</number>
-                </property>
-                <property name="columnCount">
-                 <number>6</number>
-                </property>
-                <attribute name="horizontalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <attribute name="verticalHeaderVisible">
-                 <bool>false</bool>
-                </attribute>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <row/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <column/>
-                <item row="0" column="0">
-                 <property name="text">
-                  <string>Date</string>
-                 </property>
-                </item>
-                <item row="0" column="1">
-                 <property name="text">
-                  <string>Type</string>
-                 </property>
-                </item>
-                <item row="0" column="2">
-                 <property name="text">
-                  <string>Symbol</string>
-                 </property>
-                </item>
-                <item row="0" column="3">
-                 <property name="text">
-                  <string>Quantity</string>
-                 </property>
-                </item>
-                <item row="0" column="4">
-                 <property name="text">
-                  <string>Price</string>
-                 </property>
-                </item>
-                <item row="0" column="5">
-                 <property name="text">
-                  <string>Total</string>
-                 </property>
-                </item>
-                <item row="1" column="0">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>9</pointsize>
-                  </font>
-                 </property>
-                </item>
-               </widget>
+              <item row="1" column="0">
+               <widget class="QTableView" name="tableView"/>
               </item>
              </layout>
             </widget>
