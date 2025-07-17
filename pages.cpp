@@ -20,7 +20,12 @@
 #include <algorithm>
 #include <limits>
 #include <QHeaderView>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QDebug>
 #include "db/transactiondb.h"
+#include "db/portfoliodb.h"
 
 class CustomChartView : public QChartView {
 public:
@@ -438,3 +443,29 @@ void pages::sellButtonPushed(){
     TransactionDB tdb;
     tdb.insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
 }
+
+void pages::loadPortfolioTable() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    QSqlQueryModel *model = new QSqlQueryModel(this);  // parent set to this to auto-manage memory
+    model->setQuery("SELECT symbol, name, quantity, current_price, total_value FROM portfolio", db);
+
+    if (model->lastError().isValid()) {
+        qDebug() << "Query error:" << model->lastError().text();
+        return;
+    }
+
+    model->setHeaderData(0, Qt::Horizontal, "Symbol");
+    model->setHeaderData(1, Qt::Horizontal, "Company");
+    model->setHeaderData(2, Qt::Horizontal, "Shares");
+    model->setHeaderData(3, Qt::Horizontal, "Current Price");
+    model->setHeaderData(4, Qt::Horizontal, "Total Value");
+
+    ui->Table->setModel(model);
+    ui->Table->resizeColumnsToContents();
+}
+

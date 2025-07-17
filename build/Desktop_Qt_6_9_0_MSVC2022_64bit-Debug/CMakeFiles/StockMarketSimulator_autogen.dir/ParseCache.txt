@@ -6,6 +6,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/Models/Portfolio.h
 C:/Stock Market Simulator/Stock-Market-Simulator/UI/TradeDialog.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Trade.h
 C:/Stock Market Simulator/Stock-Market-Simulator/Models/Stock.h
+C:/Stock Market Simulator/Stock-Market-Simulator/db/transactiondb.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/pages/signuppage.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/q17memory.h
@@ -424,6 +425,7 @@ C:/Stock Market Simulator/Stock-Market-Simulator/UI/TradeDialog.cpp
 C:/Stock Market Simulator/Stock-Market-Simulator/db/authenticator.h
 C:/Stock Market Simulator/Stock-Market-Simulator/db/cashdb.h
 C:/Stock Market Simulator/Stock-Market-Simulator/db/portfoliodb.h
+C:/Stock Market Simulator/Stock-Market-Simulator/db/transactiondb.h
 C:/Stock Market Simulator/Stock-Market-Simulator/pages/loginPage.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.9.0/msvc2022_64/include/QtCore/QPropertyAnimation

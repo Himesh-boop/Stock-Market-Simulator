@@ -598,6 +598,8 @@ StockMarketSimulator_autogen/timestamp: \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/db/logindb.h \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/db/portfoliodb.cpp \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/db/portfoliodb.h \
+	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/db/transactiondb.cpp \
+	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/db/transactiondb.h \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/main.cpp \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/pages.cpp \
 	C:/Stock\ Market\ Simulator/Stock-Market-Simulator/pages.h \

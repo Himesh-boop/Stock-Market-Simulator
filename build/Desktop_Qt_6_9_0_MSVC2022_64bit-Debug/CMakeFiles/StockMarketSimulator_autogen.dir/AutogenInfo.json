@@ -492,6 +492,12 @@
 			null
 		],
 		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/db/transactiondb.h",
+			"MU",
+			"SQIZ3OIOWK/moc_transactiondb.cpp",
+			null
+		],
+		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/pages.h",
 			"MU",
 			"EWIEGA46WW/moc_pages.cpp",
@@ -638,6 +644,11 @@
 		],
 		[
 			"C:/Stock Market Simulator/Stock-Market-Simulator/db/portfoliodb.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Stock Market Simulator/Stock-Market-Simulator/db/transactiondb.cpp",
 			"MU",
 			null
 		],
