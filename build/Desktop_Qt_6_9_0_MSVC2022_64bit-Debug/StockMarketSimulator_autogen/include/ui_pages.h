@@ -24,7 +24,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -42,7 +42,7 @@ public:
     QPushButton *Investment;
     QPushButton *Ledger;
     QWidget *contentPanel;
-    QGridLayout *gridLayout_2;
+    QVBoxLayout *verticalLayout_4;
     QStackedWidget *stackedWidget;
     QWidget *PortfolioPage;
     QGridLayout *gridLayout;
@@ -60,7 +60,7 @@ public:
     QVBoxLayout *verticalLayout_7;
     QLabel *label_8;
     QLabel *label_9;
-    QTableWidget *Table;
+    QTableView *table;
     QWidget *CashPage;
     QVBoxLayout *verticalLayout_2;
     QWidget *cashTitle;
@@ -81,9 +81,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
-    QWidget *cashTable_2;
-    QGridLayout *gridLayout_6;
-    QTableWidget *cashTable;
+    QTableView *cashTable;
     QWidget *CandleStickPage;
     QVBoxLayout *verticalLayout_3;
     QWidget *chartControls;
@@ -117,15 +115,13 @@ public:
     QWidget *historyTitle;
     QGridLayout *gridLayout_3;
     QLabel *title;
-    QWidget *historyTable;
-    QGridLayout *gridLayout_7;
-    QTableWidget *tableHistory;
+    QTableView *historyTable;
 
     void setupUi(QMainWindow *pages)
     {
         if (pages->objectName().isEmpty())
             pages->setObjectName("pages");
-        pages->resize(1322, 807);
+        pages->resize(1312, 445);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -303,8 +299,8 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(contentPanel->sizePolicy().hasHeightForWidth());
         contentPanel->setSizePolicy(sizePolicy2);
-        gridLayout_2 = new QGridLayout(contentPanel);
-        gridLayout_2->setObjectName("gridLayout_2");
+        verticalLayout_4 = new QVBoxLayout(contentPanel);
+        verticalLayout_4->setObjectName("verticalLayout_4");
         stackedWidget = new QStackedWidget(contentPanel);
         stackedWidget->setObjectName("stackedWidget");
         stackedWidget->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -426,34 +422,15 @@ public:
 
         gridLayout->addWidget(Cards, 1, 0, 1, 1);
 
-        Table = new QTableWidget(PortfolioPage);
-        if (Table->columnCount() < 5)
-            Table->setColumnCount(5);
-        if (Table->rowCount() < 8)
-            Table->setRowCount(8);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        Table->setItem(0, 0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        Table->setItem(0, 1, __qtablewidgetitem1);
-        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
-        Table->setItem(0, 2, __qtablewidgetitem2);
-        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        Table->setItem(0, 3, __qtablewidgetitem3);
-        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
-        Table->setItem(0, 4, __qtablewidgetitem4);
-        QFont font1;
-        font1.setPointSize(9);
-        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
-        __qtablewidgetitem5->setFont(font1);
-        Table->setItem(1, 0, __qtablewidgetitem5);
-        Table->setObjectName("Table");
+        table = new QTableView(PortfolioPage);
+        table->setObjectName("table");
         QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(6);
-        sizePolicy4.setHeightForWidth(Table->sizePolicy().hasHeightForWidth());
-        Table->setSizePolicy(sizePolicy4);
-        Table->setMinimumSize(QSize(0, 0));
-        Table->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
+        sizePolicy4.setHeightForWidth(table->sizePolicy().hasHeightForWidth());
+        table->setSizePolicy(sizePolicy4);
+        table->setMinimumSize(QSize(0, 0));
+        table->setStyleSheet(QString::fromUtf8("QTableView {\n"
 "    background-color: #2E2E2E;\n"
 "    color: white;\n"
 "    gridline-color: #505050;\n"
@@ -469,24 +446,22 @@ public:
 "    font-weight: bold;\n"
 "}\n"
 "\n"
-"QTableWidget::item {\n"
+"QTableView::item {\n"
 "    padding: 6px;\n"
 "    border-bottom: 1px solid #505050;\n"
 "}\n"
 "\n"
-"QTableWidget::item:selected {\n"
+"QTableView::item:selected {\n"
 "    background-color: #66ccff;\n"
 "    color: black;\n"
 "}\n"
 ""));
-        Table->setTabKeyNavigation(true);
-        Table->setShowGrid(false);
-        Table->setRowCount(8);
-        Table->setColumnCount(5);
-        Table->horizontalHeader()->setVisible(false);
-        Table->verticalHeader()->setVisible(false);
+        table->setTabKeyNavigation(true);
+        table->setShowGrid(false);
+        table->horizontalHeader()->setVisible(true);
+        table->verticalHeader()->setVisible(false);
 
-        gridLayout->addWidget(Table, 2, 0, 1, 1);
+        gridLayout->addWidget(table, 2, 0, 1, 1);
 
         stackedWidget->addWidget(PortfolioPage);
         CashPage = new QWidget();
@@ -505,9 +480,9 @@ public:
         verticalLayout_8->setObjectName("verticalLayout_8");
         label_10 = new QLabel(Title_2);
         label_10->setObjectName("label_10");
-        QFont font2;
-        font2.setBold(true);
-        label_10->setFont(font2);
+        QFont font1;
+        font1.setBold(true);
+        label_10->setFont(font1);
         label_10->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
@@ -518,8 +493,8 @@ public:
 
         label_12 = new QLabel(Title_2);
         label_12->setObjectName("label_12");
-        QFont font3;
-        label_12->setFont(font3);
+        QFont font2;
+        label_12->setFont(font2);
         label_12->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
@@ -626,69 +601,12 @@ public:
 
         verticalLayout_2->addWidget(cashButtons);
 
-        cashTable_2 = new QWidget(CashPage);
-        cashTable_2->setObjectName("cashTable_2");
-        gridLayout_6 = new QGridLayout(cashTable_2);
-        gridLayout_6->setObjectName("gridLayout_6");
-        cashTable = new QTableWidget(cashTable_2);
-        if (cashTable->columnCount() < 3)
-            cashTable->setColumnCount(3);
-        if (cashTable->rowCount() < 8)
-            cashTable->setRowCount(8);
-        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
-        cashTable->setItem(0, 0, __qtablewidgetitem6);
-        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
-        cashTable->setItem(0, 1, __qtablewidgetitem7);
-        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
-        cashTable->setItem(0, 2, __qtablewidgetitem8);
-        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
-        __qtablewidgetitem9->setFont(font1);
-        cashTable->setItem(1, 0, __qtablewidgetitem9);
+        cashTable = new QTableView(CashPage);
         cashTable->setObjectName("cashTable");
-        QSizePolicy sizePolicy5(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(6);
-        sizePolicy5.setHeightForWidth(cashTable->sizePolicy().hasHeightForWidth());
-        cashTable->setSizePolicy(sizePolicy5);
-        cashTable->setMinimumSize(QSize(400, 300));
-        cashTable->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
-"    background-color: #2E2E2E;\n"
-"    color: white;\n"
-"    gridline-color: #505050;\n"
-"    font-size: 10 px;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QHeaderView::section {\n"
-"    background-color: #444;\n"
-"    color: white;\n"
-"    padding: 6px;\n"
-"    border: none;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QTableWidget::item {\n"
-"    padding: 6px;\n"
-"    border-bottom: 1px solid #505050;\n"
-"}\n"
-"\n"
-"QTableWidget::item:selected {\n"
-"    background-color: #66ccff;\n"
-"    color: black;\n"
-"}\n"
-""));
-        cashTable->setTabKeyNavigation(true);
-        cashTable->setShowGrid(false);
-        cashTable->setRowCount(8);
-        cashTable->setColumnCount(3);
-        cashTable->horizontalHeader()->setVisible(false);
-        cashTable->verticalHeader()->setVisible(false);
 
-        gridLayout_6->addWidget(cashTable, 0, 0, 1, 1);
+        verticalLayout_2->addWidget(cashTable);
 
-
-        verticalLayout_2->addWidget(cashTable_2);
-
+        verticalLayout_2->setStretch(3, 5);
         stackedWidget->addWidget(CashPage);
         CandleStickPage = new QWidget();
         CandleStickPage->setObjectName("CandleStickPage");
@@ -696,11 +614,11 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         chartControls = new QWidget(CandleStickPage);
         chartControls->setObjectName("chartControls");
-        QSizePolicy sizePolicy6(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(chartControls->sizePolicy().hasHeightForWidth());
-        chartControls->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy5(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(chartControls->sizePolicy().hasHeightForWidth());
+        chartControls->setSizePolicy(sizePolicy5);
         chartControls->setMinimumSize(QSize(0, 80));
         controlsLayout = new QHBoxLayout(chartControls);
         controlsLayout->setSpacing(15);
@@ -1032,11 +950,11 @@ public:
 
         chartWidget = new QChartView(CandleStickPage);
         chartWidget->setObjectName("chartWidget");
-        QSizePolicy sizePolicy7(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(2);
-        sizePolicy7.setHeightForWidth(chartWidget->sizePolicy().hasHeightForWidth());
-        chartWidget->setSizePolicy(sizePolicy7);
+        QSizePolicy sizePolicy6(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(2);
+        sizePolicy6.setHeightForWidth(chartWidget->sizePolicy().hasHeightForWidth());
+        chartWidget->setSizePolicy(sizePolicy6);
 
         verticalLayout_3->addWidget(chartWidget);
 
@@ -1051,10 +969,10 @@ public:
         gridLayout_3->setObjectName("gridLayout_3");
         title = new QLabel(historyTitle);
         title->setObjectName("title");
-        QFont font4;
-        font4.setPointSize(24);
-        font4.setBold(true);
-        title->setFont(font4);
+        QFont font3;
+        font3.setPointSize(24);
+        font3.setBold(true);
+        title->setFont(font3);
         title->setStyleSheet(QString::fromUtf8("background-color : transparent;\n"
 "color : white;\n"
 "border: none;\n"
@@ -1063,78 +981,17 @@ public:
 
         gridLayout_3->addWidget(title, 0, 0, 1, 1);
 
+        historyTable = new QTableView(historyTitle);
+        historyTable->setObjectName("historyTable");
+
+        gridLayout_3->addWidget(historyTable, 1, 0, 1, 1);
+
 
         gridLayout_8->addWidget(historyTitle, 0, 0, 1, 1);
 
-        historyTable = new QWidget(HistoryPage);
-        historyTable->setObjectName("historyTable");
-        gridLayout_7 = new QGridLayout(historyTable);
-        gridLayout_7->setObjectName("gridLayout_7");
-        tableHistory = new QTableWidget(historyTable);
-        if (tableHistory->columnCount() < 6)
-            tableHistory->setColumnCount(6);
-        if (tableHistory->rowCount() < 15)
-            tableHistory->setRowCount(15);
-        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        tableHistory->setItem(0, 0, __qtablewidgetitem10);
-        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        tableHistory->setItem(0, 1, __qtablewidgetitem11);
-        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        tableHistory->setItem(0, 2, __qtablewidgetitem12);
-        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        tableHistory->setItem(0, 3, __qtablewidgetitem13);
-        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        tableHistory->setItem(0, 4, __qtablewidgetitem14);
-        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
-        tableHistory->setItem(0, 5, __qtablewidgetitem15);
-        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
-        __qtablewidgetitem16->setFont(font1);
-        tableHistory->setItem(1, 0, __qtablewidgetitem16);
-        tableHistory->setObjectName("tableHistory");
-        sizePolicy5.setHeightForWidth(tableHistory->sizePolicy().hasHeightForWidth());
-        tableHistory->setSizePolicy(sizePolicy5);
-        tableHistory->setMinimumSize(QSize(400, 300));
-        tableHistory->setStyleSheet(QString::fromUtf8("QTableWidget {\n"
-"    background-color: #2E2E2E;\n"
-"    color: white;\n"
-"    gridline-color: #505050;\n"
-"    font-size: 10 px;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QHeaderView::section {\n"
-"    background-color: #444;\n"
-"    color: white;\n"
-"    padding: 6px;\n"
-"    border: none;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QTableWidget::item {\n"
-"    padding: 6px;\n"
-"    border-bottom: 1px solid #505050;\n"
-"}\n"
-"\n"
-"QTableWidget::item:selected {\n"
-"    background-color: #66ccff;\n"
-"    color: black;\n"
-"}\n"
-""));
-        tableHistory->setTabKeyNavigation(true);
-        tableHistory->setShowGrid(false);
-        tableHistory->setRowCount(15);
-        tableHistory->setColumnCount(6);
-        tableHistory->horizontalHeader()->setVisible(false);
-        tableHistory->verticalHeader()->setVisible(false);
-
-        gridLayout_7->addWidget(tableHistory, 0, 0, 1, 1);
-
-
-        gridLayout_8->addWidget(historyTable, 1, 0, 1, 1);
-
         stackedWidget->addWidget(HistoryPage);
 
-        gridLayout_2->addWidget(stackedWidget, 0, 0, 1, 1);
+        verticalLayout_4->addWidget(stackedWidget);
 
 
         horizontalLayout->addWidget(contentPanel);
@@ -1143,7 +1000,7 @@ public:
 
         retranslateUi(pages);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(pages);
@@ -1162,38 +1019,12 @@ public:
         label_5->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
         label_8->setText(QCoreApplication::translate("pages", "Total Change:", nullptr));
         label_9->setText(QCoreApplication::translate("pages", " XX.XXX %", nullptr));
-
-        const bool __sortingEnabled = Table->isSortingEnabled();
-        Table->setSortingEnabled(false);
-        QTableWidgetItem *___qtablewidgetitem = Table->item(0, 0);
-        ___qtablewidgetitem->setText(QCoreApplication::translate("pages", "Symbol", nullptr));
-        QTableWidgetItem *___qtablewidgetitem1 = Table->item(0, 1);
-        ___qtablewidgetitem1->setText(QCoreApplication::translate("pages", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem2 = Table->item(0, 2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("pages", "Quantity", nullptr));
-        QTableWidgetItem *___qtablewidgetitem3 = Table->item(0, 3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("pages", "Current Price", nullptr));
-        QTableWidgetItem *___qtablewidgetitem4 = Table->item(0, 4);
-        ___qtablewidgetitem4->setText(QCoreApplication::translate("pages", "Total Value", nullptr));
-        Table->setSortingEnabled(__sortingEnabled);
-
         label_10->setText(QCoreApplication::translate("pages", "Cash", nullptr));
         label_12->setText(QCoreApplication::translate("pages", "Manage your cash balance", nullptr));
         label_11->setText(QCoreApplication::translate("pages", "Cash Balance:", nullptr));
         label_13->setText(QCoreApplication::translate("pages", "Rs. XXXX", nullptr));
         pushButton->setText(QCoreApplication::translate("pages", "Deposit", nullptr));
         pushButton_2->setText(QCoreApplication::translate("pages", "Withdraw", nullptr));
-
-        const bool __sortingEnabled1 = cashTable->isSortingEnabled();
-        cashTable->setSortingEnabled(false);
-        QTableWidgetItem *___qtablewidgetitem5 = cashTable->item(0, 0);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("pages", "Date", nullptr));
-        QTableWidgetItem *___qtablewidgetitem6 = cashTable->item(0, 1);
-        ___qtablewidgetitem6->setText(QCoreApplication::translate("pages", "Type", nullptr));
-        QTableWidgetItem *___qtablewidgetitem7 = cashTable->item(0, 2);
-        ___qtablewidgetitem7->setText(QCoreApplication::translate("pages", "Amount", nullptr));
-        cashTable->setSortingEnabled(__sortingEnabled1);
-
         buyButton->setText(QCoreApplication::translate("pages", "BUY", nullptr));
         sellButton->setText(QCoreApplication::translate("pages", "SELL", nullptr));
         companySymbolsCombo->setItemText(0, QCoreApplication::translate("pages", "BBC", nullptr));
@@ -1217,23 +1048,6 @@ public:
         algorithmsCombo->setItemText(6, QCoreApplication::translate("pages", "CCI", nullptr));
 
         title->setText(QCoreApplication::translate("pages", "Transaction History", nullptr));
-
-        const bool __sortingEnabled2 = tableHistory->isSortingEnabled();
-        tableHistory->setSortingEnabled(false);
-        QTableWidgetItem *___qtablewidgetitem8 = tableHistory->item(0, 0);
-        ___qtablewidgetitem8->setText(QCoreApplication::translate("pages", "Date", nullptr));
-        QTableWidgetItem *___qtablewidgetitem9 = tableHistory->item(0, 1);
-        ___qtablewidgetitem9->setText(QCoreApplication::translate("pages", "Type", nullptr));
-        QTableWidgetItem *___qtablewidgetitem10 = tableHistory->item(0, 2);
-        ___qtablewidgetitem10->setText(QCoreApplication::translate("pages", "Symbol", nullptr));
-        QTableWidgetItem *___qtablewidgetitem11 = tableHistory->item(0, 3);
-        ___qtablewidgetitem11->setText(QCoreApplication::translate("pages", "Quantity", nullptr));
-        QTableWidgetItem *___qtablewidgetitem12 = tableHistory->item(0, 4);
-        ___qtablewidgetitem12->setText(QCoreApplication::translate("pages", "Price", nullptr));
-        QTableWidgetItem *___qtablewidgetitem13 = tableHistory->item(0, 5);
-        ___qtablewidgetitem13->setText(QCoreApplication::translate("pages", "Total", nullptr));
-        tableHistory->setSortingEnabled(__sortingEnabled2);
-
     } // retranslateUi
 
 };

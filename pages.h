@@ -66,8 +66,9 @@ private:
     void sellButtonPushed();
     double pricePerShare;
     void extractLatestClosingPrice(const QJsonArray &data);
-
+    void loadCashTable();
     void loadPortfolioTable();
+    void loadHistoryTable();
 
 };
 

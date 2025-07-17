@@ -23,9 +23,11 @@
 #include <QSqlQueryModel>
 #include <QSqlDatabase>
 #include <QSqlError>
+#include <QSqlTableModel>
 #include <QDebug>
 #include "db/transactiondb.h"
 #include "db/portfoliodb.h"
+#include "db/cashdb.h"
 
 class CustomChartView : public QChartView {
 public:
@@ -115,6 +117,82 @@ void pages::fetchStockData() {
     }
 }
 
+void pages::loadPortfolioTable() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    QSqlTableModel* model = new QSqlTableModel(this, db);
+    model->setTable("portfolio");
+    model->select();
+
+    //Set column headers
+    model->setHeaderData(1, Qt::Horizontal, "Symbol");
+    model->setHeaderData(2, Qt::Horizontal, "Name");
+    model->setHeaderData(3, Qt::Horizontal, "Quantity");
+    model->setHeaderData(4, Qt::Horizontal, "Current Price");
+    model->setHeaderData(5, Qt::Horizontal, "Total Value");
+
+    ui->table->setModel(model);
+    ui->table->hideColumn(0); // hide id column
+    ui->table->resizeColumnsToContents();
+}
+
+void pages::loadCashTable() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    // Create and set the model
+    QSqlTableModel *model = new QSqlTableModel(this, db);
+    model->setTable("cash_transactions");
+    model->select();
+
+    // Set column headers
+    model->setHeaderData(1, Qt::Horizontal, "Date");
+    model->setHeaderData(2, Qt::Horizontal, "Type");
+    model->setHeaderData(3, Qt::Horizontal, "Amount");
+
+    // Assign model to table view
+    ui->cashTable->setModel(model);
+    ui->cashTable->hideColumn(0); // hide "id" column
+    ui->cashTable->resizeColumnsToContents(); // auto-resize
+}
+
+void pages::loadHistoryTable() {
+    QSqlDatabase db = QSqlDatabase::database("TransactionConnection");
+    if (!db.isOpen()) {
+        qDebug() << "Transaction database not open!";
+        return;
+    }
+
+    // Create a model and set the 'transactions' table
+    QSqlTableModel* model = new QSqlTableModel(this, db);
+    model->setTable("transactions");
+    model->select();
+
+    // Set headers
+    model->setHeaderData(1, Qt::Horizontal, "Date");
+    model->setHeaderData(2, Qt::Horizontal, "Type");
+    model->setHeaderData(3, Qt::Horizontal, "Symbol");
+    model->setHeaderData(4, Qt::Horizontal, "Quantity");
+    model->setHeaderData(5, Qt::Horizontal, "Price");
+    model->setHeaderData(6, Qt::Horizontal, "Total Amount");
+
+    // Assign model to table
+    ui->historyTable->setModel(model);
+
+    // Hide ID column
+    ui->historyTable->hideColumn(0);
+
+    // Resize columns
+    ui->historyTable->resizeColumnsToContents();
+}
+
 pages::pages(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::pages)
@@ -140,32 +218,8 @@ pages::pages(QWidget *parent)
     ui->Portfolio->setChecked(true);
     ui->stackedWidget->setCurrentIndex(0);
 
-
-
-    ui->Table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);            // Symbol
-    ui->Table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);          // Name
-    ui->Table->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Quantity
-    ui->Table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Curr Price
-    ui->Table->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Total Price
-
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Fixed);          // Type
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Amount
-
-    //fix width for symbol column
-    ui->Table->setColumnWidth(0, 100);
-
-
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);  // Type
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);  // Amount
-
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents); // Date
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents); // Type
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch); // Symbol
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Quantity
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Price
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(5, QHeaderView::Stretch); // Total
+    loadPortfolioTable();
+    loadCashTable();
     setupCandlestickChart();
 }
 
@@ -444,28 +498,4 @@ void pages::sellButtonPushed(){
     tdb.insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
 }
 
-void pages::loadPortfolioTable() {
-    QSqlDatabase db = QSqlDatabase::database("main_connection");
-    if (!db.isOpen()) {
-        qDebug() << "Database not open!";
-        return;
-    }
-
-    QSqlQueryModel *model = new QSqlQueryModel(this);  // parent set to this to auto-manage memory
-    model->setQuery("SELECT symbol, name, quantity, current_price, total_value FROM portfolio", db);
-
-    if (model->lastError().isValid()) {
-        qDebug() << "Query error:" << model->lastError().text();
-        return;
-    }
-
-    model->setHeaderData(0, Qt::Horizontal, "Symbol");
-    model->setHeaderData(1, Qt::Horizontal, "Company");
-    model->setHeaderData(2, Qt::Horizontal, "Shares");
-    model->setHeaderData(3, Qt::Horizontal, "Current Price");
-    model->setHeaderData(4, Qt::Horizontal, "Total Value");
-
-    ui->Table->setModel(model);
-    ui->Table->resizeColumnsToContents();
-}
 
