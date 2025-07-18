@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1413</width>
-    <height>807</height>
+    <width>1312</width>
+    <height>445</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -280,7 +280,7 @@ QPushButton:hover {
 </string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="PortfolioPage">
           <layout class="QGridLayout" name="gridLayout">
@@ -441,7 +441,7 @@ border: none;</string>
             </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QTableView" name="Table">
+            <widget class="QTableView" name="table">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -682,7 +682,7 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QTableView" name="tableView_2"/>
+            <widget class="QTableView" name="cashTable"/>
            </item>
           </layout>
          </widget>
@@ -1173,7 +1173,7 @@ font-weight: bold;</string>
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QTableView" name="tableView"/>
+               <widget class="QTableView" name="historyTable"/>
               </item>
              </layout>
             </widget>

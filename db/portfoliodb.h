@@ -3,12 +3,13 @@
 
 #include <QSqlDatabase>
 #include <QString>
+#include <QSqlQueryModel>
 
 class PortfolioDB {
 public:
     PortfolioDB();
     bool insertEntry(const QString &symbol, const QString &name, int quantity, double currentPrice);
-    // Additional methods like update, delete, fetch could be added later
+    
 private:
     QSqlDatabase db;
 };

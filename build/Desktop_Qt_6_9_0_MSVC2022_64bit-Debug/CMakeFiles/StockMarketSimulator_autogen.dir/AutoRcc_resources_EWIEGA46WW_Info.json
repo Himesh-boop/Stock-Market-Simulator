@@ -1,0 +1,31 @@
+{
+	"BUILD_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator",
+	"CMAKE_SOURCE_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Stock Market Simulator/Stock-Market-Simulator/account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/day_half.jpg",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/night_half.jpg",
+		"C:/Stock Market Simulator/Stock-Market-Simulator/assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
+	],
+	"LOCK_FILE" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/StockMarketSimulator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.9.0/msvc2022_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/StockMarketSimulator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Stock Market Simulator/Stock-Market-Simulator/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -20,7 +20,13 @@
 #include <algorithm>
 #include <limits>
 #include <QHeaderView>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlTableModel>
+#include <QDebug>
 #include "db/transactiondb.h"
+#include <QLineSeries>
 
 class CustomChartView : public QChartView {
 public:
@@ -67,7 +73,7 @@ void pages::fetchStockData() {
         QByteArray errorOutput = process->readAllStandardError();
         QString jsonString = QString(output).trimmed();
 
-        qDebug() << "Python script output:" << jsonString;
+        // qDebug() << "Python script output:" << jsonString;
         qDebug() << "Python script error output:" << errorOutput;
 
         QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonString.toUtf8());
@@ -83,11 +89,11 @@ void pages::fetchStockData() {
         }
 
         QJsonArray jsonArray = jsonDoc.array();
-        qDebug() << "Received data points:" << jsonArray.size();
+        // qDebug() << "Received data points:" << jsonArray.size();
 
         if (!jsonArray.isEmpty()) {
             QJsonObject firstRecord = jsonArray.first().toObject();
-            qDebug() << "First record:" << firstRecord;
+            // qDebug() << "First record:" << firstRecord;
         }
 
         updateCandlestickChart(jsonArray);
@@ -99,8 +105,9 @@ void pages::fetchStockData() {
     QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
     QString symbol = ui->companySymbolsCombo->currentText();
+    QString indicator = ui->algorithmsCombo->currentText();
 
-    QStringList arguments = { scriptPath, symbol };
+    QStringList arguments = { scriptPath, symbol, indicator };
 
     process->start(pythonExecutable, arguments);
 
@@ -108,6 +115,82 @@ void pages::fetchStockData() {
         qDebug() << "Failed to start python process";
         process->deleteLater();
     }
+}
+
+void pages::loadPortfolioTable() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    QSqlTableModel* model = new QSqlTableModel(this, db);
+    model->setTable("portfolio");
+    model->select();
+
+    //Set column headers
+    model->setHeaderData(1, Qt::Horizontal, "Symbol");
+    model->setHeaderData(2, Qt::Horizontal, "Name");
+    model->setHeaderData(3, Qt::Horizontal, "Quantity");
+    model->setHeaderData(4, Qt::Horizontal, "Current Price");
+    model->setHeaderData(5, Qt::Horizontal, "Total Value");
+
+    ui->table->setModel(model);
+    ui->table->hideColumn(0); // hide id column
+    ui->table->resizeColumnsToContents();
+}
+
+void pages::loadCashTable() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    // Create and set the model
+    QSqlTableModel *model = new QSqlTableModel(this, db);
+    model->setTable("cash_transactions");
+    model->select();
+
+    // Set column headers
+    model->setHeaderData(1, Qt::Horizontal, "Date");
+    model->setHeaderData(2, Qt::Horizontal, "Type");
+    model->setHeaderData(3, Qt::Horizontal, "Amount");
+
+    // Assign model to table view
+    ui->cashTable->setModel(model);
+    ui->cashTable->hideColumn(0); // hide "id" column
+    ui->cashTable->resizeColumnsToContents(); // auto-resize
+}
+
+void pages::loadHistoryTable() {
+    QSqlDatabase db = QSqlDatabase::database("TransactionConnection");
+    if (!db.isOpen()) {
+        qDebug() << "Transaction database not open!";
+        return;
+    }
+
+    // Create a model and set the 'transactions' table
+    QSqlTableModel* model = new QSqlTableModel(this, db);
+    model->setTable("transactions");
+    model->select();
+
+    // Set headers
+    model->setHeaderData(1, Qt::Horizontal, "Date");
+    model->setHeaderData(2, Qt::Horizontal, "Type");
+    model->setHeaderData(3, Qt::Horizontal, "Symbol");
+    model->setHeaderData(4, Qt::Horizontal, "Quantity");
+    model->setHeaderData(5, Qt::Horizontal, "Price");
+    model->setHeaderData(6, Qt::Horizontal, "Total Amount");
+
+    // Assign model to table
+    ui->historyTable->setModel(model);
+
+    // Hide ID column
+    ui->historyTable->hideColumn(0);
+
+    // Resize columns
+    ui->historyTable->resizeColumnsToContents();
 }
 
 pages::pages(QWidget *parent)
@@ -126,6 +209,8 @@ pages::pages(QWidget *parent)
     connect(ui->sellButton, &QPushButton::clicked, this, &pages::sellButtonPushed);
     connect(ui->companySymbolsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, &pages::fetchStockData);
+    connect(ui->algorithmsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
+            this, &pages::onIndicatorChanged);
 
     connect(ui->Portfolio, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Cash, &QPushButton::toggled, this, &pages::onButtonToggled);
@@ -135,32 +220,8 @@ pages::pages(QWidget *parent)
     ui->Portfolio->setChecked(true);
     ui->stackedWidget->setCurrentIndex(0);
 
-
-
-    ui->Table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);            // Symbol
-    ui->Table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);          // Name
-    ui->Table->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Quantity
-    ui->Table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Curr Price
-    ui->Table->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Total Price
-
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Fixed);          // Type
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents); // Amount
-
-    //fix width for symbol column
-    ui->Table->setColumnWidth(0, 100);
-
-
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);  // Date
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);  // Type
-    ui->cashTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);  // Amount
-
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents); // Date
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents); // Type
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch); // Symbol
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents); // Quantity
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents); // Price
-    ui->tableHistory->horizontalHeader()->setSectionResizeMode(5, QHeaderView::Stretch); // Total
+    loadPortfolioTable();
+    loadCashTable();
     setupCandlestickChart();
 }
 
@@ -170,6 +231,54 @@ pages::~pages()
         delete currentAnimation;
     }
 }
+
+void pages::onIndicatorChanged(int index) {
+    QString indicator = ui->algorithmsCombo->currentText();
+    QString symbol = ui->companySymbolsCombo->currentText();
+
+    // Call Python script with indicator name
+    QString pythonExecutable = "python";
+    QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
+
+    QStringList arguments = { scriptPath, symbol, indicator };
+
+    QProcess* process = new QProcess(this);
+    connect(process, &QProcess::finished, this, [=]() {
+        QByteArray output = process->readAllStandardOutput();
+        QJsonDocument doc = QJsonDocument::fromJson(output);
+        if (!doc.isArray()) return;
+
+        QJsonArray array = doc.array();
+        updateCandlestickChart(array);
+
+        if (indicator != "None")
+            drawIndicatorOverlay(array, indicator);
+    });
+
+    process->start(pythonExecutable, arguments);
+}
+
+void pages::drawIndicatorOverlay(const QJsonArray& data, const QString& indicator) {
+    QLineSeries* indicatorLine = new QLineSeries();
+    indicatorLine->setName(indicator);
+    indicatorLine->setColor(Qt::yellow); // Choose distinct color
+
+    for (const QJsonValue &val : data) {
+        QJsonObject obj = val.toObject();
+        if (!obj.contains(indicator)) continue;
+
+        QDateTime dt = QDateTime::fromString(obj["date"].toString(), "yyyy-MM-ddT00:00:00.000");
+        qreal value = obj[indicator].toDouble();
+
+        indicatorLine->append(dt.toMSecsSinceEpoch(), value);
+    }
+
+    chart->addSeries(indicatorLine);
+    indicatorLine->attachAxis(axisX);
+    indicatorLine->attachAxis(axisYPrice);
+}
+
+
 
 void pages::onButtonToggled(bool checked)
 {
@@ -296,7 +405,7 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
     candlestickSeries->clear();
     volumeSet->remove(0, volumeSet->count());
 
-    qDebug() << "=== Stock Data with Volume ===";
+    // qDebug() << "=== Stock Data with Volume ===";
 
     // Sort by date
     QVector<QJsonValue> tempList;
@@ -333,8 +442,8 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         minPrice = std::min(minPrice, low);
         maxPrice = std::max(maxPrice, high);
 
-        qDebug() << QString("Date: %1 | O: %2 | H: %3 | L: %4 | C: %5 | Vol: %6")
-                        .arg(dateStr).arg(open).arg(high).arg(low).arg(close).arg(volume);
+        // qDebug() << QString("Date: %1 | O: %2 | H: %3 | L: %4 | C: %5 | Vol: %6")
+        //                 .arg(dateStr).arg(open).arg(high).arg(low).arg(close).arg(volume);
 
         QDateTime dateTime = QDateTime::fromString(dateStr, "yyyy-MM-ddT00:00:00.000");
         if (!dateTime.isValid()) {
@@ -370,7 +479,7 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
     volumeAxisY->setRange(0, originalMaxVolume);
     axisX->setRange(originalFirstDate, originalLastDate);
 
-    qDebug() << "=== End Stock Data ===";
+    // qDebug() << "=== End Stock Data ===";
     qDebug() << "Added" << candlestickSeries->count() << "candlestick sets and"
              << volumeSet->count() << "volume bars.";
 }
@@ -438,3 +547,5 @@ void pages::sellButtonPushed(){
     TransactionDB tdb;
     tdb.insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
 }
+
+

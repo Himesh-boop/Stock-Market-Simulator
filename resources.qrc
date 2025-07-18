@@ -7,8 +7,6 @@
         <file>wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png</file>
         <file>day_half.jpg</file>
         <file>night_half.jpg</file>
-        <file>../../Users/dell/Downloads/night.jpg</file>
-        <file>../../Users/dell/Downloads/day.jpg</file>
     </qresource>
     <qresource prefix="/images"/>
     <qresource lang="English" prefix="/images"/>

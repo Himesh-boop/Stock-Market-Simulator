@@ -8,7 +8,7 @@ class CashDB {
 public:
     CashDB();
     bool insertTransaction(const QString &date, const QString &type, double amount);
-    // Additional CRUD methods can be added here
+   
 private:
     QSqlDatabase db;
 };
