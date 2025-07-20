@@ -15,6 +15,9 @@
 #include <QtCharts/QBarSet>
 #include <QtCharts/QDateTimeAxis>
 #include <QtCharts/QValueAxis>
+#include "db/transactiondb.h"
+#include "db/cashdb.h"
+#include "db/portfoliodb.h"
 
 
 namespace Ui {
@@ -47,6 +50,10 @@ private:
     QCandlestickSeries *candlestickSeries = nullptr;
     QChart *chart = nullptr;
 
+    CashDB* cashDB;
+    PortfolioDB* portfolioDB;
+    TransactionDB* transactionDB;
+
     QBarSeries *volumeSeries;
     QBarSet *volumeSet;
     QValueAxis *volumeAxisY;
@@ -69,8 +76,12 @@ private:
     void loadCashTable();
     void loadPortfolioTable();
     void loadHistoryTable();
-    void onIndicatorChanged(int index);
+    // void onIndicatorChanged(int index);
     void drawIndicatorOverlay(const QJsonArray& data, const QString& indicator);
+    void updateIndicatorChart(const QJsonArray &data, const QString &indicatorName);
+    void handleDepositClicked();
+    void handleWithdrawClicked();
+    void updateCashUI();
 };
 
 #endif // PAGES_H

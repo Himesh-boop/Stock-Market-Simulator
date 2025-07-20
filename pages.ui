@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1312</width>
-    <height>445</height>
+    <width>1413</width>
+    <height>872</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -280,10 +280,10 @@ QPushButton:hover {
 </string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="PortfolioPage">
-          <layout class="QGridLayout" name="gridLayout">
+          <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="0">
            <item row="1" column="0">
             <widget class="QFrame" name="Cards">
              <property name="sizePolicy">
@@ -496,6 +496,20 @@ QTableView::item:selected {
              </attribute>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="portfolioTitle">
+             <property name="styleSheet">
+              <string notr="true">background-color : transparent;
+color : white;
+border: none;
+font-size: 50px;
+font-weight: bold;</string>
+             </property>
+             <property name="text">
+              <string>My Portfolio</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="CashPage">
@@ -687,7 +701,7 @@ QPushButton:hover {
           </layout>
          </widget>
          <widget class="QWidget" name="CandleStickPage">
-          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,2">
            <item>
             <widget class="QWidget" name="chartControls" native="true">
              <property name="sizePolicy">
@@ -1144,6 +1158,9 @@ QComboBox QAbstractItemView {
               </sizepolicy>
              </property>
             </widget>
+           </item>
+           <item>
+            <widget class="QChartView" name="indicatorChart" native="true"/>
            </item>
           </layout>
          </widget>

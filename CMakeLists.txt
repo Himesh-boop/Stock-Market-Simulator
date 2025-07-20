@@ -86,6 +86,7 @@ add_executable(StockMarketSimulator
     db/cashdb.h db/cashdb.cpp
     db/transactiondb.h db/transactiondb.cpp
 
+
 )
 
 # Link Qt libraries

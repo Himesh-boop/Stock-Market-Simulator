@@ -27,6 +27,8 @@
 #include <QDebug>
 #include "db/transactiondb.h"
 #include <QLineSeries>
+#include <QMessageBox>
+#include <QInputDialog>
 
 class CustomChartView : public QChartView {
 public:
@@ -62,8 +64,82 @@ void pages::setUsername(const QString &username)
 {
     m_username = username;
     m_username[0] = m_username[0].toUpper();
-    // ui->label->setText(QString("%1's Portfolio").arg(m_username));
+    ui->portfolioTitle->setText(QString("%1's Portfolio").arg(m_username));
 }
+
+void pages::updateIndicatorChart(const QJsonArray &data, const QString &indicatorName) {
+    QChart *chart = new QChart();
+    chart->setTitle(indicatorName + " Indicator");
+    chart->legend()->setVisible(true);
+
+    QMap<QString, QLineSeries*> seriesMap;
+    QSet<QString> matchingKeys;
+
+    if (!data.isEmpty()) {
+        QJsonObject first = data.first().toObject();
+
+        qDebug() << "Available keys in first data point:";
+        for (const QString &key : first.keys()) {
+            qDebug() << key;
+        }
+
+        for (const QString &key : first.keys()) {
+            if (key.startsWith(indicatorName)) {
+                matchingKeys.insert(key);
+            }
+        }
+    }
+
+    if (matchingKeys.isEmpty()) {
+        qDebug() << "No indicator keys matching:" << indicatorName;
+        return;
+    }
+
+    for (const QString &key : matchingKeys) {
+        QLineSeries *series = new QLineSeries();
+        series->setName(key);
+        seriesMap[key] = series;
+    }
+
+    for (const QJsonValue &val : data) {
+        QJsonObject obj = val.toObject();
+        QString dateStr = obj["date"].toString();
+        QDateTime dateTime = QDateTime::fromString(dateStr, Qt::ISODate);
+        qreal x = dateTime.toMSecsSinceEpoch();
+
+        for (const QString &key : matchingKeys) {
+            if (obj.contains(key)) {
+                qreal y = obj[key].toDouble();
+                seriesMap[key]->append(x, y);
+            }
+        }
+    }
+
+    // Step 4: Add all series to chart
+    for (QLineSeries *series : seriesMap.values()) {
+        chart->addSeries(series);
+    }
+
+    // Step 5: Setup X and Y axes
+    QDateTimeAxis *axisX = new QDateTimeAxis;
+    axisX->setFormat("dd MMM");
+    axisX->setTitleText("Date");
+    chart->addAxis(axisX, Qt::AlignBottom);
+
+    QValueAxis *axisY = new QValueAxis;
+    axisY->setLabelFormat("%.2f");
+    axisY->setTitleText(indicatorName);
+    chart->addAxis(axisY, Qt::AlignLeft);
+
+    for (QLineSeries *series : seriesMap.values()) {
+        series->attachAxis(axisX);
+        series->attachAxis(axisY);
+    }
+
+    ui->indicatorChart->setChart(chart);
+}
+
+
 
 void pages::fetchStockData() {
     QProcess* process = new QProcess(this);
@@ -89,14 +165,13 @@ void pages::fetchStockData() {
         }
 
         QJsonArray jsonArray = jsonDoc.array();
-        // qDebug() << "Received data points:" << jsonArray.size();
 
         if (!jsonArray.isEmpty()) {
             QJsonObject firstRecord = jsonArray.first().toObject();
-            // qDebug() << "First record:" << firstRecord;
         }
 
         updateCandlestickChart(jsonArray);
+        updateIndicatorChart(jsonArray, ui->algorithmsCombo->currentText());
 
         process->deleteLater();
     });
@@ -128,7 +203,6 @@ void pages::loadPortfolioTable() {
     model->setTable("portfolio");
     model->select();
 
-    //Set column headers
     model->setHeaderData(1, Qt::Horizontal, "Symbol");
     model->setHeaderData(2, Qt::Horizontal, "Name");
     model->setHeaderData(3, Qt::Horizontal, "Quantity");
@@ -136,46 +210,81 @@ void pages::loadPortfolioTable() {
     model->setHeaderData(5, Qt::Horizontal, "Total Value");
 
     ui->table->setModel(model);
-    ui->table->hideColumn(0); // hide id column
-    ui->table->resizeColumnsToContents();
+    ui->table->hideColumn(0);
+    // ui->table->resizeColumnsToContents();
 }
 
 void pages::loadCashTable() {
-    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    QSqlDatabase db = QSqlDatabase::database("cashConnection");
     if (!db.isOpen()) {
         qDebug() << "Database not open!";
         return;
     }
 
-    // Create and set the model
     QSqlTableModel *model = new QSqlTableModel(this, db);
     model->setTable("cash_transactions");
     model->select();
 
-    // Set column headers
     model->setHeaderData(1, Qt::Horizontal, "Date");
     model->setHeaderData(2, Qt::Horizontal, "Type");
     model->setHeaderData(3, Qt::Horizontal, "Amount");
 
-    // Assign model to table view
     ui->cashTable->setModel(model);
-    ui->cashTable->hideColumn(0); // hide "id" column
-    ui->cashTable->resizeColumnsToContents(); // auto-resize
+    ui->cashTable->hideColumn(0);
+    // ui->cashTable->resizeColumnsToContents();
 }
+
+void pages::updateCashUI() {
+    double currentCash = cashDB->getCurrentBalance();
+    ui->label_13->setText("Rs. " + QString::number(currentCash, 'f', 2));
+    loadCashTable();
+}
+
+void pages::handleDepositClicked() {
+    bool ok;
+    double amount = QInputDialog::getDouble(this, "Deposit", "Enter amount:", 0, 0, 1e9, 2, &ok);
+    if (ok && amount > 0) {
+        QString now = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+        if (cashDB->insertTransaction(now, "Deposit", amount)) {
+            updateCashUI();
+        }
+    }
+}
+
+void pages::handleWithdrawClicked() {
+    bool ok;
+    double amount = QInputDialog::getDouble(this, "Withdraw", "Enter amount:", 0, 0, 1e9, 2, &ok);
+    if (ok && amount > 0) {
+        double current = cashDB->getCurrentBalance();
+        if (amount > current) {
+            QMessageBox::warning(this, "Withdraw Failed", "Not enough cash.");
+            return;
+        }
+        QString now = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+        if (cashDB->insertTransaction(now, "Withdraw", amount)) {
+            updateCashUI();
+        }
+    }
+}
+
 
 void pages::loadHistoryTable() {
     QSqlDatabase db = QSqlDatabase::database("TransactionConnection");
     if (!db.isOpen()) {
-        qDebug() << "Transaction database not open!";
+        qDebug() << "Transaction database not open! Error:" << db.lastError();
         return;
     }
 
-    // Create a model and set the 'transactions' table
     QSqlTableModel* model = new QSqlTableModel(this, db);
     model->setTable("transactions");
-    model->select();
 
-    // Set headers
+    model->setSort(1, Qt::DescendingOrder);
+
+    if (!model->select()) {
+        qDebug() << "Error loading transactions:" << model->lastError();
+        return;
+    }
+
     model->setHeaderData(1, Qt::Horizontal, "Date");
     model->setHeaderData(2, Qt::Horizontal, "Type");
     model->setHeaderData(3, Qt::Horizontal, "Symbol");
@@ -183,14 +292,13 @@ void pages::loadHistoryTable() {
     model->setHeaderData(5, Qt::Horizontal, "Price");
     model->setHeaderData(6, Qt::Horizontal, "Total Amount");
 
-    // Assign model to table
     ui->historyTable->setModel(model);
 
-    // Hide ID column
     ui->historyTable->hideColumn(0);
 
-    // Resize columns
-    ui->historyTable->resizeColumnsToContents();
+    // ui->historyTable->resizeColumnsToContents();
+
+    ui->historyTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 pages::pages(QWidget *parent)
@@ -205,12 +313,18 @@ pages::pages(QWidget *parent)
 {
     ui->setupUi(this);
 
+    cashDB = new CashDB();
+    portfolioDB = new PortfolioDB();
+    transactionDB = new TransactionDB();
+
     connect(ui->buyButton, &QPushButton::clicked, this, &pages::buyButtonPushed);
     connect(ui->sellButton, &QPushButton::clicked, this, &pages::sellButtonPushed);
     connect(ui->companySymbolsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, &pages::fetchStockData);
-    connect(ui->algorithmsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
-            this, &pages::onIndicatorChanged);
+    connect(ui->pushButton, &QPushButton::clicked, this, &pages::handleDepositClicked);
+    connect(ui->pushButton_2, &QPushButton::clicked, this, &pages::handleWithdrawClicked);
+    // connect(ui->algorithmsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
+    //         this, &pages::onIndicatorChanged);
 
     connect(ui->Portfolio, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Cash, &QPushButton::toggled, this, &pages::onButtonToggled);
@@ -222,6 +336,8 @@ pages::pages(QWidget *parent)
 
     loadPortfolioTable();
     loadCashTable();
+    loadHistoryTable();
+    updateCashUI();
     setupCandlestickChart();
 }
 
@@ -232,51 +348,51 @@ pages::~pages()
     }
 }
 
-void pages::onIndicatorChanged(int index) {
-    QString indicator = ui->algorithmsCombo->currentText();
-    QString symbol = ui->companySymbolsCombo->currentText();
+// void pages::onIndicatorChanged(int index) {
+//     QString indicator = ui->algorithmsCombo->currentText();
+//     QString symbol = ui->companySymbolsCombo->currentText();
 
-    // Call Python script with indicator name
-    QString pythonExecutable = "python";
-    QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
+//     // Call Python script with indicator name
+//     QString pythonExecutable = "python";
+//     QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
-    QStringList arguments = { scriptPath, symbol, indicator };
+//     QStringList arguments = { scriptPath, symbol, indicator };
 
-    QProcess* process = new QProcess(this);
-    connect(process, &QProcess::finished, this, [=]() {
-        QByteArray output = process->readAllStandardOutput();
-        QJsonDocument doc = QJsonDocument::fromJson(output);
-        if (!doc.isArray()) return;
+//     QProcess* process = new QProcess(this);
+//     connect(process, &QProcess::finished, this, [=]() {
+//         QByteArray output = process->readAllStandardOutput();
+//         QJsonDocument doc = QJsonDocument::fromJson(output);
+//         if (!doc.isArray()) return;
 
-        QJsonArray array = doc.array();
-        updateCandlestickChart(array);
+//         QJsonArray array = doc.array();
+//         updateCandlestickChart(array);
 
-        if (indicator != "None")
-            drawIndicatorOverlay(array, indicator);
-    });
+//         if (indicator != "None")
+//             drawIndicatorOverlay(array, indicator);
+//     });
 
-    process->start(pythonExecutable, arguments);
-}
+//     process->start(pythonExecutable, arguments);
+// }
 
-void pages::drawIndicatorOverlay(const QJsonArray& data, const QString& indicator) {
-    QLineSeries* indicatorLine = new QLineSeries();
-    indicatorLine->setName(indicator);
-    indicatorLine->setColor(Qt::yellow); // Choose distinct color
+// void pages::drawIndicatorOverlay(const QJsonArray& data, const QString& indicator) {
+//     QLineSeries* indicatorLine = new QLineSeries();
+//     indicatorLine->setName(indicator);
+//     indicatorLine->setColor(Qt::yellow); // Choose distinct color
 
-    for (const QJsonValue &val : data) {
-        QJsonObject obj = val.toObject();
-        if (!obj.contains(indicator)) continue;
+//     for (const QJsonValue &val : data) {
+//         QJsonObject obj = val.toObject();
+//         if (!obj.contains(indicator)) continue;
 
-        QDateTime dt = QDateTime::fromString(obj["date"].toString(), "yyyy-MM-ddT00:00:00.000");
-        qreal value = obj[indicator].toDouble();
+//         QDateTime dt = QDateTime::fromString(obj["date"].toString(), "yyyy-MM-ddT00:00:00.000");
+//         qreal value = obj[indicator].toDouble();
 
-        indicatorLine->append(dt.toMSecsSinceEpoch(), value);
-    }
+//         indicatorLine->append(dt.toMSecsSinceEpoch(), value);
+//     }
 
-    chart->addSeries(indicatorLine);
-    indicatorLine->attachAxis(axisX);
-    indicatorLine->attachAxis(axisYPrice);
-}
+//     chart->addSeries(indicatorLine);
+//     indicatorLine->attachAxis(axisX);
+//     indicatorLine->attachAxis(axisYPrice);
+// }
 
 
 
@@ -288,13 +404,16 @@ void pages::onButtonToggled(bool checked)
     // Switch to corresponding page in stacked widget
     if (button == ui->Portfolio) {
         ui->stackedWidget->setCurrentIndex(0);
+        loadPortfolioTable();
     } else if (button == ui->Cash) {
         ui->stackedWidget->setCurrentIndex(1);
+        loadCashTable();
     } else if (button == ui->Investment) {
         ui->stackedWidget->setCurrentIndex(2);
         fetchStockData();
     } else if (button == ui->Ledger) {
         ui->stackedWidget->setCurrentIndex(3);
+        loadHistoryTable();
     }
 
     if (currentAnimation) {
@@ -535,17 +654,36 @@ void pages::buyButtonPushed() {
     QString symbol = ui->companySymbolsCombo->currentText();
     int quantity = ui->spinBox->value();
 
-    TransactionDB tdb;
-    tdb.insertEntry(currentTime, "BUY", symbol, quantity, pricePerShare);
+    if (portfolioDB->insertOrUpdateEntry(symbol, quantity, pricePerShare)) {
+        transactionDB->insertEntry(currentTime, "BUY", symbol, quantity, pricePerShare);
+
+        loadPortfolioTable();
+        cashDB->insertTransaction(currentTime, "Deposit", quantity * pricePerShare);
+        updateCashUI();
+
+        loadHistoryTable();
+    }
 }
 
-void pages::sellButtonPushed(){
+void pages::sellButtonPushed() {
     QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
     QString symbol = ui->companySymbolsCombo->currentText();
     int quantity = ui->spinBox->value();
 
-    TransactionDB tdb;
-    tdb.insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
+    if (!portfolioDB->insertOrUpdateEntry(symbol, -quantity, pricePerShare)) {
+        QMessageBox::warning(this, "Sell Error", "You cannot sell more shares than you own.");
+        return;
+    }
+
+    if (portfolioDB->insertOrUpdateEntry(symbol, -quantity, pricePerShare)) {
+        transactionDB->insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
+
+        loadPortfolioTable();
+        cashDB->insertTransaction(currentTime, "Deposit", quantity * pricePerShare);
+        updateCashUI();
+
+        loadHistoryTable();
+    }
 }
 
 

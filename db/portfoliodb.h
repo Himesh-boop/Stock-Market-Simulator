@@ -8,7 +8,7 @@
 class PortfolioDB {
 public:
     PortfolioDB();
-    bool insertEntry(const QString &symbol, const QString &name, int quantity, double currentPrice);
+    bool insertOrUpdateEntry(const QString &symbol, int quantity, double currentPrice);
     
 private:
     QSqlDatabase db;

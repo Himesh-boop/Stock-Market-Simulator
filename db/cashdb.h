@@ -8,6 +8,7 @@ class CashDB {
 public:
     CashDB();
     bool insertTransaction(const QString &date, const QString &type, double amount);
+    double getCurrentBalance();
    
 private:
     QSqlDatabase db;

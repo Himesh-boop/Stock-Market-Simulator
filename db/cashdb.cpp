@@ -2,14 +2,35 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
+#include <QDateTime>
+#include <QStandardPaths>
+#include <QDir>
 
 CashDB::CashDB() {
-    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (QSqlDatabase::contains("cashConnection")) {
+        db = QSqlDatabase::database("cashConnection");
+    } else {
+        db = QSqlDatabase::addDatabase("QSQLITE", "cashConnection");
+        QString dbPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+        QDir().mkpath(dbPath);
+        db.setDatabaseName(dbPath + "/cash.db");
+    }
 
     if (!db.open()) {
         qDebug() << "Failed to open cash database:" << db.lastError().text();
         return;
     }
+
+    QSqlQuery checkQuery(db);
+    checkQuery.prepare("SELECT COUNT(*) FROM cash_transactions");
+
+    if (checkQuery.exec() && checkQuery.next()) {
+        int count = checkQuery.value(0).toInt();
+        if (count == 0) {
+            insertTransaction(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"), "Deposit", 500000.0);
+        }
+    }
+
 
     QSqlQuery query(db);
     query.prepare("CREATE TABLE IF NOT EXISTS cash_transactions ("
@@ -24,6 +45,24 @@ CashDB::CashDB() {
         qDebug() << "Cash transactions table ready.";
     }
 }
+
+double CashDB::getCurrentBalance() {
+    QSqlQuery query(db);
+    query.prepare("SELECT type, amount FROM cash_transactions");
+
+    double balance = 0;
+    if (query.exec()) {
+        while (query.next()) {
+            QString type = query.value(0).toString();
+            double amount = query.value(1).toDouble();
+
+            if (type == "Deposit") balance += amount;
+            else if (type == "Withdraw") balance -= amount;
+        }
+    }
+    return balance;
+}
+
 
 bool CashDB::insertTransaction(const QString &date, const QString &type, double amount) {
     QSqlQuery query(db);
