@@ -115,12 +115,10 @@ void pages::updateIndicatorChart(const QJsonArray &data, const QString &indicato
         }
     }
 
-    // Step 4: Add all series to chart
     for (QLineSeries *series : seriesMap.values()) {
         chart->addSeries(series);
     }
 
-    // Step 5: Setup X and Y axes
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
     axisX->setTitleText("Date");
@@ -149,7 +147,6 @@ void pages::fetchStockData() {
         QByteArray errorOutput = process->readAllStandardError();
         QString jsonString = QString(output).trimmed();
 
-        // qDebug() << "Python script output:" << jsonString;
         qDebug() << "Python script error output:" << errorOutput;
 
         QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonString.toUtf8());
@@ -165,6 +162,8 @@ void pages::fetchStockData() {
         }
 
         QJsonArray jsonArray = jsonDoc.array();
+
+        this->jsonArray = jsonArray;
 
         if (!jsonArray.isEmpty()) {
             QJsonObject firstRecord = jsonArray.first().toObject();
@@ -348,53 +347,6 @@ pages::~pages()
     }
 }
 
-// void pages::onIndicatorChanged(int index) {
-//     QString indicator = ui->algorithmsCombo->currentText();
-//     QString symbol = ui->companySymbolsCombo->currentText();
-
-//     // Call Python script with indicator name
-//     QString pythonExecutable = "python";
-//     QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
-
-//     QStringList arguments = { scriptPath, symbol, indicator };
-
-//     QProcess* process = new QProcess(this);
-//     connect(process, &QProcess::finished, this, [=]() {
-//         QByteArray output = process->readAllStandardOutput();
-//         QJsonDocument doc = QJsonDocument::fromJson(output);
-//         if (!doc.isArray()) return;
-
-//         QJsonArray array = doc.array();
-//         updateCandlestickChart(array);
-
-//         if (indicator != "None")
-//             drawIndicatorOverlay(array, indicator);
-//     });
-
-//     process->start(pythonExecutable, arguments);
-// }
-
-// void pages::drawIndicatorOverlay(const QJsonArray& data, const QString& indicator) {
-//     QLineSeries* indicatorLine = new QLineSeries();
-//     indicatorLine->setName(indicator);
-//     indicatorLine->setColor(Qt::yellow); // Choose distinct color
-
-//     for (const QJsonValue &val : data) {
-//         QJsonObject obj = val.toObject();
-//         if (!obj.contains(indicator)) continue;
-
-//         QDateTime dt = QDateTime::fromString(obj["date"].toString(), "yyyy-MM-ddT00:00:00.000");
-//         qreal value = obj[indicator].toDouble();
-
-//         indicatorLine->append(dt.toMSecsSinceEpoch(), value);
-//     }
-
-//     chart->addSeries(indicatorLine);
-//     indicatorLine->attachAxis(axisX);
-//     indicatorLine->attachAxis(axisYPrice);
-// }
-
-
 
 void pages::onButtonToggled(bool checked)
 {
@@ -520,13 +472,9 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         return;
     }
 
-    // Clear existing data
     candlestickSeries->clear();
     volumeSet->remove(0, volumeSet->count());
 
-    // qDebug() << "=== Stock Data with Volume ===";
-
-    // Sort by date
     QVector<QJsonValue> tempList;
     for (const QJsonValue &val : data) {
         tempList.append(val);
@@ -541,7 +489,6 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         sortedData.append(val);
     }
 
-    // Track ranges for proper axis management
     double maxVolume = 0;
     double minPrice = std::numeric_limits<double>::max();
     double maxPrice = std::numeric_limits<double>::lowest();
@@ -561,9 +508,6 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         minPrice = std::min(minPrice, low);
         maxPrice = std::max(maxPrice, high);
 
-        // qDebug() << QString("Date: %1 | O: %2 | H: %3 | L: %4 | C: %5 | Vol: %6")
-        //                 .arg(dateStr).arg(open).arg(high).arg(low).arg(close).arg(volume);
-
         QDateTime dateTime = QDateTime::fromString(dateStr, "yyyy-MM-ddT00:00:00.000");
         if (!dateTime.isValid()) {
             qDebug() << "Invalid date format:" << dateStr;
@@ -575,7 +519,6 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
 
         qint64 timestamp = dateTime.toMSecsSinceEpoch();
 
-        // Candlestick
         auto *candlestickSet = new QCandlestickSet(timestamp);
         candlestickSet->setOpen(open);
         candlestickSet->setHigh(high);
@@ -583,8 +526,6 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
         candlestickSet->setClose(close);
         candlestickSet->setBrush(close >= open ? Qt::green : Qt::red);
         candlestickSeries->append(candlestickSet);
-
-        // Volume
         volumeSet->append(volume);
     }
 
@@ -598,7 +539,6 @@ void pages::updateCandlestickChart(const QJsonArray &data) {
     volumeAxisY->setRange(0, originalMaxVolume);
     axisX->setRange(originalFirstDate, originalLastDate);
 
-    // qDebug() << "=== End Stock Data ===";
     qDebug() << "Added" << candlestickSeries->count() << "candlestick sets and"
              << volumeSet->count() << "volume bars.";
 }
@@ -634,19 +574,27 @@ bool pages::eventFilter(QObject* obj, QEvent* event) {
     return QMainWindow::eventFilter(obj, event);
 }
 
-// Alternative simpler approach - get the last item from the already sorted data
-void pages::extractLatestClosingPrice(const QJsonArray &data) {
-    if (data.isEmpty()) {
-        qDebug() << "No data available to extract closing price";
+void pages::extractLatestClosingPrice(const QJsonArray &jsonArray) {
+    if (jsonArray.isEmpty()) {
+        qDebug() << "No stock entries found in JSON.";
         pricePerShare = 0.0;
         return;
     }
 
-    QJsonObject latestEntry = data.last().toObject();
-    pricePerShare = latestEntry["close"].toDouble();
+    QJsonObject lastEntry = jsonArray.last().toObject();
+
+    if (!lastEntry.contains("close")) {
+        qDebug() << "Latest entry has no 'close' value.";
+        pricePerShare = 0.0;
+        return;
+    }
+
+    pricePerShare = lastEntry["close"].toDouble();
 
     qDebug() << "Latest closing price:" << pricePerShare;
-    qDebug() << "Date:" << latestEntry["date"].toString();
+    if (lastEntry.contains("date")) {
+        qDebug() << "Date:" << lastEntry["date"].toString();
+    }
 }
 
 void pages::buyButtonPushed() {
@@ -654,36 +602,80 @@ void pages::buyButtonPushed() {
     QString symbol = ui->companySymbolsCombo->currentText();
     int quantity = ui->spinBox->value();
 
+    if (jsonArray.isEmpty()) {
+        QMessageBox::warning(this, "No Data", "Please wait for stock data to load.");
+        return;
+    }
+
+    extractLatestClosingPrice(jsonArray);
+
+    if (pricePerShare <= 0.0) {
+        QMessageBox::warning(this, "Invalid Price", "Could not get current stock price.");
+        return;
+    }
+
+    double totalCost = quantity * pricePerShare;
+    double currentCash = cashDB->getCurrentBalance();
+
+    if (totalCost > currentCash) {
+        QMessageBox::warning(this, "Insufficient Funds",
+                             QString("Not enough cash. Required: Rs. %1, Available: Rs. %2")
+                                 .arg(totalCost, 0, 'f', 2).arg(currentCash, 0, 'f', 2));
+        return;
+    }
+
+    qDebug() << "Buying" << quantity << "shares at Rs." << pricePerShare << "each";
+
     if (portfolioDB->insertOrUpdateEntry(symbol, quantity, pricePerShare)) {
         transactionDB->insertEntry(currentTime, "BUY", symbol, quantity, pricePerShare);
 
-        loadPortfolioTable();
-        cashDB->insertTransaction(currentTime, "Deposit", quantity * pricePerShare);
-        updateCashUI();
+        cashDB->insertTransaction(currentTime, "Withdraw", totalCost);
 
+        loadPortfolioTable();
+        updateCashUI();
         loadHistoryTable();
+
+        QMessageBox::information(this, "Purchase Successful",
+                                 QString("Bought %1 shares of %2 at Rs. %3 each\nTotal: Rs. %4")
+                                     .arg(quantity).arg(symbol).arg(pricePerShare, 0, 'f', 2).arg(totalCost, 0, 'f', 2));
     }
 }
-
 void pages::sellButtonPushed() {
     QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
     QString symbol = ui->companySymbolsCombo->currentText();
     int quantity = ui->spinBox->value();
+
+    if (jsonArray.isEmpty()) {
+        QMessageBox::warning(this, "No Data", "Please wait for stock data to load.");
+        return;
+    }
+
+    extractLatestClosingPrice(jsonArray);
+
+    if (pricePerShare <= 0.0) {
+        QMessageBox::warning(this, "Invalid Price", "Could not get current stock price.");
+        return;
+    }
+
+    double totalValue = quantity * pricePerShare;
+
+    qDebug() << "Selling" << quantity << "shares at Rs." << pricePerShare << "each";
 
     if (!portfolioDB->insertOrUpdateEntry(symbol, -quantity, pricePerShare)) {
         QMessageBox::warning(this, "Sell Error", "You cannot sell more shares than you own.");
         return;
     }
 
-    if (portfolioDB->insertOrUpdateEntry(symbol, -quantity, pricePerShare)) {
-        transactionDB->insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
+    transactionDB->insertEntry(currentTime, "SELL", symbol, quantity, pricePerShare);
+    cashDB->insertTransaction(currentTime, "Deposit", totalValue);
 
-        loadPortfolioTable();
-        cashDB->insertTransaction(currentTime, "Deposit", quantity * pricePerShare);
-        updateCashUI();
+    loadPortfolioTable();
+    updateCashUI();
+    loadHistoryTable();
 
-        loadHistoryTable();
-    }
+    QMessageBox::information(this, "Sale Successful",
+                             QString("Sold %1 shares of %2 at Rs. %3 each\nTotal received: Rs. %4")
+                                 .arg(quantity).arg(symbol).arg(pricePerShare, 0, 'f', 2).arg(totalValue, 0, 'f', 2));
 }
 
 

@@ -15,6 +15,7 @@
 #include <QtCharts/QBarSet>
 #include <QtCharts/QDateTimeAxis>
 #include <QtCharts/QValueAxis>
+#include <qjsonarray.h>
 #include "db/transactiondb.h"
 #include "db/cashdb.h"
 #include "db/portfoliodb.h"
@@ -72,6 +73,7 @@ private:
     void buyButtonPushed();
     void sellButtonPushed();
     double pricePerShare;
+    QJsonArray jsonArray;
     void extractLatestClosingPrice(const QJsonArray &data);
     void loadCashTable();
     void loadPortfolioTable();

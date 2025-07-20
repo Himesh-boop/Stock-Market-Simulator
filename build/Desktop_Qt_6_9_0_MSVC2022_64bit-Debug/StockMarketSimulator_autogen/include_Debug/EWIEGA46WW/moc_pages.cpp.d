@@ -64,6 +64,8 @@ C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_6
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qbytearrayview.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcalendar.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcborcommon.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qchar.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qcompare_impl.h \
@@ -102,6 +104,10 @@ C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_6
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qiterable.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qiterator.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qjsonarray.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qjsondocument.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qjsonparseerror.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qline.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qlist.h \
@@ -129,6 +135,7 @@ C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_6
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qpropertyanimation.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qrect.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qrefcount.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qset.h \
@@ -177,6 +184,7 @@ C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_6
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qtypes.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qurl.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.9.0/msvc2022_64/include/QtCore/quuid.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qvariant.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qvariantanimation.h \
   C:/Qt/6.9.0/msvc2022_64/include/QtCore/qvarlengtharray.h \
