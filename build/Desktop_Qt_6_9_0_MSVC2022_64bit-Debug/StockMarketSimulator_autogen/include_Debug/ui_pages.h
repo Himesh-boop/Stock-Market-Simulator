@@ -21,7 +21,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTableView>
@@ -94,24 +93,10 @@ public:
     QHBoxLayout *horizontalLayout_6;
     QSpinBox *spinBox;
     QPushButton *sellButton;
-    QSpacerItem *horizontalSpacer;
     QWidget *companySymbols;
     QHBoxLayout *horizontalLayout_5;
     QComboBox *companySymbolsCombo;
-    QWidget *chartTypeWidget;
-    QHBoxLayout *chartTypeLayout;
-    QLabel *chartTypeLabel;
-    QPushButton *chartTypeToggle;
-    QWidget *rsiWidget;
-    QHBoxLayout *rsiLayout;
-    QLabel *rsiLabel;
-    QPushButton *rsiToggle;
-    QWidget *algorithmsWidget;
-    QHBoxLayout *algorithmsLayout;
-    QLabel *algorithmsLabel;
-    QComboBox *algorithmsCombo;
     QChartView *chartWidget;
-    QChartView *indicatorChart;
     QWidget *HistoryPage;
     QGridLayout *gridLayout_8;
     QWidget *historyTitle;
@@ -615,6 +600,32 @@ public:
 
         cashTable = new QTableView(CashPage);
         cashTable->setObjectName("cashTable");
+        cashTable->setStyleSheet(QString::fromUtf8("QTableView {\n"
+"    background-color: #2E2E2E;\n"
+"    color: white;\n"
+"    gridline-color: #505050;\n"
+"    font-size: 10 px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #444;\n"
+"    color: white;\n"
+"    padding: 6px;\n"
+"    border: none;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"    padding: 6px;\n"
+"    border-bottom: 1px solid #505050;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #66ccff;\n"
+"    color: black;\n"
+"}\n"
+""));
 
         verticalLayout_2->addWidget(cashTable);
 
@@ -752,10 +763,6 @@ public:
 
         controlsLayout->addWidget(tradingButtons);
 
-        horizontalSpacer = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        controlsLayout->addItem(horizontalSpacer);
-
         companySymbols = new QWidget(chartControls);
         companySymbols->setObjectName("companySymbols");
         horizontalLayout_5 = new QHBoxLayout(companySymbols);
@@ -808,155 +815,6 @@ public:
 
         controlsLayout->addWidget(companySymbols);
 
-        chartTypeWidget = new QWidget(chartControls);
-        chartTypeWidget->setObjectName("chartTypeWidget");
-        chartTypeLayout = new QHBoxLayout(chartTypeWidget);
-        chartTypeLayout->setSpacing(5);
-        chartTypeLayout->setObjectName("chartTypeLayout");
-        chartTypeLabel = new QLabel(chartTypeWidget);
-        chartTypeLabel->setObjectName("chartTypeLabel");
-        chartTypeLabel->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"color: white;\n"
-"border: none;\n"
-"font-size: 12px;"));
-
-        chartTypeLayout->addWidget(chartTypeLabel);
-
-        chartTypeToggle = new QPushButton(chartTypeWidget);
-        chartTypeToggle->setObjectName("chartTypeToggle");
-        chartTypeToggle->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    min-width: 100px;\n"
-"    min-height: 30px;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 15px;\n"
-"    font-weight: bold;\n"
-"    color: white;\n"
-"    background-color: #2196F3;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #1976D2;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #1565C0;\n"
-"}"));
-        chartTypeToggle->setCheckable(true);
-
-        chartTypeLayout->addWidget(chartTypeToggle);
-
-
-        controlsLayout->addWidget(chartTypeWidget);
-
-        rsiWidget = new QWidget(chartControls);
-        rsiWidget->setObjectName("rsiWidget");
-        rsiLayout = new QHBoxLayout(rsiWidget);
-        rsiLayout->setSpacing(5);
-        rsiLayout->setObjectName("rsiLayout");
-        rsiLabel = new QLabel(rsiWidget);
-        rsiLabel->setObjectName("rsiLabel");
-        rsiLabel->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"color: white;\n"
-"border: none;\n"
-"font-size: 12px;"));
-
-        rsiLayout->addWidget(rsiLabel);
-
-        rsiToggle = new QPushButton(rsiWidget);
-        rsiToggle->setObjectName("rsiToggle");
-        rsiToggle->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"    min-width: 60px;\n"
-"    min-height: 30px;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 15px;\n"
-"    font-weight: bold;\n"
-"    color: white;\n"
-"    background-color: #666;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #777;\n"
-"}\n"
-"\n"
-"QPushButton:checked {\n"
-"    background-color: #FF9800;\n"
-"}\n"
-"\n"
-"QPushButton:checked:hover {\n"
-"    background-color: #F57C00;\n"
-"}"));
-        rsiToggle->setCheckable(true);
-
-        rsiLayout->addWidget(rsiToggle);
-
-
-        controlsLayout->addWidget(rsiWidget);
-
-        algorithmsWidget = new QWidget(chartControls);
-        algorithmsWidget->setObjectName("algorithmsWidget");
-        algorithmsLayout = new QHBoxLayout(algorithmsWidget);
-        algorithmsLayout->setSpacing(5);
-        algorithmsLayout->setObjectName("algorithmsLayout");
-        algorithmsLabel = new QLabel(algorithmsWidget);
-        algorithmsLabel->setObjectName("algorithmsLabel");
-        algorithmsLabel->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"color: white;\n"
-"border: none;\n"
-"font-size: 12px;"));
-
-        algorithmsLayout->addWidget(algorithmsLabel);
-
-        algorithmsCombo = new QComboBox(algorithmsWidget);
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->addItem(QString());
-        algorithmsCombo->setObjectName("algorithmsCombo");
-        algorithmsCombo->setStyleSheet(QString::fromUtf8("QComboBox {\n"
-"    min-width: 120px;\n"
-"    min-height: 30px;\n"
-"    padding: 5px 10px;\n"
-"    border-radius: 15px;\n"
-"    background-color: #3A3A3A;\n"
-"    color: #E0E0E0;\n"
-"    border: 1px solid #555;\n"
-"}\n"
-"\n"
-"QComboBox:hover {\n"
-"    background-color: #505050;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    border: none;\n"
-"    width: 20px;\n"
-"}\n"
-"\n"
-"QComboBox::down-arrow {\n"
-"    image: none;\n"
-"    border-left: 5px solid transparent;\n"
-"    border-right: 5px solid transparent;\n"
-"    border-top: 5px solid #E0E0E0;\n"
-"    margin-right: 5px;\n"
-"}\n"
-"\n"
-"QComboBox QAbstractItemView {\n"
-"    background-color: #3A3A3A;\n"
-"    color: #E0E0E0;\n"
-"    selection-background-color: #555;\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 8px;\n"
-"}"));
-
-        algorithmsLayout->addWidget(algorithmsCombo);
-
-
-        controlsLayout->addWidget(algorithmsWidget);
-
 
         verticalLayout_3->addWidget(chartControls);
 
@@ -970,12 +828,6 @@ public:
 
         verticalLayout_3->addWidget(chartWidget);
 
-        indicatorChart = new QChartView(CandleStickPage);
-        indicatorChart->setObjectName("indicatorChart");
-
-        verticalLayout_3->addWidget(indicatorChart);
-
-        verticalLayout_3->setStretch(2, 2);
         stackedWidget->addWidget(CandleStickPage);
         HistoryPage = new QWidget();
         HistoryPage->setObjectName("HistoryPage");
@@ -1001,6 +853,32 @@ public:
 
         historyTable = new QTableView(historyTitle);
         historyTable->setObjectName("historyTable");
+        historyTable->setStyleSheet(QString::fromUtf8("QTableView {\n"
+"    background-color: #2E2E2E;\n"
+"    color: white;\n"
+"    gridline-color: #505050;\n"
+"    font-size: 10 px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #444;\n"
+"    color: white;\n"
+"    padding: 6px;\n"
+"    border: none;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"    padding: 6px;\n"
+"    border-bottom: 1px solid #505050;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #66ccff;\n"
+"    color: black;\n"
+"}\n"
+""));
 
         gridLayout_3->addWidget(historyTable, 1, 0, 1, 1);
 
@@ -1018,7 +896,7 @@ public:
 
         retranslateUi(pages);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(pages);
@@ -1052,19 +930,6 @@ public:
         companySymbolsCombo->setItemText(3, QCoreApplication::translate("pages", "GBIME", nullptr));
         companySymbolsCombo->setItemText(4, QCoreApplication::translate("pages", "SANIMA", nullptr));
         companySymbolsCombo->setItemText(5, QCoreApplication::translate("pages", "SBI", nullptr));
-
-        chartTypeLabel->setText(QCoreApplication::translate("pages", "Chart Type:", nullptr));
-        chartTypeToggle->setText(QCoreApplication::translate("pages", "Candlestick", nullptr));
-        rsiLabel->setText(QCoreApplication::translate("pages", "RSI:", nullptr));
-        rsiToggle->setText(QCoreApplication::translate("pages", "OFF", nullptr));
-        algorithmsLabel->setText(QCoreApplication::translate("pages", "Indicators:", nullptr));
-        algorithmsCombo->setItemText(0, QCoreApplication::translate("pages", "None", nullptr));
-        algorithmsCombo->setItemText(1, QCoreApplication::translate("pages", "MACD", nullptr));
-        algorithmsCombo->setItemText(2, QCoreApplication::translate("pages", "Bollinger Bands", nullptr));
-        algorithmsCombo->setItemText(3, QCoreApplication::translate("pages", "Moving Average", nullptr));
-        algorithmsCombo->setItemText(4, QCoreApplication::translate("pages", "Stochastic", nullptr));
-        algorithmsCombo->setItemText(5, QCoreApplication::translate("pages", "Williams %R", nullptr));
-        algorithmsCombo->setItemText(6, QCoreApplication::translate("pages", "CCI", nullptr));
 
         title->setText(QCoreApplication::translate("pages", "Transaction History", nullptr));
     } // retranslateUi

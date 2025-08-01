@@ -28,6 +28,7 @@ PortfolioDB::PortfolioDB() {
         return;
     }
 
+    // Create table (initially without average_price)
     QSqlQuery query(db);
     query.prepare("CREATE TABLE IF NOT EXISTS portfolio ("
                   "id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -40,12 +41,33 @@ PortfolioDB::PortfolioDB() {
     if (!query.exec()) {
         qDebug() << "Failed to create portfolio table:" << query.lastError().text();
     }
+
+    // 🆕 Add average_price column if missing
+    QSqlQuery check(db);
+    check.exec("PRAGMA table_info(portfolio)");
+    bool hasAveragePrice = false;
+
+    while (check.next()) {
+        if (check.value(1).toString() == "average_price") {
+            hasAveragePrice = true;
+            break;
+        }
+    }
+
+    if (!hasAveragePrice) {
+        QSqlQuery alterQuery(db);
+        if (!alterQuery.exec("ALTER TABLE portfolio ADD COLUMN average_price REAL")) {
+            qDebug() << "Failed to add average_price column:" << alterQuery.lastError().text();
+        } else {
+            qDebug() << "average_price column added successfully.";
+        }
+    }
 }
 
 bool PortfolioDB::insertOrUpdateEntry(const QString &symbol, int quantity, double currentPrice) {
     QSqlQuery query(db);
 
-    query.prepare("SELECT quantity FROM portfolio WHERE symbol = :symbol");
+    query.prepare("SELECT quantity, average_price FROM portfolio WHERE symbol = :symbol");
     query.bindValue(":symbol", symbol);
 
     if (!query.exec()) {
@@ -55,6 +77,7 @@ bool PortfolioDB::insertOrUpdateEntry(const QString &symbol, int quantity, doubl
 
     if (query.next()) {
         int currentQuantity = query.value(0).toInt();
+        double currentAvgPrice = query.value(1).toDouble();
         int newQuantity = currentQuantity + quantity;
 
         if (newQuantity < 0) {
@@ -71,20 +94,31 @@ bool PortfolioDB::insertOrUpdateEntry(const QString &symbol, int quantity, doubl
                 return false;
             }
         } else {
+            double newAvgPrice = currentAvgPrice;
+
+            if (quantity > 0) {
+                // Recalculate weighted average price for new buy
+                double totalCost = (currentAvgPrice * currentQuantity) + (currentPrice * quantity);
+                newAvgPrice = totalCost / newQuantity;
+            }
+
             double totalValue = newQuantity * currentPrice;
 
-            query.prepare("UPDATE portfolio SET "
-                          "quantity = :quantity, "
-                          "current_price = :current_price, "
-                          "total_value = :total_value "
-                          "WHERE symbol = :symbol");
-            query.bindValue(":quantity", newQuantity);
-            query.bindValue(":current_price", currentPrice);
-            query.bindValue(":total_value", totalValue);
-            query.bindValue(":symbol", symbol);
+            QSqlQuery updateQuery(db);
+            updateQuery.prepare("UPDATE portfolio SET "
+                                "quantity = :quantity, "
+                                "current_price = :current_price, "
+                                "total_value = :total_value, "
+                                "average_price = :average_price "
+                                "WHERE symbol = :symbol");
+            updateQuery.bindValue(":quantity", newQuantity);
+            updateQuery.bindValue(":current_price", currentPrice);
+            updateQuery.bindValue(":total_value", totalValue);
+            updateQuery.bindValue(":average_price", newAvgPrice);
+            updateQuery.bindValue(":symbol", symbol);
 
-            if (!query.exec()) {
-                qDebug() << "Update failed:" << query.lastError().text();
+            if (!updateQuery.exec()) {
+                qDebug() << "Update failed:" << updateQuery.lastError().text();
                 return false;
             }
         }
@@ -96,15 +130,17 @@ bool PortfolioDB::insertOrUpdateEntry(const QString &symbol, int quantity, doubl
 
         double totalValue = quantity * currentPrice;
 
-        query.prepare("INSERT INTO portfolio (symbol, quantity, current_price, total_value) "
-                      "VALUES (:symbol, :quantity, :current_price, :total_value)");
-        query.bindValue(":symbol", symbol);
-        query.bindValue(":quantity", quantity);
-        query.bindValue(":current_price", currentPrice);
-        query.bindValue(":total_value", totalValue);
+        QSqlQuery insertQuery(db);
+        insertQuery.prepare("INSERT INTO portfolio (symbol, quantity, current_price, total_value, average_price) "
+                            "VALUES (:symbol, :quantity, :current_price, :total_value, :average_price)");
+        insertQuery.bindValue(":symbol", symbol);
+        insertQuery.bindValue(":quantity", quantity);
+        insertQuery.bindValue(":current_price", currentPrice);
+        insertQuery.bindValue(":total_value", totalValue);
+        insertQuery.bindValue(":average_price", currentPrice);
 
-        if (!query.exec()) {
-            qDebug() << "Insert failed:" << query.lastError().text();
+        if (!insertQuery.exec()) {
+            qDebug() << "Insert failed:" << insertQuery.lastError().text();
             return false;
         }
     }

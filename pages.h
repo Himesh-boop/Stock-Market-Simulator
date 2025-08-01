@@ -78,9 +78,7 @@ private:
     void loadCashTable();
     void loadPortfolioTable();
     void loadHistoryTable();
-    // void onIndicatorChanged(int index);
-    void drawIndicatorOverlay(const QJsonArray& data, const QString& indicator);
-    void updateIndicatorChart(const QJsonArray &data, const QString &indicatorName);
+    void updatePortfolioSummary();
     void handleDepositClicked();
     void handleWithdrawClicked();
     void updateCashUI();

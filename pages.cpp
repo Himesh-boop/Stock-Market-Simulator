@@ -23,6 +23,7 @@
 #include <QSqlQueryModel>
 #include <QSqlDatabase>
 #include <QSqlError>
+#include <QSqlQuery>
 #include <QSqlTableModel>
 #include <QDebug>
 #include "db/transactiondb.h"
@@ -67,78 +68,6 @@ void pages::setUsername(const QString &username)
     ui->portfolioTitle->setText(QString("%1's Portfolio").arg(m_username));
 }
 
-void pages::updateIndicatorChart(const QJsonArray &data, const QString &indicatorName) {
-    QChart *chart = new QChart();
-    chart->setTitle(indicatorName + " Indicator");
-    chart->legend()->setVisible(true);
-
-    QMap<QString, QLineSeries*> seriesMap;
-    QSet<QString> matchingKeys;
-
-    if (!data.isEmpty()) {
-        QJsonObject first = data.first().toObject();
-
-        qDebug() << "Available keys in first data point:";
-        for (const QString &key : first.keys()) {
-            qDebug() << key;
-        }
-
-        for (const QString &key : first.keys()) {
-            if (key.startsWith(indicatorName)) {
-                matchingKeys.insert(key);
-            }
-        }
-    }
-
-    if (matchingKeys.isEmpty()) {
-        qDebug() << "No indicator keys matching:" << indicatorName;
-        return;
-    }
-
-    for (const QString &key : matchingKeys) {
-        QLineSeries *series = new QLineSeries();
-        series->setName(key);
-        seriesMap[key] = series;
-    }
-
-    for (const QJsonValue &val : data) {
-        QJsonObject obj = val.toObject();
-        QString dateStr = obj["date"].toString();
-        QDateTime dateTime = QDateTime::fromString(dateStr, Qt::ISODate);
-        qreal x = dateTime.toMSecsSinceEpoch();
-
-        for (const QString &key : matchingKeys) {
-            if (obj.contains(key)) {
-                qreal y = obj[key].toDouble();
-                seriesMap[key]->append(x, y);
-            }
-        }
-    }
-
-    for (QLineSeries *series : seriesMap.values()) {
-        chart->addSeries(series);
-    }
-
-    QDateTimeAxis *axisX = new QDateTimeAxis;
-    axisX->setFormat("dd MMM");
-    axisX->setTitleText("Date");
-    chart->addAxis(axisX, Qt::AlignBottom);
-
-    QValueAxis *axisY = new QValueAxis;
-    axisY->setLabelFormat("%.2f");
-    axisY->setTitleText(indicatorName);
-    chart->addAxis(axisY, Qt::AlignLeft);
-
-    for (QLineSeries *series : seriesMap.values()) {
-        series->attachAxis(axisX);
-        series->attachAxis(axisY);
-    }
-
-    ui->indicatorChart->setChart(chart);
-}
-
-
-
 void pages::fetchStockData() {
     QProcess* process = new QProcess(this);
 
@@ -170,7 +99,6 @@ void pages::fetchStockData() {
         }
 
         updateCandlestickChart(jsonArray);
-        updateIndicatorChart(jsonArray, ui->algorithmsCombo->currentText());
 
         process->deleteLater();
     });
@@ -179,9 +107,8 @@ void pages::fetchStockData() {
     QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
 
     QString symbol = ui->companySymbolsCombo->currentText();
-    QString indicator = ui->algorithmsCombo->currentText();
 
-    QStringList arguments = { scriptPath, symbol, indicator };
+    QStringList arguments = { scriptPath, symbol};
 
     process->start(pythonExecutable, arguments);
 
@@ -189,6 +116,41 @@ void pages::fetchStockData() {
         qDebug() << "Failed to start python process";
         process->deleteLater();
     }
+}
+
+void pages::updatePortfolioSummary() {
+    QSqlDatabase db = QSqlDatabase::database("main_connection");
+    if (!db.isOpen()) {
+        qDebug() << "Database not open!";
+        return;
+    }
+
+    QSqlQuery query(db);
+    if (!query.exec("SELECT quantity, current_price, average_price FROM portfolio")) {
+        qDebug() << "Query failed:" << query.lastError().text();
+        return;
+    }
+
+    double totalValue = 0.0;
+    double totalInvestment = 0.0;
+
+    while (query.next()) {
+        int quantity = query.value(0).toInt();
+        double currentPrice = query.value(1).toDouble();
+        double avgBuyPrice = query.value(2).toDouble();
+
+        totalValue += quantity * currentPrice;
+        totalInvestment += quantity * avgBuyPrice;
+    }
+
+    double gainLoss = totalValue - totalInvestment;
+    double percentChange = (totalInvestment == 0.0) ? 0.0 : (gainLoss / totalInvestment) * 100.0;
+
+    ui->label_6->setText("Rs. " + QString::number(totalValue, 'f', 2));
+    ui->label_5->setText("Rs. " + QString::number(gainLoss, 'f', 2));
+    ui->label_9->setText(QString::number(percentChange, 'f', 2) + " %");
+
+    qDebug() << "Total Value:" << totalValue << " Gain/Loss:" << gainLoss << " Change:" << percentChange;
 }
 
 void pages::loadPortfolioTable() {
@@ -210,7 +172,8 @@ void pages::loadPortfolioTable() {
 
     ui->table->setModel(model);
     ui->table->hideColumn(0);
-    // ui->table->resizeColumnsToContents();
+
+    updatePortfolioSummary();
 }
 
 void pages::loadCashTable() {
@@ -322,8 +285,6 @@ pages::pages(QWidget *parent)
             this, &pages::fetchStockData);
     connect(ui->pushButton, &QPushButton::clicked, this, &pages::handleDepositClicked);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &pages::handleWithdrawClicked);
-    // connect(ui->algorithmsCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
-    //         this, &pages::onIndicatorChanged);
 
     connect(ui->Portfolio, &QPushButton::toggled, this, &pages::onButtonToggled);
     connect(ui->Cash, &QPushButton::toggled, this, &pages::onButtonToggled);
@@ -632,6 +593,7 @@ void pages::buyButtonPushed() {
         cashDB->insertTransaction(currentTime, "Withdraw", totalCost);
 
         loadPortfolioTable();
+        updatePortfolioSummary();
         updateCashUI();
         loadHistoryTable();
 
@@ -670,6 +632,7 @@ void pages::sellButtonPushed() {
     cashDB->insertTransaction(currentTime, "Deposit", totalValue);
 
     loadPortfolioTable();
+    updatePortfolioSummary();
     updateCashUI();
     loadHistoryTable();
 

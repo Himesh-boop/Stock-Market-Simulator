@@ -280,7 +280,7 @@ QPushButton:hover {
 </string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="PortfolioPage">
           <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0" columnstretch="0">
@@ -696,12 +696,41 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QTableView" name="cashTable"/>
+            <widget class="QTableView" name="cashTable">
+             <property name="styleSheet">
+              <string notr="true">QTableView {
+    background-color: #2E2E2E;
+    color: white;
+    gridline-color: #505050;
+    font-size: 10 px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #444;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableView::item {
+    padding: 6px;
+    border-bottom: 1px solid #505050;
+}
+
+QTableView::item:selected {
+    background-color: #66ccff;
+    color: black;
+}
+</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
          <widget class="QWidget" name="CandleStickPage">
-          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,2">
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
            <item>
             <widget class="QWidget" name="chartControls" native="true">
              <property name="sizePolicy">
@@ -853,19 +882,6 @@ QPushButton:pressed {
                </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
                <widget class="QWidget" name="companySymbols" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0">
                  <item>
@@ -941,211 +957,6 @@ QComboBox QAbstractItemView {
                 </layout>
                </widget>
               </item>
-              <item>
-               <widget class="QWidget" name="chartTypeWidget" native="true">
-                <layout class="QHBoxLayout" name="chartTypeLayout" stretch="0,0">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="chartTypeLabel">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
-color: white;
-border: none;
-font-size: 12px;</string>
-                   </property>
-                   <property name="text">
-                    <string>Chart Type:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="chartTypeToggle">
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    min-width: 100px;
-    min-height: 30px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
-    background-color: #2196F3;
-    border: none;
-}
-
-QPushButton:hover {
-    background-color: #1976D2;
-}
-
-QPushButton:pressed {
-    background-color: #1565C0;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Candlestick</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="rsiWidget" native="true">
-                <layout class="QHBoxLayout" name="rsiLayout" stretch="0,0">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="rsiLabel">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
-color: white;
-border: none;
-font-size: 12px;</string>
-                   </property>
-                   <property name="text">
-                    <string>RSI:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="rsiToggle">
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    min-width: 60px;
-    min-height: 30px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
-    background-color: #666;
-    border: none;
-}
-
-QPushButton:hover {
-    background-color: #777;
-}
-
-QPushButton:checked {
-    background-color: #FF9800;
-}
-
-QPushButton:checked:hover {
-    background-color: #F57C00;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>OFF</string>
-                   </property>
-                   <property name="checkable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="algorithmsWidget" native="true">
-                <layout class="QHBoxLayout" name="algorithmsLayout" stretch="0,0">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="algorithmsLabel">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
-color: white;
-border: none;
-font-size: 12px;</string>
-                   </property>
-                   <property name="text">
-                    <string>Indicators:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="algorithmsCombo">
-                   <property name="styleSheet">
-                    <string notr="true">QComboBox {
-    min-width: 120px;
-    min-height: 30px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    background-color: #3A3A3A;
-    color: #E0E0E0;
-    border: 1px solid #555;
-}
-
-QComboBox:hover {
-    background-color: #505050;
-}
-
-QComboBox::drop-down {
-    border: none;
-    width: 20px;
-}
-
-QComboBox::down-arrow {
-    image: none;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #E0E0E0;
-    margin-right: 5px;
-}
-
-QComboBox QAbstractItemView {
-    background-color: #3A3A3A;
-    color: #E0E0E0;
-    selection-background-color: #555;
-    border: 1px solid #555;
-    border-radius: 8px;
-}</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>None</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>MACD</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Bollinger Bands</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Moving Average</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Stochastic</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Williams %R</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>CCI</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
              </layout>
             </widget>
            </item>
@@ -1158,9 +969,6 @@ QComboBox QAbstractItemView {
               </sizepolicy>
              </property>
             </widget>
-           </item>
-           <item>
-            <widget class="QChartView" name="indicatorChart" native="true"/>
            </item>
           </layout>
          </widget>
@@ -1190,7 +998,36 @@ font-weight: bold;</string>
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QTableView" name="historyTable"/>
+               <widget class="QTableView" name="historyTable">
+                <property name="styleSheet">
+                 <string notr="true">QTableView {
+    background-color: #2E2E2E;
+    color: white;
+    gridline-color: #505050;
+    font-size: 10 px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #444;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableView::item {
+    padding: 6px;
+    border-bottom: 1px solid #505050;
+}
+
+QTableView::item:selected {
+    background-color: #66ccff;
+    color: black;
+}
+</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
