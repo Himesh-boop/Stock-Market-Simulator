@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/StockMarketSimulator.exe"
+			"path" : "MinSizeRel/StockMarketSimulator.exe"
 		},
 		{
-			"path" : "Release/StockMarketSimulator.pdb"
+			"path" : "MinSizeRel/StockMarketSimulator.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -150,7 +150,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 2,
@@ -228,7 +228,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_Release"
+					"path" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_MinSizeRel"
 				},
 				{
 					"backtrace" : 20,
@@ -323,6 +323,7 @@
 				0,
 				1,
 				2,
+				4,
 				5,
 				6,
 				7,
@@ -333,13 +334,11 @@
 				12,
 				13,
 				14,
-				15,
-				34,
-				36,
-				38,
-				40,
-				42,
-				47
+				33,
+				35,
+				37,
+				39,
+				44
 			]
 		}
 	],
@@ -355,7 +354,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
@@ -459,6 +458,7 @@
 				0,
 				1,
 				2,
+				4,
 				5,
 				6,
 				7,
@@ -469,13 +469,11 @@
 				12,
 				13,
 				14,
-				15,
-				34,
-				36,
-				38,
-				40,
-				42,
-				47
+				33,
+				35,
+				37,
+				39,
+				44
 			]
 		},
 		{
@@ -483,15 +481,15 @@
 			"sourceIndexes" : 
 			[
 				3,
-				4,
-				32,
-				46
+				31,
+				43
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
+				15,
 				16,
 				17,
 				18,
@@ -503,39 +501,37 @@
 				24,
 				25,
 				26,
-				27,
-				33,
-				35,
-				37,
-				39,
+				32,
+				34,
+				36,
+				38,
+				40,
 				41,
-				43,
-				44,
-				45
+				42
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
+				27,
 				28,
-				29,
-				30
+				29
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				31
+				30
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				48,
-				49
+				45,
+				46
 			]
 		}
 	],
@@ -545,7 +541,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation_Release.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation_MinSizeRel.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -563,11 +559,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "pythonBackend/nepse_data_server.py",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "db/dbUpdater.py",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -766,45 +757,34 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 1,
-			"path" : "pages/macdplotter.h",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "pages/macdplotter.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_Release/ui_pages.h",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_MinSizeRel/ui_pages.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_Release/pages/ui_loginpage.h",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_MinSizeRel/pages/ui_loginpage.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_Release/pages/ui_signuppage.h",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/include_MinSizeRel/pages/ui_signuppage.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/autouic_Release.stamp",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/autouic_MinSizeRel.stamp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/EWIEGA46WW_Release/qrc_resources.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/EWIEGA46WW_MinSizeRel/qrc_resources.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

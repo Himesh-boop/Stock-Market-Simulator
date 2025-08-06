@@ -323,6 +323,7 @@
 				0,
 				1,
 				2,
+				4,
 				5,
 				6,
 				7,
@@ -333,13 +334,11 @@
 				12,
 				13,
 				14,
-				15,
-				34,
-				36,
-				38,
-				40,
-				42,
-				47
+				33,
+				35,
+				37,
+				39,
+				44
 			]
 		}
 	],
@@ -459,6 +458,7 @@
 				0,
 				1,
 				2,
+				4,
 				5,
 				6,
 				7,
@@ -469,13 +469,11 @@
 				12,
 				13,
 				14,
-				15,
-				34,
-				36,
-				38,
-				40,
-				42,
-				47
+				33,
+				35,
+				37,
+				39,
+				44
 			]
 		},
 		{
@@ -483,15 +481,15 @@
 			"sourceIndexes" : 
 			[
 				3,
-				4,
-				32,
-				46
+				31,
+				43
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
+				15,
 				16,
 				17,
 				18,
@@ -503,39 +501,37 @@
 				24,
 				25,
 				26,
-				27,
-				33,
-				35,
-				37,
-				39,
+				32,
+				34,
+				36,
+				38,
+				40,
 				41,
-				43,
-				44,
-				45
+				42
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
+				27,
 				28,
-				29,
-				30
+				29
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				31
+				30
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				48,
-				49
+				45,
+				46
 			]
 		}
 	],
@@ -563,11 +559,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "pythonBackend/nepse_data_server.py",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "db/dbUpdater.py",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -763,17 +754,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "db/transactiondb.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "pages/macdplotter.h",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "pages/macdplotter.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

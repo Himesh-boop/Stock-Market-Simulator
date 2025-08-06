@@ -571,8 +571,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages\signuppage.cpp" />
     <None Include="C:\StockMarketSimulator\Stock-Market-Simulator\pythonBackend\nepse_data_server.py">
     </None>
-    <None Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\dbUpdater.py">
-    </None>
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\logindb.cpp" />
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages\loginpage.cpp" />
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages.cpp" />

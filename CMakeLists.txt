@@ -26,7 +26,7 @@ set(SOURCES
 
     pages/signuppage.cpp
     pythonBackend/nepse_data_server.py
-    db/dbUpdater.py
+
     db/logindb.cpp
 
     pages/loginpage.cpp

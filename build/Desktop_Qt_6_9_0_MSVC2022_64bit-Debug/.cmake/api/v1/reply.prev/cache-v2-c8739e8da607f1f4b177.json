@@ -6591,7 +6591,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/StockMarketSimulator"
+			"value" : "/tmp"
 		}
 	],
 	"kind" : "cache",
