@@ -25,27 +25,11 @@ set(SOURCES
     main.cpp
 
     pages/signuppage.cpp
-    pythonBackend/nepse_data_server.py
 
     db/logindb.cpp
 
     pages/loginpage.cpp
     pages.cpp
-
-    Data/DataProvider.cpp
-
-    Models/Stock.cpp
-    Models/Portfolio.cpp
-    Models/Trade.cpp
-
-
-    UI/StockListView.cpp
-    UI/TradeDialog.cpp
-
-    Utils/Logger.cpp
-    Utils/Config.cpp
-
-
 )
 
 # Header files
@@ -53,17 +37,6 @@ set(HEADERS
     pages.h
     pages/signuppage.h
     pages/loginpage.h
-    Data/DataProvider.h
-
-    Models/Stock.h
-    Models/Portfolio.h
-    Models/Trade.h
-
-    UI/StockListView.h
-    UI/TradeDialog.h
-
-    Utils/Logger.h
-    Utils/Config.h
 
     db/logindb.h
 )

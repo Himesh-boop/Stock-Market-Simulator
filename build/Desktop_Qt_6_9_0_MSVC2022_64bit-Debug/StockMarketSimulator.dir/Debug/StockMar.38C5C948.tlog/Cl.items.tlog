@@ -4,14 +4,6 @@ C:\StockMarketSimulator\Stock-Market-Simulator\pages\signuppage.cpp;C:\StockMark
 C:\StockMarketSimulator\Stock-Market-Simulator\db\logindb.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\logindb.obj
 C:\StockMarketSimulator\Stock-Market-Simulator\pages\loginpage.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\loginpage.obj
 C:\StockMarketSimulator\Stock-Market-Simulator\pages.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\pages.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Data\DataProvider.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\DataProvider.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Models\Stock.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\Stock.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Models\Portfolio.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\Portfolio.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Models\Trade.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\Trade.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\UI\StockListView.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\StockListView.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\UI\TradeDialog.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\TradeDialog.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Logger.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\Logger.obj
-C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Config.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\Config.obj
 C:\StockMarketSimulator\Stock-Market-Simulator\db\authenticator.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\authenticator.obj
 C:\StockMarketSimulator\Stock-Market-Simulator\db\portfoliodb.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\portfoliodb.obj
 C:\StockMarketSimulator\Stock-Market-Simulator\db\cashdb.cpp;C:\StockMarketSimulator\Stock-Market-Simulator\build\Desktop_Qt_6_9_0_MSVC2022_64bit-Debug\StockMarketSimulator.dir\Debug\cashdb.obj

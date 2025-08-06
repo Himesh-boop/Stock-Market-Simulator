@@ -19,30 +19,6 @@
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Data\DataProvider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Stock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Portfolio.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Trade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\UI\StockListView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\UI\TradeDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Logger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Config.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\authenticator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -85,30 +61,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages\loginpage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Data\DataProvider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Stock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Portfolio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Models\Trade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\UI\StockListView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\UI\TradeDialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Logger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\Utils\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\StockMarketSimulator\Stock-Market-Simulator\db\logindb.h">
@@ -173,7 +125,6 @@
     <CustomBuild Include="C:\StockMarketSimulator\Stock-Market-Simulator\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\StockMarketSimulator\Stock-Market-Simulator\pythonBackend\nepse_data_server.py" />
     <None Include="C:\StockMarketSimulator\Stock-Market-Simulator\pages.ui">
       <Filter>Forms</Filter>
     </None>

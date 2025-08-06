@@ -426,54 +426,6 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Data/DataProvider.h",
-			"MU",
-			"M5WLY3B75D/moc_DataProvider.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Portfolio.h",
-			"MU",
-			"25IR5XJDBU/moc_Portfolio.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Stock.h",
-			"MU",
-			"25IR5XJDBU/moc_Stock.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Trade.h",
-			"MU",
-			"25IR5XJDBU/moc_Trade.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/StockListView.h",
-			"MU",
-			"KRKR4BN5RM/moc_StockListView.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/TradeDialog.h",
-			"MU",
-			"KRKR4BN5RM/moc_TradeDialog.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Config.h",
-			"MU",
-			"3AKZUBQRRA/moc_Config.cpp",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Logger.h",
-			"MU",
-			"3AKZUBQRRA/moc_Logger.cpp",
-			null
-		],
-		[
 			"C:/StockMarketSimulator/Stock-Market-Simulator/db/authenticator.h",
 			"MU",
 			"SQIZ3OIOWK/moc_authenticator.cpp",
@@ -730,46 +682,6 @@
 	"SETTINGS_FILE_Release" : "C:/StockMarketSimulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/StockMarketSimulator_autogen.dir/AutogenUsed_Release.txt",
 	"SOURCES" : 
 	[
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Data/DataProvider.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Portfolio.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Stock.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Models/Trade.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/StockListView.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/UI/TradeDialog.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Config.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/StockMarketSimulator/Stock-Market-Simulator/Utils/Logger.cpp",
-			"MU",
-			null
-		],
 		[
 			"C:/StockMarketSimulator/Stock-Market-Simulator/db/authenticator.cpp",
 			"MU",
