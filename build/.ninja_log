@@ -1,0 +1,29 @@
+# ninja log v6
+56	1415	7762721551697461	StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+56	1415	7762721551697461	StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+56	1415	7762721551697461	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+56	1415	7762721551697461	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+1429	1610	7762721555313293	StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	271b1984549a84f
+1429	1610	7762721555313293	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	271b1984549a84f
+1690	2381	7762721556322881	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp.obj	b2ef122d168124be
+1659	6618	7762721556016634	CMakeFiles/StockMarketSimulator.dir/db/authenticator.cpp.obj	823db5704cc145c8
+1621	7429	7762721555629392	CMakeFiles/StockMarketSimulator.dir/main.cpp.obj	56d2fbda3d3e592
+1629	7461	7762721555714868	CMakeFiles/StockMarketSimulator.dir/pages/signuppage.cpp.obj	63384f137d8cfdf3
+1636	7842	7762721555795804	CMakeFiles/StockMarketSimulator.dir/db/logindb.cpp.obj	a46c9a89bea7dd7
+1667	8013	7762721556091928	CMakeFiles/StockMarketSimulator.dir/db/portfoliodb.cpp.obj	68d184f1a455a469
+1674	8028	7762721556172060	CMakeFiles/StockMarketSimulator.dir/db/cashdb.cpp.obj	d9d62f3d01d6a1b7
+1682	8175	7762721556247436	CMakeFiles/StockMarketSimulator.dir/db/transactiondb.cpp.obj	afe8bbb23f49ed42
+1611	8309	7762721555544058	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/mocs_compilation.cpp.obj	a543765d025d0569
+1644	8828	7762721555865921	CMakeFiles/StockMarketSimulator.dir/pages/loginPage.cpp.obj	71f8a8ae1ef47a3
+1652	10758	7762721555941263	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	69c0cb44c4fc6db2
+10760	11706	7762721647021824	StockMarketSimulator.exe	8237be0891ee6068
+57	331	7762723481452051	StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+57	331	7762723481452051	StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+57	331	7762723481452051	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+57	331	7762723481452051	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+167	519	7762723768262068	StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+167	519	7762723768262068	StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+167	519	7762723768262068	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/timestamp	f82bee442abf03bc
+167	519	7762723768262068	C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/StockMarketSimulator_autogen/mocs_compilation.cpp	f82bee442abf03bc
+522	6015	7762723771814174	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	69c0cb44c4fc6db2
+6015	6429	7762723826742276	StockMarketSimulator.exe	8237be0891ee6068

@@ -1,0 +1,5 @@
+C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/CMakeFiles/StockMarketSimulator.dir
+C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/CMakeFiles/edit_cache.dir
+C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/CMakeFiles/rebuild_cache.dir
+C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/CMakeFiles/StockMarketSimulator_autogen_timestamp_deps.dir
+C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/build/CMakeFiles/StockMarketSimulator_autogen.dir

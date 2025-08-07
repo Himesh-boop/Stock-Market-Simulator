@@ -1,0 +1,59 @@
+# ninja log v6
+65	3524	7762706797781309	StockMarketSimulator_autogen/timestamp	cea364e747789187
+65	3524	7762706797781309	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+65	3524	7762706797781309	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+65	3524	7762706797781309	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+3538	3835	7762706802496242	StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	cc2c7c6a4fddd351
+3538	3835	7762706802496242	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp	cc2c7c6a4fddd351
+3918	4911	7762706803522505	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/EWIEGA46WW/qrc_resources.cpp.obj	536dfc13ada3a2a4
+3886	10305	7762706803196290	CMakeFiles/StockMarketSimulator.dir/db/authenticator.cpp.obj	2b36a89aa985baf3
+3846	10888	7762706802799681	CMakeFiles/StockMarketSimulator.dir/main.cpp.obj	a93bc6d007b7cb85
+3854	11238	7762706802884878	CMakeFiles/StockMarketSimulator.dir/pages/signuppage.cpp.obj	e1490500dba06dfc
+3902	11660	7762706803361741	CMakeFiles/StockMarketSimulator.dir/db/cashdb.cpp.obj	397809ac707b828a
+3862	11717	7762706802960403	CMakeFiles/StockMarketSimulator.dir/db/logindb.cpp.obj	76ef6b1720e489cd
+3910	11738	7762706803437154	CMakeFiles/StockMarketSimulator.dir/db/transactiondb.cpp.obj	a4007fb0367ac871
+3894	11884	7762706803291680	CMakeFiles/StockMarketSimulator.dir/db/portfoliodb.cpp.obj	74c16ae2a1e8d64c
+3837	12108	7762706802707613	CMakeFiles/StockMarketSimulator.dir/StockMarketSimulator_autogen/mocs_compilation.cpp.obj	d6e889def8d25917
+3870	12135	7762706803035716	CMakeFiles/StockMarketSimulator.dir/pages/loginPage.cpp.obj	aafbb34035d4894b
+3878	13196	7762706803121100	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+13197	14224	7762706896300838	StockMarketSimulator.exe	8237be0891ee6068
+91	441	7762708897996528	StockMarketSimulator_autogen/timestamp	cea364e747789187
+91	441	7762708897996528	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+91	441	7762708897996528	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+91	441	7762708897996528	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+460	4511	7762708901685130	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+4511	4831	7762708942200984	StockMarketSimulator.exe	8237be0891ee6068
+55	311	7762710839564732	StockMarketSimulator_autogen/timestamp	cea364e747789187
+55	311	7762710839564732	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+55	311	7762710839564732	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+55	311	7762710839564732	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+314	4164	7762710842150976	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+4164	4489	7762710880646220	StockMarketSimulator.exe	8237be0891ee6068
+58	290	7762711899438244	StockMarketSimulator_autogen/timestamp	cea364e747789187
+58	290	7762711899438244	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+58	290	7762711899438244	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+58	290	7762711899438244	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+113	386	7762712324826508	StockMarketSimulator_autogen/timestamp	cea364e747789187
+113	386	7762712324826508	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+113	386	7762712324826508	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+113	386	7762712324826508	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+388	4747	7762712327580966	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+4748	5071	7762712371168094	StockMarketSimulator.exe	8237be0891ee6068
+73	351	7762714728148791	StockMarketSimulator_autogen/timestamp	cea364e747789187
+73	351	7762714728148791	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+73	351	7762714728148791	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+73	351	7762714728148791	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+354	4341	7762714730948537	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+4341	4636	7762714770826503	StockMarketSimulator.exe	8237be0891ee6068
+86	401	7762716472507592	StockMarketSimulator_autogen/timestamp	cea364e747789187
+86	401	7762716472507592	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+86	401	7762716472507592	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+86	401	7762716472507592	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+403	5146	7762716475524440	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+5147	5535	7762716522949968	StockMarketSimulator.exe	8237be0891ee6068
+60	282	7762719113672575	StockMarketSimulator_autogen/timestamp	cea364e747789187
+60	282	7762719113672575	StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+60	282	7762719113672575	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/timestamp	cea364e747789187
+60	282	7762719113672575	C:/Stock Market Simulator/Stock-Market-Simulator/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/StockMarketSimulator_autogen/mocs_compilation.cpp	cea364e747789187
+284	3912	7762719115912350	CMakeFiles/StockMarketSimulator.dir/pages.cpp.obj	3fb7ca8004dc5b13
+3912	4186	7762719152189478	StockMarketSimulator.exe	8237be0891ee6068

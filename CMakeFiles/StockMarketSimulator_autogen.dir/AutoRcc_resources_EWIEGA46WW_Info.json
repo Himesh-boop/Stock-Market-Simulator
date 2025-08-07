@@ -1,0 +1,31 @@
+{
+	"BUILD_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/StockMarketSimulator_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator",
+	"CMAKE_SOURCE_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/StockMarketSimulator_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/account_circle_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/newspaper_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/candlestick_chart_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/wallet_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/day_half.jpg",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/night_half.jpg",
+		"C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/assignment_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
+	],
+	"LOCK_FILE" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/CMakeFiles/StockMarketSimulator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.9.0/msvc2022_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/CMakeFiles/StockMarketSimulator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/LENOVO/Documents/Notes KU/Project/2nd Sem/StockMarketSimulator/Stock-Market-Simulator/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

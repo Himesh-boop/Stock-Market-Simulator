@@ -30,6 +30,7 @@
 #include <QLineSeries>
 #include <QMessageBox>
 #include <QInputDialog>
+#include<QDir>
 
 class CustomChartView : public QChartView {
 public:
@@ -104,11 +105,13 @@ void pages::fetchStockData() {
     });
 
     QString pythonExecutable = "python";
-    QString scriptPath = "C:/StockMarketSimulator/Stock-Market-Simulator/Models/candlestickChart.py";
+    QString scriptPath = QDir::currentPath() + "/../Models/candlestickChart.py";
+
+    qDebug() << "Script Path:" << scriptPath;
 
     QString symbol = ui->companySymbolsCombo->currentText();
 
-    QStringList arguments = { scriptPath, symbol};
+    QStringList arguments = {scriptPath, symbol};
 
     process->start(pythonExecutable, arguments);
 
